@@ -287,15 +287,83 @@
 						</div>
 					</div>
 				</div>
-				
-				
 			</div>
-			<div class="dream-dots">
-				<a href="#" class="dream-dot active" data-num="1"><span>1</span></a>
-				<a href="#" class="dream-dot" data-num="2"><span>2</span></a>
-				<a href="#" class="dream-dot" data-num="3"><span>3</span></a>
-				<a href="#" class="dream-dot" data-num="4"><span>4</span></a>
-				<a href="#" class="dream-dot" data-num="5"><span>5</span></a>
+
+			<div class="container">
+				<div id="dream-carousel-mobile" class="dream-carousel">
+					<div class="dc-item" data-num="1">
+						<div class="dc-link" id="item-1">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Doctor</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/doctor.svg" alt=""></figure>
+							</div>
+						</div>
+					</div> 
+					<div class="dc-item" data-num="2">
+						<div class="dc-link" id="item-2">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Teacher</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/teacher.svg" alt=""></figure>
+							</div>
+						</div>
+					</div> 
+					<div class="dc-item" data-num="3">
+						<div class="dc-link" id="item-3">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Astronaut</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/astronaut.svg" alt=""></figure>
+							</div>
+						</div>
+					</div>
+					<div class="dc-item" data-num="4">
+						<div class="dc-link" id="item-4">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Lawyer</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/lawyer.svg" alt=""></figure>
+							</div>
+						</div>
+					</div>
+					<div class="dc-item" data-num="5">
+						<div class="dc-link" id="item-5">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Ballerina</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/ballerina.svg" alt=""></figure>
+							</div>
+						</div>
+					</div> 
+				</div>
+				<div class="dream-dots" id="dream-dots-mobile">
+					<a href="#" class="dream-dot active" data-num="1"><span>1</span></a>
+					<a href="#" class="dream-dot" data-num="2"><span>2</span></a>
+					<a href="#" class="dream-dot" data-num="3"><span>3</span></a>
+					<a href="#" class="dream-dot" data-num="4"><span>4</span></a>
+					<a href="#" class="dream-dot" data-num="5"><span>5</span></a>
+				</div>
 			</div>
 		</section>
 
@@ -508,21 +576,21 @@
 						<p>Be one of the first to experience mobile investing.</p>
 					</div>
 					<div class="form-wrapper">
-						<form method="post" action="">
+						<form id="access-form" method="post" action="">
 							<div class="row-wrap">
 								<div class="input-wrap input-half">
 									<input type="text" id="first-name" name="" placeholder="First Name">
 								</div>
 								<div class="input-wrap input-half">
-									<input type="text" id="first-name" name="" placeholder="Last Name">
+									<input type="text" id="last-name" name="" placeholder="Last Name">
 								</div>
 							</div>
 							<div class="row-wrap">
 								<div class="input-wrap input-half">
-									<input type="email" id="first-name" name="" placeholder="Email Address">
+									<input type="email" id="email-account" name="" placeholder="Email Address">
 								</div>
 								<div class="input-wrap input-half">
-									<input type="tel" id="first-name" name="" placeholder="Mobile Number">
+									<input type="tel" id="contact-num" name="" placeholder="Mobile Number" value="" maxlength="15" onkeypress="return event.charCode === 0 || /[\d-+=,()]/.test(String.fromCharCode(event.charCode));">
 								</div>
 							</div>
 							<p>Manulife values your privacy. By clicking I’m in!, this gives us consent to gather your provided information.</p>
@@ -530,6 +598,8 @@
 								<div class="input-wrap">
 									<input class="btn" type="submit" name="" value="I'm in!">
 								</div>
+
+								<p class="ty-message">You've secured your slot to get notified when the app is ready. Thanks and we'll be in touch!</p>
 							</div>
 						</form>
 					</div>
@@ -710,7 +780,8 @@
 </footer>
 
 <script src="js/lib/jquery.min.js"></script>
-<script src="js/lib/jquery-ui.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script> 
+<!-- <script src="js/lib/jquery-ui.min.js"></script> -->
 <script src="js/plugins.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/TweenMax.js"></script>
@@ -788,49 +859,59 @@
 	        }
 	    })
 
-	    var carousel = $("#dream-carousel").waterwheelCarousel({
-			flankingItems: 3,
-			separation: 290,
-			opacityMultiplier: 1,
-			animationEasing: 'swing',
-			activeClassName: 'active',
-			keyboardNav: true,
-          movingToCenter: function ($item) {
-            $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
-          },
-          movedToCenter: function ($item) {
-            $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
-          },
-          movingFromCenter: function ($item) {
-            $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
-          },
-          movedFromCenter: function ($item) {
-            $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
-          },
-          clickedCenter: function ($item) {
-            $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
-          }
-        });
 
-	    $('.dc-item').click(function(){
+	    if($("#dream-carousel").length > 0) {
 
-	    	var _thisNum = $(this).data('num');
+		    var carousel = $("#dream-carousel").waterwheelCarousel({
+				flankingItems: 3,
+				separation: ($(window).width() < 1024) ? 200 : 290,
+				opacityMultiplier: 1,
+				animationEasing: 'swing',
+				activeClassName: 'active',
+				keyboardNav: true,
+	          	
+	        });
 
-	    	console.log(_thisNum);
+	        $("#dream-carousel").on("swipeleft",function(){
+	          carousel.next();
+	        });
+	        $("#dream-carousel").on("swiperight",function(){
+	          carousel.prev();
+	        });
 
-	    	$('.dream-dot').removeClass('active');
-	    	$('.dream-dots .dream-dot[data-num='+ _thisNum +']').addClass('active');
-	    });
+	        $(window).resize(function(){
+	        	carousel.reload({
+	        		lankingItems: 3,
+					separation: ($(window).width() < 1024) ? 200 : 290,
+					opacityMultiplier: 1,
+					animationEasing: 'swing',
+					activeClassName: 'active',
+					keyboardNav: true,
+	        	});
+	          	return false;
+	        });
 
-	    $('.dream-dots .dream-dot').click(function(e){
-	    	e.preventDefault();
+	        $('.dc-item').click(function(){
 
-	    	var _thisNum = $(this).data('num');
-	    	console.log(_thisNum);
-	    	$('.dream-dots .dream-dot').removeClass('active');
-	    	$(this).addClass('active');
-	    	$('#item-'+_thisNum+'').closest('.dc-item').click();
-	    });
+		    	var _thisNum = $(this).data('num');
+
+		    	console.log(_thisNum);
+
+		    	$('.dream-dot').removeClass('active');
+		    	$('.dream-dots .dream-dot[data-num='+ _thisNum +']').addClass('active');
+		    });
+
+		    $('.dream-dots .dream-dot').click(function(e){
+		    	e.preventDefault();
+
+		    	var _thisNum = $(this).data('num');
+		    	console.log(_thisNum);
+		    	$('.dream-dots .dream-dot').removeClass('active');
+		    	$(this).addClass('active');
+		    	$('#item-'+_thisNum+'').closest('.dc-item').click();
+		    });
+        }
+
 
 	    $('.ii-circle a').click(function(e){
 	    	e.preventDefault();
@@ -845,6 +926,57 @@
 
 	    	$(this).closest('.popup-wrap').removeClass('active');
 	    });
+
+
+	    (function() {
+		  	var rotate, timeline;
+
+			rotate = function() {
+				return $('#dream-carousel-mobile .dc-item:first-child').fadeOut(400, 'swing', function() {
+				return $('#dream-carousel-mobile .dc-item:first-child').appendTo('#dream-carousel-mobile').hide();
+				}).fadeIn(400, 'swing');
+			};
+
+
+			timeline = setInterval(rotate, 7000);
+
+			$('#dream-carousel-mobile').hover(function() {
+				return clearInterval(timeline);
+			});
+
+			isBusy = false;
+
+			$('#dream-carousel-mobile .dc-item').click(function(e) {
+				e.preventDefault();
+
+				if( isBusy == false) {
+
+					isBusy = true;
+					setTimeout(function(){
+						isBusy = false;
+					}, 400);
+					return rotate();
+				} 
+
+			});
+
+			$('#dream-dots-mobile a').click(function(e){
+				e.preventDefault();
+
+				$('#dream-dots-mobile .dream-dot').removeClass('active');
+				$(this).closest('.dream-dot').addClass('active');
+				var _this = $(this).data('num');
+				var test = $('#dream-carousel-mobile .dc-item[data-num='+ _this +']').prevAll('.dc-item');
+
+				$('#dream-carousel-mobile  .dc-item[data-num='+ _this +']').prevAll('.dc-item').fadeOut(400, 'swing', function() {
+				$('#dream-carousel-mobile').append(test);
+				}).fadeIn(400, 'swing');
+
+				return clearInterval(timeline);
+			});
+
+		}).call(this);
+
 	});
 </script>
 

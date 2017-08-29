@@ -27,7 +27,7 @@
 					<div class="popup-right fr">
 						<a href="#" class="popup-close"><img src="images/home/icon-close.svg" alt=""></a>
 						<h4>Product</h4>
-						<p>You are not just investing but you are also insured. In case anything happens.</p>
+						<p>You are not just investing but you are also insured. <br>In case anything happens.</p>
 
 						<figure><img src="images/home/pop-product.png" alt=""></figure>
 					</div>
@@ -70,7 +70,7 @@
 					<div class="popup-right fr">
 						<a href="#" class="popup-close"><img src="images/home/icon-close.svg" alt=""></a>
 						<h4>Security</h4>
-						<p>Safeguards are in place to protect your data and transactions.</p>
+						<p>Safeguards are in place to protect your <br>data and transactions.</p>
 
 						<figure><img src="images/home/pop-security.svg" alt=""></figure>
 					</div>
@@ -287,15 +287,83 @@
 						</div>
 					</div>
 				</div>
-				
-				
 			</div>
-			<div class="dream-dots">
-				<a href="#" class="dream-dot active" data-num="1"><span>1</span></a>
-				<a href="#" class="dream-dot" data-num="2"><span>2</span></a>
-				<a href="#" class="dream-dot" data-num="3"><span>3</span></a>
-				<a href="#" class="dream-dot" data-num="4"><span>4</span></a>
-				<a href="#" class="dream-dot" data-num="5"><span>5</span></a>
+
+			<div class="container">
+				<div id="dream-carousel-mobile" class="dream-carousel">
+					<div class="dc-item" data-num="1">
+						<div class="dc-link" id="item-1">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Doctor</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/doctor.svg" alt=""></figure>
+							</div>
+						</div>
+					</div> 
+					<div class="dc-item" data-num="2">
+						<div class="dc-link" id="item-2">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Teacher</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/teacher.svg" alt=""></figure>
+							</div>
+						</div>
+					</div> 
+					<div class="dc-item" data-num="3">
+						<div class="dc-link" id="item-3">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Astronaut</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/astronaut.svg" alt=""></figure>
+							</div>
+						</div>
+					</div>
+					<div class="dc-item" data-num="4">
+						<div class="dc-link" id="item-4">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Lawyer</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/lawyer.svg" alt=""></figure>
+							</div>
+						</div>
+					</div>
+					<div class="dc-item" data-num="5">
+						<div class="dc-link" id="item-5">
+							<div class="dc-wrap">
+								<div class="dc-box">
+									<div class="dc-content">
+										<p>His dream is <br>to become a</p>
+										<h3>Ballerina</h3>
+									</div>
+								</div>
+								<figure><img src="images/home/ballerina.svg" alt=""></figure>
+							</div>
+						</div>
+					</div> 
+				</div>
+				<div class="dream-dots" id="dream-dots-mobile">
+					<a href="#" class="dream-dot active" data-num="1"><span>1</span></a>
+					<a href="#" class="dream-dot" data-num="2"><span>2</span></a>
+					<a href="#" class="dream-dot" data-num="3"><span>3</span></a>
+					<a href="#" class="dream-dot" data-num="4"><span>4</span></a>
+					<a href="#" class="dream-dot" data-num="5"><span>5</span></a>
+				</div>
 			</div>
 		</section>
 
@@ -788,49 +856,58 @@
 	        }
 	    })
 
-	    var carousel = $("#dream-carousel").waterwheelCarousel({
-			flankingItems: 3,
-			separation: 290,
-			opacityMultiplier: 1,
-			animationEasing: 'swing',
-			activeClassName: 'active',
-			keyboardNav: true,
-          movingToCenter: function ($item) {
-            $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
-          },
-          movedToCenter: function ($item) {
-            $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
-          },
-          movingFromCenter: function ($item) {
-            $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
-          },
-          movedFromCenter: function ($item) {
-            $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
-          },
-          clickedCenter: function ($item) {
-            $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
-          }
-        });
+	    if($("#dream-carousel").length > 0) {
 
-	    $('.dc-item').click(function(){
+		    var carousel = $("#dream-carousel").waterwheelCarousel({
+				flankingItems: 3,
+				separation: ($(window).width() < 1024) ? 200 : 290,
+				opacityMultiplier: 1,
+				animationEasing: 'swing',
+				activeClassName: 'active',
+				keyboardNav: true,
+	          	
+	        });
 
-	    	var _thisNum = $(this).data('num');
+	        $("#dream-carousel").on("swipeleft",function(){
+	          carousel.next();
+	        });
+	        $("#dream-carousel").on("swiperight",function(){
+	          carousel.prev();
+	        });
 
-	    	console.log(_thisNum);
+	        $(window).resize(function(){
+	        	carousel.reload({
+	        		lankingItems: 3,
+					separation: ($(window).width() < 1024) ? 200 : 290,
+					opacityMultiplier: 1,
+					animationEasing: 'swing',
+					activeClassName: 'active',
+					keyboardNav: true,
+	        	});
+	          	return false;
+	        });
 
-	    	$('.dream-dot').removeClass('active');
-	    	$('.dream-dots .dream-dot[data-num='+ _thisNum +']').addClass('active');
-	    });
+	        $('.dc-item').click(function(){
 
-	    $('.dream-dots .dream-dot').click(function(e){
-	    	e.preventDefault();
+		    	var _thisNum = $(this).data('num');
 
-	    	var _thisNum = $(this).data('num');
-	    	console.log(_thisNum);
-	    	$('.dream-dots .dream-dot').removeClass('active');
-	    	$(this).addClass('active');
-	    	$('#item-'+_thisNum+'').closest('.dc-item').click();
-	    });
+		    	console.log(_thisNum);
+
+		    	$('.dream-dot').removeClass('active');
+		    	$('.dream-dots .dream-dot[data-num='+ _thisNum +']').addClass('active');
+		    });
+
+		    $('.dream-dots .dream-dot').click(function(e){
+		    	e.preventDefault();
+
+		    	var _thisNum = $(this).data('num');
+		    	console.log(_thisNum);
+		    	$('.dream-dots .dream-dot').removeClass('active');
+		    	$(this).addClass('active');
+		    	$('#item-'+_thisNum+'').closest('.dc-item').click();
+		    });
+        }
+
 
 	    $('.ii-circle a').click(function(e){
 	    	e.preventDefault();
@@ -845,6 +922,56 @@
 
 	    	$(this).closest('.popup-wrap').removeClass('active');
 	    });
+
+
+	    (function() {
+		  	var rotate, timeline;
+
+			rotate = function() {
+				return $('#dream-carousel-mobile .dc-item:first-child').fadeOut(400, 'swing', function() {
+				return $('#dream-carousel-mobile .dc-item:first-child').appendTo('#dream-carousel-mobile').hide();
+				}).fadeIn(400, 'swing');
+			};
+
+
+			timeline = setInterval(rotate, 7000);
+
+			$('#dream-carousel-mobile').hover(function() {
+				return clearInterval(timeline);
+			});
+
+			isBusy = false;
+
+			$('#dream-carousel-mobile .dc-item').click(function(e) {
+				e.preventDefault();
+
+				if( isBusy == false) {
+
+					isBusy = true;
+					setTimeout(function(){
+						isBusy = false;
+					}, 400);
+					return rotate();
+				} 
+
+			});
+
+			$('#dream-dots-mobile a').click(function(e){
+				e.preventDefault();
+
+				$('#dream-dots-mobile .dream-dot').removeClass('active');
+				$(this).closest('.dream-dot').addClass('active');
+				var _this = $(this).data('num');
+				var test = $('#dream-carousel-mobile .dc-item[data-num='+ _this +']').prevAll('.dc-item');
+
+				$('#dream-carousel-mobile  .dc-item[data-num='+ _this +']').prevAll('.dc-item').fadeOut(400, 'swing', function() {
+				$('#dream-carousel-mobile').append(test);
+				}).fadeIn(400, 'swing');
+
+				return clearInterval(timeline);
+			});
+
+		}).call(this);
 	});
 </script>
 
