@@ -3198,6 +3198,9 @@ footer {
   .popup-close img {
     width: 15px;
     display: inline-block; }
+    @media (max-width: 640px) {
+      .popup-close img {
+        width: 10px; } }
   @media (max-width: 640px) {
     .popup-close {
       width: 30px;
