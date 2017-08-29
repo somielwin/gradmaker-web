@@ -1189,7 +1189,7 @@ footer {
     height: 100vh; }
     @media (max-width: 640px) {
       .section1.sec-full {
-        height: calc(100vh - 100px); } }
+        height: calc(100vh - 75px); } }
   .section1:after {
     content: '';
     position: absolute;
@@ -1232,7 +1232,7 @@ footer {
 
 .table-wrap {
   display: table;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
