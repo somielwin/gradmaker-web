@@ -2549,36 +2549,44 @@
 @-webkit-keyframes clouds {
   0% {
     -webkit-transform : translate(0, 0);
+    -moz-transform : translate(0, 0);
+    transform : translate(0, 0);
   }
 
   50%{
     -webkit-transform : translate(500px, 0);
+    -moz-transform : translate(500px, 0);
+    transform : translate(500px, 0);
   }
   
   51%{
-    -webkit-transform : translate(500px, 0);
+   -webkit-transform : translate(500px, 0);
+   -moz-transform : translate(500px, 0);
+   transform : translate(500px, 0);
   }
 
   100%{
+    -moz-transform : translate(0, 0);
     -webkit-transform : translate(0, 0);
+    transform : translate(0, 0);
   }
 }
 
 @-webkit-keyframes clouds1 {
   0% {
-    -webkit-transform : translate(-300px, 0);
+    @include transform(translate(-300px, 0));
   }
 
   50%{
-    -webkit-transform : translate(300px, 0);
+    @include transform(translate(300px, 0));
   }
   
   51%{
-    -webkit-transform : translate(300px, 0);
+    @include transform(translate(300px, 0));
   }
 
   100% {
-  	-webkit-transform : translate(-300px, 0);
+  	@include transform(translate(-300px, 0));
   }
 
 }
@@ -2586,29 +2594,28 @@
 
 @keyframes heartbeat
 {
-  0%
-  {
-    transform: scale( .6 );
+  0%{
+    @include transform(scale(0.6));
   }
   20%
   {
-    transform: scale( 1 );
+    @include transform(scale(1));
   }
   40%
   {
-    transform: scale( .6 );
+    @include transform(scale(0.6));
   }
   60%
   {
-    transform: scale( 1 );
+    @include transform(scale(1));
   }
   80%
   {
-    transform: scale( .6 );
+    @include transform(scale(0.6));
   }
   100%
   {
-    transform: scale( .6 );
+    @include transform(scale(0.6));
   }
 }
 
