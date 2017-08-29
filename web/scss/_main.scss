@@ -135,6 +135,10 @@
 		font-weight: 300;
 		margin-bottom: 30px;
 
+		br.mobile-br {
+			display: none;
+		}
+
 		@include breakpoint(tablet) {
 			font-size: 48px;
 			line-height: 60px;
@@ -155,10 +159,19 @@
 			font-size: 32px;
 			line-height: 48px;
 			margin-bottom: 20px;
+			padding: 0px 25px;
+
+			br.mobile-br {
+				display: block;
+			}
 		}
 
 		span {
 			font-weight: 100;
+
+			@include breakpoint(mobile) {
+				display: block;
+			}
 		}
 	}
 
@@ -510,7 +523,6 @@
     flex-direction: row;
     flex-wrap: nowrap;
     margin-top: 40px;
-    align-items: stretch;
     justify-content: center;
 }
 
@@ -518,14 +530,15 @@
 	max-width: 203px;
 	width: 33.33%;
 	margin: 0px 5px;
-	display: -webkit-flex;
+	position: relative;
+	/*display: -webkit-flex;
 	display: -webkit-box;
 	display: -moz-flex;
 	display: -webkit-box;
 	display: flex;
 	flex-direction: column;
 	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
+	-webkit-box-direction: normal;*/
 
 	@include breakpoint(tablet2) {
 		width: 50%;
@@ -578,6 +591,8 @@
 
 .cg-bank {
 	width: 100%;
+	position: absolute;
+	bottom: 0;
 
 	.cg-top {
 		text-align: center;
@@ -728,12 +743,10 @@
 	display: -moz-flex;
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
 	height: 100%;
 	align-items: flex-end;
 	width: 100%;
-	position: relative;
+	position: static;
 }
 
 .cg-bot {
@@ -1049,7 +1062,7 @@
 	overflow: visible;
 	padding-top: 6px;
 	height: 0;
-	padding-bottom: 66%;
+	padding-bottom: 50%;
 
 	@include breakpoint(tablet2) {
 		padding-top: 40px;
@@ -1622,6 +1635,8 @@
 	padding-bottom: 55%;
 	height: 0;
 	position: relative;
+	float: right;
+	clear: none;
 
 	@include breakpoint(tablet2) {
 		width: 100%;
@@ -1693,6 +1708,8 @@
 .iw-text {
 	width: 45%;
 	padding-top: 100px;
+	float: left;
+	clear: none;
 
 	@include breakpoint(tablet2) {
 		width: 100%;
@@ -2507,12 +2524,17 @@
 	
 	border-radius: 50%;
 	background: #DCDCDC;
-	line-height: 36px;
+	line-height: 37px;
 	position: absolute;
 	left: 50%;
 	margin-top: -20px;
 	top: 0;
 	margin-left: -20px;
+
+	img {
+		width: 15px;
+		display: inline-block;
+	}
 
 	@include breakpoint(phablet) {
 		width: 30px;

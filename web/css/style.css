@@ -931,6 +931,8 @@ footer {
     .social-wrap ul li a {
       font-size: 30px;
       opacity: 0.8; }
+      .social-wrap ul li a:hover {
+        opacity: 1; }
       @media (max-width: 767px) {
         .social-wrap ul li a {
           font-size: 24px; } }
@@ -970,6 +972,8 @@ footer {
       line-height: 18px;
       font-weight: 400;
       padding: 0px 10px; }
+      .top-footer ul li a:hover, .sitemap-wrap ul li a:hover {
+        color: #fff; }
       @media (max-width: 640px) {
         .top-footer ul li a, .sitemap-wrap ul li a {
           font-size: 12px;
@@ -1248,6 +1252,8 @@ footer {
     line-height: 80px;
     font-weight: 300;
     margin-bottom: 30px; }
+    .banner-text h1 br.mobile-br {
+      display: none; }
     @media (max-width: 991px) {
       .banner-text h1 {
         font-size: 48px;
@@ -1263,9 +1269,15 @@ footer {
       .banner-text h1 {
         font-size: 32px;
         line-height: 48px;
-        margin-bottom: 20px; } }
+        margin-bottom: 20px;
+        padding: 0px 25px; }
+        .banner-text h1 br.mobile-br {
+          display: block; } }
     .banner-text h1 span {
       font-weight: 100; }
+      @media (max-width: 480px) {
+        .banner-text h1 span {
+          display: block; } }
   .banner-text p {
     opacity: 0.8;
     font-family: Roboto-Light;
@@ -1558,10 +1570,6 @@ footer {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   margin-top: 40px;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1571,17 +1579,15 @@ footer {
   max-width: 203px;
   width: 33.33%;
   margin: 0px 5px;
-  display: -webkit-flex;
-  display: -webkit-box;
-  display: -moz-flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal; }
+  position: relative;
+  /*display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-flex;
+	display: -webkit-box;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;*/ }
   @media (max-width: 767px) {
     .cg-item {
       width: 50%;
@@ -1624,7 +1630,9 @@ footer {
         height: 212px; } }
 
 .cg-bank {
-  width: 100%; }
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
   .cg-bank .cg-top {
     text-align: center;
     height: 150px;
@@ -1741,15 +1749,13 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   height: 100%;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
   width: 100%;
-  position: relative; }
+  position: static; }
 
 .cg-bot {
   padding: 50px 0 15px 0;
@@ -1993,7 +1999,7 @@ footer {
   overflow: visible;
   padding-top: 6px;
   height: 0;
-  padding-bottom: 66%; }
+  padding-bottom: 50%; }
   @media (max-width: 767px) {
     .section5 {
       padding-top: 40px; } }
@@ -2432,7 +2438,9 @@ footer {
   width: 52%;
   padding-bottom: 55%;
   height: 0;
-  position: relative; }
+  position: relative;
+  float: right;
+  clear: none; }
   @media (max-width: 767px) {
     .investment-graph {
       width: 100%;
@@ -2498,7 +2506,9 @@ footer {
 
 .iw-text {
   width: 45%;
-  padding-top: 100px; }
+  padding-top: 100px;
+  float: left;
+  clear: none; }
   @media (max-width: 767px) {
     .iw-text {
       width: 100%;
@@ -3174,12 +3184,15 @@ footer {
   display: block;
   border-radius: 50%;
   background: #DCDCDC;
-  line-height: 36px;
+  line-height: 37px;
   position: absolute;
   left: 50%;
   margin-top: -20px;
   top: 0;
   margin-left: -20px; }
+  .popup-close img {
+    width: 15px;
+    display: inline-block; }
   @media (max-width: 640px) {
     .popup-close {
       width: 30px;
