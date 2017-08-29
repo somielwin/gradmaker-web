@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="89px" height="89px" viewBox="0 0 89 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 22</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-34.7273642%" y1="0.640744579%" x2="99.3172921%" y2="49.7498804%" id="linearGradient-1">
+            <stop stop-color="#F7E500" stop-opacity="0.0995527627" offset="0%"></stop>
+            <stop stop-color="#FFB66E" stop-opacity="0.693585824" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.894814312">
+        <g id="Desktop---FINAL" transform="translate(-125.000000, -4837.000000)" fill="url(#linearGradient-1)">
+            <ellipse id="Oval-22" transform="translate(169.063319, 4881.055769) scale(-1, 1) translate(-169.063319, -4881.055769) " cx="169.063319" cy="4881.05577" rx="44.0633188" ry="44.0557692"></ellipse>
+        </g>
+    </g>
+</svg>

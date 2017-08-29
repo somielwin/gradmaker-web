@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="685px" viewBox="0 0 1440 685" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="90.1637316%" y1="61.8896484%" x2="90.1637316%" y2="-9.7265625%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.400758605" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="100%" x2="-22.556686%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-3" points="16 601.232624 300.164063 536.238875 594.421875 408.011228 875.792969 335.340581 1159.96094 225.657355 1456 1.85111914 1456 683.815897 16.3834278 683.815897"></polygon>
+        <ellipse id="path-4" cx="1157.43877" cy="225.427027" rx="15.4387726" ry="15.4270272"></ellipse>
+        <filter x="-22.7%" y="-16.2%" width="145.3%" height="145.4%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.129670516 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-6" cx="877.131407" cy="332.336876" rx="15.4387726" ry="15.4270272"></ellipse>
+        <filter x="-22.7%" y="-16.2%" width="145.3%" height="145.4%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.129670516 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-8" cx="593.438773" cy="406.427027" rx="15.4387726" ry="15.4270272"></ellipse>
+        <filter x="-22.7%" y="-16.2%" width="145.3%" height="145.4%" filterUnits="objectBoundingBox" id="filter-9">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.129670516 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-10" cx="301.438773" cy="534.427027" rx="15.4387726" ry="15.4270272"></ellipse>
+        <filter x="-22.7%" y="-16.2%" width="145.3%" height="145.4%" filterUnits="objectBoundingBox" id="filter-11">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.129670516 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M310.218014,495.862774 L324.591404,495.862774 C335.323062,495.862774 344.022791,487.163045 344.022791,476.431387 C344.022791,465.699728 335.323062,457 324.591404,457 L324.591404,457 L274.454178,457 L274.454178,457 C263.722519,457 255.022791,465.699728 255.022791,476.431387 L255.022791,476.431387 L255.022791,476.431387 C255.022791,487.163045 263.722519,495.862774 274.454178,495.862774 L290.813188,495.862774 L300.515601,505.565187 L310.218014,495.862774 Z" id="path-12"></path>
+        <filter x="-7.9%" y="-10.3%" width="115.7%" height="128.8%" filterUnits="objectBoundingBox" id="filter-13">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.078125 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop_PRE-LAUNCH-_-EARLY-ACCESS" transform="translate(0.000000, -3365.000000)">
+            <g id="5" transform="translate(-16.000000, 3366.000000)">
+                <g id="GRAPH">
+                    <g id="Group-7" transform="translate(736.223561, 382.357746) rotate(-270.000000) translate(-736.223561, -382.357746) translate(577.723561, -337.642254)" stroke="#BCBCBC" stroke-width="0.5" stroke-linecap="square" stroke-dasharray="3,5">
+                        <path d="M315.142254,-2.27373675e-13 L315.142254,1440" id="Line"></path>
+                        <path d="M158.142254,-3.41060513e-13 L158.142254,1440" id="Line"></path>
+                        <path d="M1,-2.27373675e-13 L1,1440" id="Line"></path>
+                    </g>
+                    <g id="Combined-Shape">
+                        <use fill="#008E53" xlink:href="#path-3"></use>
+                        <use fill="url(#linearGradient-2)" style="mix-blend-mode: overlay;" xlink:href="#path-3"></use>
+                    </g>
+                    <polyline id="Path-2" stroke="#116734" stroke-width="2" points="0.359375 680.096637 0.359375 608.485841 301.039062 536.247446 593.441406 408.661294 875.976562 334.449196 1158.90625 227.35013 1456 0.616893572"></polyline>
+                    <g id="Group-7" transform="translate(300.000000, 223.000000)" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square" opacity="0.192595109" stroke-dasharray="1,1">
+                        <path d="M1,311.5014 L1,459.63757" id="Line"></path>
+                        <path d="M292,185.135619 L292,459.070066" id="Line"></path>
+                        <path d="M576,110.663167 L576,459.185941" id="Line"></path>
+                        <path d="M859,0.982546069 L859,459.34073" id="Line"></path>
+                    </g>
+                    <g id="Oval-4">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-4"></use>
+                        <ellipse stroke="#FFFFFF" stroke-width="2" cx="1157.43877" cy="225.427027" rx="14.4387726" ry="14.4270272"></ellipse>
+                    </g>
+                    <g id="Oval-4">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-6"></use>
+                        <ellipse stroke="#FFFFFF" stroke-width="2" cx="877.131407" cy="332.336876" rx="14.4387726" ry="14.4270272"></ellipse>
+                    </g>
+                    <g id="Oval-4">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-9)" xlink:href="#path-8"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-8"></use>
+                        <ellipse stroke="#FFFFFF" stroke-width="2" cx="593.438773" cy="406.427027" rx="14.4387726" ry="14.4270272"></ellipse>
+                    </g>
+                    <g id="Oval-4">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-11)" xlink:href="#path-10"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-10"></use>
+                        <ellipse stroke="#FFFFFF" stroke-width="2" cx="301.438773" cy="534.427027" rx="14.4387726" ry="14.4270272"></ellipse>
+                    </g>
+                    <ellipse id="Oval-4" fill="#424559" cx="1157.14626" cy="225.142342" rx="5.14625752" ry="5.1423424"></ellipse>
+                    <ellipse id="Oval-4" fill="#424559" cx="877.131407" cy="332.336876" rx="5.14625752" ry="5.1423424"></ellipse>
+                    <ellipse id="Oval-4" fill="#424559" cx="593.146258" cy="407.142342" rx="5.14625752" ry="5.1423424"></ellipse>
+                    <ellipse id="Oval-4" fill="#424559" cx="301.146258" cy="534.142342" rx="5.14625752" ry="5.1423424"></ellipse>
+                    <g id="Combined-Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-13)" xlink:href="#path-12"></use>
+                        <use fill="#F5A623" fill-rule="evenodd" xlink:href="#path-12"></use>
+                    </g>
+                    <text id="Start" font-family="Roboto-Regular, Roboto" font-size="18" font-weight="normal" line-spacing="28" fill="#FFFFFF">
+                        <tspan x="280.711162" y="480">Start</tspan>
+                    </text>
+                    <text id="2032" font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                        <tspan x="1135.91456" y="268">2032</tspan>
+                    </text>
+                    <text id="2027" font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                        <tspan x="855.914555" y="375">2027</tspan>
+                    </text>
+                    <text id="2022" font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                        <tspan x="570.914555" y="448">2022</tspan>
+                    </text>
+                    <text id="2017" font-family="Roboto-Medium, Roboto" font-size="20" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                        <tspan x="278.914555" y="577">2017</tspan>
+                    </text>
+                </g>
+                <path d="M46,659.408701 L81.4356589,659.408701 L81.4356589,624 L46,624 L46,659.408701 Z M72.1305644,636.48314 L77.4311641,631.340165 L77.4311641,652.233242 L72.1305644,657.381158 L72.1305644,636.48314 Z M63.3816497,636.539964 L68.6806015,631.396989 L68.6806015,652.29089 L63.3816497,657.439629 L63.3816497,636.539964 Z M54.6714615,636.546552 L59.9712373,631.402754 L59.9712373,652.309007 L54.6714615,657.450335 L54.6714615,636.546552 Z" id="Page-1" fill="#FFFFFF" opacity="0.419157609"></path>
+                <text id="*-For-illustration-p" opacity="0.751811594" font-family="Roboto-Light, Roboto" font-size="14" font-weight="300" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="96" y="635">* For illustration purposes only. </tspan>
+                    <tspan x="96" y="655">  Trend will depend on actual fund performance.</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

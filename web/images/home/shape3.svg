@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="65px" viewBox="0 0 78 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 17</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-34.7273642%" y1="0.640744579%" x2="99.3172921%" y2="49.7498804%" id="linearGradient-1">
+            <stop stop-color="#F7E500" stop-opacity="0.0995527627" offset="0%"></stop>
+            <stop stop-color="#FCC844" stop-opacity="0.468722982" offset="43.1232635%"></stop>
+            <stop stop-color="#FFB66E" stop-opacity="0.693585824" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.688462409">
+        <g id="Desktop---FINAL" transform="translate(-1362.000000, -4918.000000)" fill="url(#linearGradient-1)">
+            <path d="M1369.72108,4955.77606 C1384.41421,4972.46859 1422.95196,4969.64636 1435.34263,4969.64636 C1447.73331,4969.64636 1460.53477,4963.05436 1467.91394,4955.77606 C1475.29311,4948.49777 1475.94336,4936.36934 1465.03236,4937.87831 C1454.12137,4939.38728 1446.58217,4937.87831 1435.34263,4937.87831 C1424.1031,4937.87831 1417.66675,4928.83335 1413.4647,4917.509 C1409.26266,4906.18465 1389.82479,4884.08144 1374.91519,4895.71396 C1360.0056,4907.34648 1355.02794,4939.08354 1369.72108,4955.77606 Z" id="Path-17" transform="translate(1417.126496, 4931.126496) rotate(-405.000000) translate(-1417.126496, -4931.126496) "></path>
+        </g>
+    </g>
+</svg>

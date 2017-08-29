@@ -1,0 +1,24 @@
+// includes all tags for paragraphs and titles such as header, p, span
+h1 { font-size: 80px; }
+h2 { 
+	font-size: 64px;
+	font-weight: 300;
+
+	span {
+		font-weight: 100;
+	}
+
+	@include breakpoint(tablet) {
+		font-size: 48px;
+	}
+
+	@include breakpoint(phablet) {
+		font-size: 32px;
+		line-height: 42px;
+	}
+}
+
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em; }
+h5 { font-size: 0.83em; }
+h6 { font-size: 0.67em; }
