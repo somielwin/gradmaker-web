@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="484px" height="351px" viewBox="0 0 484 351" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="504px" height="372px" viewBox="0 0 504 372" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 9</title>
+    <title>D_Pay Online</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <rect id="path-1" x="670" y="69" width="700" height="664" rx="15"></rect>
+        <filter x="-3.4%" y="-3.6%" width="106.9%" height="107.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0772192029 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="D_Pay-Online" transform="translate(-784.000000, -319.000000)">
+        <g id="D_Pay-Online" transform="translate(-773.000000, -299.000000)">
+            <rect id="Rectangle-33-Copy-2" fill="#FFFFFF" x="0" y="0" width="1440" height="800"></rect>
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
             <g id="Group-9" transform="translate(761.000000, 319.000000)">
                 <g id="Group-2" transform="translate(29.187230, 0.000000)">
                     <g id="Group-5" transform="translate(167.642171, 0.000000)">
