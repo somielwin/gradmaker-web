@@ -1187,6 +1187,9 @@ footer {
       min-height: 480px; } }
   .section1.sec-full {
     height: 100vh; }
+    @media (max-width: 640px) {
+      .section1.sec-full {
+        height: calc(100vh - 100px); } }
   .section1:after {
     content: '';
     position: absolute;

@@ -46,6 +46,10 @@
 
 	&.sec-full {
 		height: 100vh;
+
+		@include breakpoint(phablet) {
+			height: calc(100vh - 100px);
+		}
 	}
 
 
