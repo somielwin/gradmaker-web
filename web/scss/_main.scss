@@ -1070,6 +1070,10 @@
 	height: 0;
 	padding-bottom: 50%;
 
+	@include breakpoint(tablet) {
+		padding-bottom: 65%;
+	}
+
 	@include breakpoint(tablet2) {
 		padding-top: 40px;
 	}
