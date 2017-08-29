@@ -1095,6 +1095,9 @@ footer {
     background: -webkit-linear-gradient(#04b972, #01bc75);
     background: -o-linear-gradient(#04b972, #01bc75);
     background: linear-gradient(#04b972, #01bc75); }
+    @media (max-width: 767px) {
+      .section1:after {
+        height: 23px; } }
   .section1 .table-wrap {
     min-height: 640px; }
     @media (max-width: 767px) {

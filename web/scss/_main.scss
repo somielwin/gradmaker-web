@@ -58,6 +58,10 @@
 		height: 40px;
 		z-index: 2;
 		background: linear-gradient(#04b972, #01bc75);
+
+		@include breakpoint(tablet2) {
+			height: 23px;
+		}
 	}
 
 	.table-wrap {
@@ -439,6 +443,8 @@
 
 		@include breakpoint(tablet2) {
 			padding: 0px 0px;
+
+			
 		}
 
 		@include breakpoint(mobilesmall) {
