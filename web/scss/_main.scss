@@ -206,6 +206,7 @@
 	position: relative;
 	overflow: hidden;
 	height: calc(100vh - 74px);
+	width: 100%;
 
 }
 
@@ -444,7 +445,7 @@
 		@include breakpoint(tablet2) {
 			padding: 0px 0px;
 
-			
+
 		}
 
 		@include breakpoint(mobilesmall) {
@@ -950,6 +951,10 @@
 
 		small {
 			font-size: 36px;
+
+			@include breakpoint(phablet) {
+				font-size: 20px;
+			}
 		}
 	}
 
@@ -2316,7 +2321,7 @@
 	width: 100%;
 	height: 100vh;
 	background: $coWhite;
-	z-index: 2001;
+	z-index: 3006;
 	visibility: hidden;
 	opacity: 0;
 	@include transition(all 0.4s ease);
@@ -2329,6 +2334,7 @@
 	.popup-content {
 		max-width: 1200px;
 		margin: 0 auto;
+		padding: 0px 15px;
 	}
 
 	.table-cell {
@@ -2342,38 +2348,105 @@
 
 	h2 {
 		margin-bottom: 30px;
+
+		@include breakpoint(tablet) {
+			font-size: 48px;
+		}
+
+		@include breakpoint(tablet2) {
+			font-size: 42px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		@include breakpoint(phablet) {
+			font-size: 32px;
+			line-height: 40px;
+
+		}
 	}
 
 	p {
-		font-size: 24px;
-		line-height: 38px;
+		font-size: 20px;
+		line-height: 30px;
+
+		@include breakpoint(tablet2) {
+			font-size: 16px;
+			line-height: 24px;
+		}
+		
 	}
 }
 
 .popup-left {
-	width: 35%;
-	padding-top: 60px;
+	width: 45%;
+	padding-top: 100px;
+
+	@include breakpoint(tablet2) {
+		clear: both;
+		float: none;
+		width: 100%;
+		padding-top: 40px;
+	}
+
+	@include breakpoint(phablet) {
+		padding-top: 0px;
+		padding-bottom: 15px;
+	}
+
+	p {
+		@include breakpoint(tablet2) {
+			display: none;
+		}
+	}
 }
 
 .popup-right {
 	position: relative;
 	right: 0;
-	width: 55%;
-	height: 0;
-	padding: 50px 60px 45%;
+	width: 52%;
+	padding: 50px 60px 30px;
 	background: #FFFFFF;
 	box-shadow: 0 0 16px 0 rgba(0,0,0,0.08);
 	border-radius: 15px;
 	text-align: center;
 
 
+
+	@include breakpoint(tablet) {
+		padding: 50px 30px 30px;
+	}
+
+	@include breakpoint(tablet2) {
+		clear: both;
+		float: none;
+		width: 100%;
+		max-width: 335px;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+
+	@include breakpoint(phablet) {
+		padding: 20px 15px 10px;
+	}
+
+
 	figure {
 		padding: 0;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		width: 100%;
+		height: auto;
+
+		@include breakpoint(phablet) {
+			margin-bottom: 15px;
+			margin-top: 20px;
+		}
 
 		img {
 			display: inline-block;
-			max-width: 100%;
-
+			width: 100%;
+			height: auto;
 		}
 	}
 
@@ -2384,6 +2457,14 @@
 		margin-bottom: 30px;
 		display: inline-block;
 		position: relative;
+
+		@include breakpoint(tablet2) {
+			font-size: 28px;
+			margin-bottom: 15px;
+
+		}
+
+
 
 		&:after {
 			content:'';
@@ -2430,6 +2511,14 @@
 	margin-top: -20px;
 	top: 0;
 	margin-left: -20px;
+
+	@include breakpoint(phablet) {
+		width: 30px;
+		height: 30px;
+		line-height: 26px;
+		margin-top: -15px;
+		margin-left: -15px;
+	}
 }
 
 

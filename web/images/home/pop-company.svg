@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="418px" height="310px" viewBox="0 0 418 310" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="418px" height="347px" viewBox="0 0 418 347" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
     <title>Group 4</title>
     <desc>Created with Sketch.</desc>
@@ -55,8 +55,8 @@
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="D_Company" transform="translate(-811.000000, -306.000000)">
-            <g id="Group-4" transform="translate(794.000000, 306.000000)">
-                <g id="building">
+            <g id="Group-4" transform="translate(791.000000, 306.000000)">
+                <g id="building" transform="translate(3.000000, 0.000000)">
                     <g transform="translate(47.322581, 0.000000)" id="Group-13">
                         <g transform="translate(0.509549, 0.000000)">
                             <g id="Group-6" transform="translate(0.454080, 0.000000)">
@@ -411,7 +411,10 @@
                         </g>
                     </g>
                 </g>
-                <g id="people" transform="translate(50.000000, 141.000000)">
+                <text id="Over-22-million-cust" font-family="Roboto-Bold, Roboto" font-size="18" font-weight="bold" line-spacing="16" letter-spacing="1.80000007" fill="#424559">
+                    <tspan x="99.1367231" y="343.974002">Over 22 million customers</tspan>
+                </text>
+                <g id="people" transform="translate(53.000000, 141.000000)">
                     <g id="Group-3" transform="translate(0.000000, 122.951239)">
                         <mask id="mask-92" fill="white">
                             <use xlink:href="#path-91"></use>
@@ -500,7 +503,7 @@
                     <path d="M152.800059,10.4008643 C152.800059,10.4008643 142.057,14.6864615 137.241093,21.5624541 C137.241093,21.5624541 130.875787,31.6649206 127.093318,31.0333748 C127.093318,31.0333748 136.860353,33.5157426 142.043402,26.9101966 L154.228589,22.5898492 L152.800059,10.4008643 Z" id="Fill-79" fill="#79464D" mask="url(#mask-94)"></path>
                     <path d="M167.892619,5.61448746 C167.892619,5.61448746 159.5662,2.17951289 153.303633,5.51628057 C153.303633,5.51628057 146.205554,9.9099054 143.534331,7.88910993 C143.534331,7.88910993 147.906041,15.9670037 154.349912,12.987558 L165.321114,14.6064607 L167.892619,5.61448746 Z" id="Fill-80" fill="#79464D" mask="url(#mask-94)"></path>
                 </g>
-                <g id="globe" transform="translate(333.526882, 3.510258)">
+                <g id="globe" transform="translate(336.526882, 3.510258)">
                     <g id="Page-1" transform="translate(0.000000, 7.020516)">
                         <path d="M100.908852,49.9049064 C100.908852,77.4665727 78.4974315,99.8099433 50.8518221,99.8099433 C23.2057764,99.8099433 0.794792182,77.4665727 0.794792182,49.9049064 C0.794792182,22.3432401 23.2057764,0.000304476705 50.8518221,0.000304476705 C78.4974315,0.000304476705 100.908852,22.3432401 100.908852,49.9049064" id="Fill-1" fill="#2666C4"></path>
                         <path d="M47.3152871,64.0731644 C46.7459267,64.3567627 44.8947419,65.6346949 44.8947419,66.0600924 C44.8947419,66.4863598 44.0404832,69.8934541 44.0404832,69.8934541 L44.0404832,71.3131855 C44.0404832,71.3131855 45.3223076,72.0226162 45.6778851,71.3131855 C46.033899,70.6033198 47.3152871,67.8508504 47.3152871,67.8508504 L47.3152871,64.0731644 Z" id="Fill-3" fill="#6ABC0C"></path>
