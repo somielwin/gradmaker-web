@@ -64,7 +64,7 @@ $(document).ready(function() {
     	$("html, body").animate({ scrollTop: $('#section7').offset().top - (wH - 2) }, 700);
     });
 
-    $('.btn-get-app').click(function(e){
+    $('.btn-get-app, .btn-start').click(function(e){
     	e.preventDefault();
     	var wH = $('header').outerHeight(false);
     	$("html, body").animate({ scrollTop: $('#section7').offset().top - (wH - 2) }, 700);
