@@ -3152,7 +3152,9 @@ footer {
     .popup-right figure img {
       display: inline-block;
       width: auto;
-      height: auto; }
+      height: auto;
+      max-height: 100%;
+      max-width: 100%; }
   .popup-right h4 {
     font-size: 36px;
     color: #00673C;
