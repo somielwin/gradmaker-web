@@ -1914,7 +1914,9 @@ footer {
   width: 50%; }
   @media (max-width: 991px) {
     .col-wrap {
-      width: 100%; } }
+      width: 100%;
+      float: none;
+      clear: both; } }
 
 @media (max-width: 991px) {
   .compa-content {
