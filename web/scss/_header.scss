@@ -193,6 +193,7 @@ nav {
 					@include transition(all 0.4s linear);
 					opacity: 1;
 				}
+
 			}
 
 			a {
@@ -201,6 +202,10 @@ nav {
 				font-size: 14px;
 				font-weight: 400;
 				letter-spacing: 1px;
+
+				&:hover {
+					color: #F3A624;
+				}
 			}
 		}
 	}
