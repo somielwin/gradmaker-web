@@ -29,7 +29,7 @@
 						<h4>Product</h4>
 						<p>You are not just investing but you are also insured. <br>In case anything happens.</p>
 
-						<figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/pop-product.png" alt=""></figure>
+						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-product.png" alt=""></figure>
 					</div>
 				</div>
 			</div>
@@ -50,7 +50,7 @@
 						<h4>Company</h4>
 						<p>Manulife is a leading global financial services company with over C$47 Billion Market Capitalization</p>
 
-						<figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/pop-company.svg" alt=""></figure>
+						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-company.svg" alt=""></figure>
 					</div>
 				</div>
 			</div>
@@ -72,7 +72,7 @@
 						<h4>Security</h4>
 						<p>Safeguards are in place to protect your <br>data and transactions.</p>
 
-						<figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/pop-security.svg" alt=""></figure>
+						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-security.svg" alt=""></figure>
 					</div>
 				</div>
 			</div>
@@ -94,7 +94,7 @@
 						<h4>Pay it Forward</h4>
 						<p>Our vision is to create a world where all children, rich and poor, get access to education.</p>
 
-						<figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/pop-payit.svg" alt=""></figure>
+						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-payit.svg" alt=""></figure>
 					</div>
 				</div>
 			</div>
@@ -116,7 +116,7 @@
 						<h4>Rewards</h4>
 						<p>Earn additional units to your account on the first anniversary of each purchase.</p>
 
-						<figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/pop-reward.svg" alt=""></figure>
+						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-reward.svg" alt=""></figure>
 					</div>
 				</div>
 			</div>
@@ -138,7 +138,7 @@
 						<h4>Pay Online</h4>
 						<p>Fully online payments in minutes! Invest on the go, anytime.</p>
 
-						<figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/pop-payonline.svg" alt=""></figure>
+						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-payonline.svg" alt=""></figure>
 					</div>
 				</div>
 			</div>
@@ -790,7 +790,6 @@
 <script type="text/javascript">
 	$(document).ready(function () {
 		
-
 		$('.carousel-cocreate').owlCarousel({
 	        loop: false,
 	        margin: 0,
@@ -942,6 +941,10 @@
 
 	    	$('.popup-wrap').removeClass('active');
 	    	$(_this).addClass('active');
+
+	    	console.log(_this);
+
+			$(_this).find('.lazyload-trigger').unveil();
 	    });
 
 	    $(document).on('click', '.popup-close', function(e){
