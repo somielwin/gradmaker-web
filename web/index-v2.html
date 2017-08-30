@@ -1013,6 +1013,8 @@
 							setTimeout(function(){
 								isBusyFill = false;
 							},500);
+
+							return clearInterval(timeline);
 						}
 						
 					} else {
@@ -1022,6 +1024,8 @@
 							setTimeout(function(){
 								isBusyFill = false;
 							},500);
+
+							return clearInterval(timeline);
 						}
 					}
 				}
