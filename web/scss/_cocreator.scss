@@ -237,7 +237,7 @@
 
 		> li {
 			display: inline-block;
-			width: 19.7%;
+			width: 19.6%;
 			text-align: center;
 			vertical-align: top;
 			margin-bottom: 55px;
@@ -251,11 +251,11 @@
 			}
 
 			@include breakpoint(desktop) {
-				width: 24%;
+				width: 24.5%;
 			}
 
 			@include breakpoint(tablet) {
-				width: 32.7%;
+				width: 32%;
 			}
 
 			@include breakpoint(phablet) {
