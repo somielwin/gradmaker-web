@@ -101,6 +101,25 @@
 		@include breakpoint(tablet2) {
 			margin-bottom: 10px;
 		}
+
+		@include breakpoint(phablet) {
+
+			span {
+				display: block;
+			}
+		}
+	}
+
+	.sec-head-title {
+
+		@include breakpoint(phablet) {
+			max-width: 320px;
+		}
+
+		@include breakpoint(mobile) {
+			max-width: 250px;
+			margin: 0 auto;
+		}
 	}
 }
 
