@@ -58,6 +58,12 @@ $(document).ready(function() {
         $('.hiding').css({'opacity' : 1});
     }
 
+    $('.lazyload').unveil(200, function() {
+            $(this).load(function() {
+                this.style.opacity = 1;
+            });
+        });
+
 	$('.header-hamburger').click(function(e){
 		e.preventDefault();
         var _this = $(this);
