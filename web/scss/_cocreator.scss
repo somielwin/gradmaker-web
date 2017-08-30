@@ -1,0 +1,725 @@
+.family {
+	position: absolute;
+	bottom: -27px;
+	z-index: 9;
+	left: 50%;
+	margin-left: -60px;
+
+	@include breakpoint(tablet) {
+		max-width: 400px;
+		bottom: -19px;
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	@include breakpoint(tablet2) {
+		max-width: 300px;
+		bottom: -14px;
+		left: 50%;
+		margin-left: -150px;
+	}
+
+	@include breakpoint(phablet) {
+		width: 260px;
+		margin-left: -130px;
+		bottom: -13px;
+	}
+
+	
+}
+
+.city {
+	position: absolute;
+	left: 50%;
+	bottom: 23px;
+	@include transform(translate(-50%, 0));
+
+	@include breakpoint(tablet2) {
+		bottom: 10px;
+	}
+
+	@include breakpoint(phablet) {
+		right: -410px;
+		left: inherit;
+		@include transform(translate(0, 0) scale(0.7));
+		transform-origin: bottom;
+	}
+
+	@include breakpoint(mobilesmall) {
+		right: -438px;
+	}
+}
+
+.heart-bulk {
+	position: absolute;
+	width: 98px;
+	height: 132px;
+	z-index: 100;
+	left: 50%;
+	margin-left: 190px;
+	bottom: 380px;
+	-webkit-animation: heartbeatUp 5s linear infinite;
+	-moz-animation: heartbeatUp 5s linear infinite;
+	animation: heartbeatUp  5s linear infinite;
+
+	@include breakpoint(tablet) {
+		margin-left: 110px;
+		bottom: 230px;
+	}
+
+	@include breakpoint(phablet) {
+		margin-left: -29px;
+    	bottom: 110px;
+	}
+
+	.b-heart1 {
+		bottom: auto;
+		left: auto;
+		right: auto;
+		top: auto;
+		margin-left: 0;
+		position: absolute;
+		transform-origin: center center;
+
+		img {
+			@include breakpoint(phablet) {
+				width: 50%;
+			}
+		}
+
+		&.heart-anim3 {
+			left: 10px;
+			bottom: 0;
+
+			@include breakpoint(phablet) {
+				bottom: 40px;
+			}
+		}
+
+		&.heart-anim1 {
+			opacity: 0.27;
+			@include transform(scale(0.9));
+			-webkit-animation: heartbeatX 5s linear infinite;
+			-moz-animation: heartbeatX  5s linear infinite;
+			animation: heartbeatX  5s linear infinite;
+
+			@include breakpoint(phablet) {
+				bottom: 70px;
+			}
+		}
+
+		&.heart-anim2 {
+			right: 0px;
+			bottom: 45px;
+			opacity: 0.5;
+			@include transform(scale(0.7));
+			-webkit-animation: heartbeatY 5s linear infinite;
+			-moz-animation: heartbeatY  5s linear infinite;
+			animation: heartbeatY 5s linear infinite;
+
+			@include breakpoint(phablet) {
+				bottom: 60px;
+			}
+		}
+
+		
+	}
+}
+
+.co-creator {
+
+	.section1 {
+		margin-bottom: 50px;
+
+		@include breakpoint(tablet2) {
+			margin-bottom: 0;
+		}
+
+		&.sec-full {
+			overflow: visible;
+
+			@include breakpoint(phablet) {
+				height: calc(100vh - 10px);
+			}
+		}
+
+		.banner-text p {
+
+			@include breakpoint(tablet2) {
+				display: block;
+				font-size: 15px;
+				line-height: 24px;
+				padding: 0px 30px;
+				margin-bottom: 15px;
+
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.section2 {
+		padding-top: 60px;
+		min-height: auto;
+	}
+
+	.clouds1 {
+		bottom: 210px;
+
+		@include breakpoint(tablet2) {
+
+		}
+	}
+
+	.clouds2 {
+		margin-top: -240px;
+	}
+}
+
+.sec-title {
+	font-size: 12px;
+	color: #424559;
+	letter-spacing: 8.32px;
+	text-transform: uppercase;
+	text-align: center;
+
+	@include breakpoint(mobile) {
+		font-size: 10px;
+	}
+
+	span {
+		background: $coWhite;
+		display: inline-block;
+		position: relative;
+		padding: 0px 25px;
+
+		@include breakpoint(mobile) {
+			padding: 0px 15px;
+		}
+
+		&:after, &:before {
+			content:'';
+			display: block;
+			float: none;
+			clear: both;
+			width: 50px;
+			height: 14px;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			background: url('../images/co-creator/tiles.svg') no-repeat;
+
+			@include breakpoint(mobile) {
+				width: 35px;
+				background-size: 100%;
+				top: 3px;
+			}
+		}
+
+		&:before {
+			right: calc(100% + 8px);
+			left: inherit;
+		}
+	}
+}
+
+
+.co-creator-list {
+	margin-top: 60px;
+
+	> ul {
+		margin: 0px -1%;
+
+		> li {
+			display: inline-block;
+			width: 19.7%;
+			text-align: center;
+			vertical-align: top;
+			margin-bottom: 55px;
+			@include transition(all 0.4s ease);
+			opacity: 1;
+			@include transform(translate(0, 0px));
+
+			&.anim {
+				opacity: 0;
+				@include transform(translate(0, 30px));
+			}
+
+			@include breakpoint(desktop) {
+				width: 24.7%;
+			}
+
+			@include breakpoint(tablet) {
+				width: 32.7%;
+			}
+
+			@include breakpoint(phablet) {
+				margin-bottom: 40px;
+			}
+
+			@include breakpoint(phablet) {
+				margin-bottom: 30px;
+			}
+
+		}
+	}
+
+	.cc-img {
+		width: 180px;
+		height: 180px;
+		margin-bottom: 20px;
+
+		@include breakpoint(desktoplarge) {
+			width: 160px;
+			height: 160px;
+		}
+
+		@include breakpoint(desktop) {
+			width: 140px;
+			height: 140px;
+		}
+
+		@include breakpoint(phablet) {
+			width: 80px;
+			height: 80px;
+
+		}
+
+		@include breakpoint(mobile) {
+			margin-bottom: 5px;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.cc-text {
+
+		h5 {
+			font-size: 18px;
+
+			@include breakpoint(phablet) {
+				font-size: 15px;
+			}
+
+			@include breakpoint(mobile) {
+				font-size: 12px;
+			}
+		}
+
+		h6 {
+			font-size: 14px;
+
+			@include breakpoint(phablet) {
+				font-size: 12px;
+			}
+
+			@include breakpoint(mobile) {
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+
+.testimonial-list {
+	margin-top: 60px;
+
+	> ul {
+
+		li {
+			width: 49%;
+			display: inline-block;
+			margin-bottom: 55px;
+			vertical-align: top;
+
+			&:last-child, &:nth-last-child(2) {
+			 	margin-bottom: 0;
+
+			 	
+			}
+
+			&:nth-last-child(2) {
+
+				@include breakpoint(tablet) {
+			 		margin-bottom: 55px;
+			 	}
+			}
+
+			@include breakpoint(tablet) {
+				width: 100%;
+				float: none;
+				clear: both;
+				display: block;	
+			}
+		}
+	}
+}
+
+.testi-wrap {
+
+	.fl {
+		width: 38%;
+
+		@include breakpoint(tablet2) {
+			width: 100%;
+			float: none;
+			clear: both;
+		}
+
+		.cc-img {
+
+			background: linear-gradient(#f3f3f3, #ececed);
+
+			@include breakpoint(tablet2) {
+				width: 140px;
+				height: 140px;
+			}
+		}
+
+		.cc-text {
+
+
+			h5 {
+				@include breakpoint(phablet) {
+					font-size: 16px;
+				}
+
+				@include breakpoint(mobile) {
+					font-size: 16px;
+				}
+			}
+
+			h6 {
+				@include breakpoint(phablet) {
+					font-size: 12px;
+				}
+
+				@include breakpoint(mobile) {
+					font-size: 12px;
+				}
+			}
+		}
+
+	}
+
+	.fr {
+		width: 62%;
+
+		@include breakpoint(tablet2) {
+			width: 100%;
+			float: none;
+			clear: both;
+		}
+
+		.cc-text {
+			text-align: left;
+			padding-left: 15px;
+			padding-right: 30px;
+
+			.icon-blockquote {
+				margin-top: 20px;
+
+				@include breakpoint(tablet2) {
+					margin-top: 30px;
+				}
+			}
+
+
+			@include breakpoint(tablet) {
+				padding-right: 15px;
+				p {
+					font-size: 22px;
+					line-height: 34px;
+				}
+			}
+
+			@include breakpoint(phablet) {
+				padding-right: 15px;
+				p {
+					font-size: 18px;
+					line-height: 26px;
+				}
+			}
+
+		}
+
+		.cc-excerpt {
+
+			@include breakpoint(tablet2) {
+				text-align: center;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&:after {
+		content:'';
+		display: block;
+		float: none;
+		clear: both;
+	}
+
+	.cc-img {
+		width: 180px;
+		height: 180px;
+		margin-bottom: 20px;
+
+		@include breakpoint(desktoplarge) {
+			width: 160px;
+			height: 160px;
+		}
+
+		@include breakpoint(desktop) {
+			width: 140px;
+			height: 140px;
+		}
+
+		@include breakpoint(phablet) {
+			width: 88px;
+			height: 88px;
+
+		}
+
+		@include breakpoint(mobile) {
+			margin-bottom: 5px;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.cc-text {
+
+		h5 {
+			font-size: 18px;
+
+			@include breakpoint(phablet) {
+				font-size: 15px;
+			}
+
+			@include breakpoint(mobile) {
+				font-size: 12px;
+			}
+		}
+
+		h6 {
+			font-size: 14px;
+
+			@include breakpoint(phablet) {
+				font-size: 12px;
+			}
+
+			@include breakpoint(mobile) {
+				font-size: 10px;
+			}
+		}
+	}
+}
+
+.wavy-loader {
+	margin-bottom: 15px;
+	opacity: 0;
+	@include transition(opacity 0.4s ease);
+
+	&.active {
+		opacity: 1;
+	}
+}
+
+
+.wavy-loader span:first-child {
+	-webkit-animation:wavy-loader 1.1s .1s cubic-bezier(0.215,0.61,0.355,1) infinite;
+	-moz-animation:wavy-loader 1.1s .1s cubic-bezier(0.215,0.61,0.355,1) infinite;
+	animation:wavy-loader 1.1s .1s cubic-bezier(0.215,0.61,0.355,1) infinite;
+}
+
+.wavy-loader span:nth-child(2) {
+	-webkit-animation:wavy-loader 1.1s .2s cubic-bezier(0.215,0.61,0.355,1) infinite;
+	-moz-animation:wavy-loader 1.1s .2s cubic-bezier(0.215,0.61,0.355,1) infinite;
+	animation:wavy-loader 1.1s .2s cubic-bezier(0.215,0.61,0.355,1) infinite;
+}
+
+.wavy-loader span:nth-child(3) {
+	-webkit-animation:wavy-loader 1.1s .3s cubic-bezier(0.215,0.61,0.355,1) infinite;
+	-moz-animation:wavy-loader 1.1s .3s cubic-bezier(0.215,0.61,0.355,1) infinite;
+	animation:wavy-loader 1.1s .3s cubic-bezier(0.215,0.61,0.355,1) infinite;
+}
+
+.wavy-loader span {
+	display:inline-block;
+	position:relative;
+	border-radius:50%;
+	width: 10px;
+	height: 10px;
+	background-color: #04b972;
+	margin:0 5px;
+
+}
+
+@keyframes heartbeatUp
+{
+  0%{
+    @include transform(scale(0.8) translate(0, -15px));
+    opacity: 1;
+
+  }
+  20%
+  {
+    @include transform(scale(1) translate(0, -20px));
+
+  
+  }
+  40%
+  {
+    @include transform(scale(0.8) translate(0, -25px));
+
+  }
+  60%
+  {
+    @include transform(scale(1) translate(0, -30px));
+
+  }
+  90%
+  {
+    @include transform(scale(0.8) translate(0, -35px));
+    opacity: 0;
+
+  }
+  100%
+  {
+    @include transform(scale(0.8) translate(0, -35px));
+    opacity: 0;
+
+  }
+}
+
+@keyframes heartbeatX
+{
+  0%{
+    @include transform(translate(0, -25px) scale(0.9));
+  }
+  20%
+  {
+    @include transform(translate(0, -30px) scale(0.9));
+  }
+  40%
+  {
+    @include transform(translate(0, -35px) scale(0.9));
+  }
+  60%
+  {
+    @include transform(translate(0, -40px) scale(0.9));
+  }
+  90%
+  {
+    @include transform(translate(0, -45px) scale(0.9));
+  }
+  100%
+  {
+    @include transform(translate(0, -45px) scale(0.9));
+  }
+}
+
+@keyframes heartbeatY
+{
+  0%{
+    @include transform(translate(0, -15px) scale(0.7));
+    opacity: 1;
+  }
+  20%
+  {
+    @include transform(translate(0, -20px) scale(0.7));
+  }
+  40%
+  {
+    @include transform(translate(0, -25px) scale(0.7));
+  }
+  60%
+  {
+    @include transform(translate(0, -30px) scale(0.7));
+  }
+  90%
+  {
+    @include transform(translate(0, -35px) scale(0.7));
+    opacity: 0;
+  }
+  100%
+  {
+    @include transform(translate(0, -35px) scale(0.7));
+    opacity: 0;
+  }
+}
+
+
+@-webkit-keyframes wavy-loader{
+	0%{transform:translateY(2px)}
+	3%{transform:translateY(4px)}
+	6%{transform:translateY(6px)}
+	9%{transform:translateY(8px)}
+	12%{transform:translateY(10px)}
+	15%{transform:translateY(-2px)}
+	18%{transform:translateY(-4px)}
+	21%{transform:translateY(-6px)}
+	24%{transform:translateY(-8px)}
+	27%{transform:translateY(-10px)}
+	30%{transform:translateY(1px)}
+	33%{transform:translateY(2px)}
+	36%{transform:translateY(3px)}
+	39%{transform:translateY(-1px)}
+	42%{transform:translateY(-2px)}
+	45%{transform:translateY(-3px)}
+	48%{transform:translateY(0px)}
+	100%{transform:translateY(0px)}
+}
+
+@-moz-keyframes wavy-loader{
+	0%{transform:translateY(2px)}
+	3%{transform:translateY(4px)}
+	6%{transform:translateY(6px)}
+	9%{transform:translateY(8px)}
+	12%{transform:translateY(10px)}
+	15%{transform:translateY(-2px)}
+	18%{transform:translateY(-4px)}
+	21%{transform:translateY(-6px)}
+	24%{transform:translateY(-8px)}
+	27%{transform:translateY(-10px)}
+	30%{transform:translateY(1px)}
+	33%{transform:translateY(2px)}
+	36%{transform:translateY(3px)}
+	39%{transform:translateY(-1px)}
+	42%{transform:translateY(-2px)}
+	45%{transform:translateY(-3px)}
+	48%{transform:translateY(0px)}
+	100%{transform:translateY(0px)}
+}
+	
+@keyframes wavy-loader{
+	0%{transform:translateY(2px)}
+	3%{transform:translateY(4px)}
+	6%{transform:translateY(6px)}
+	9%{transform:translateY(8px)}
+	12%{transform:translateY(10px)}
+	15%{transform:translateY(-2px)}
+	18%{transform:translateY(-4px)}
+	21%{transform:translateY(-6px)}
+	24%{transform:translateY(-8px)}
+	27%{transform:translateY(-10px)}
+	30%{transform:translateY(1px)}
+	33%{transform:translateY(2px)}
+	36%{transform:translateY(3px)}
+	39%{transform:translateY(-1px)}
+	42%{transform:translateY(-2px)}
+	45%{transform:translateY(-3px)}
+	48%{transform:translateY(0px)}
+	100%{transform:translateY(0px)}
+}

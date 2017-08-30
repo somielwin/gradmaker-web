@@ -16,6 +16,14 @@
 
 // Above the fold
 
+.hiding {
+	opacity: 0;
+}
+
+.visible {
+	opacity: 1;
+}
+
 .btn {
 	border-radius: 100px;
 	font-weight: 400;
@@ -23,6 +31,7 @@
 	padding: 10px 30px;
 	display: inline-block;
 	border: 1px solid #ccc;
+	color: $defaultColor;
 
 	@include breakpoint(tablet2) {
 		font-size: 18px;
@@ -33,6 +42,11 @@
 	max-width: 1090px;
 	margin: 0 auto;
 	padding: 0px 15px;
+
+	&.max-container {
+		max-width: 1250px;
+
+	}
 }
 
 .section1 {
@@ -1202,8 +1216,8 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
-    left: 50%;
-    transform: translate(-50%, 0);
+    /*left: 50%;
+    transform: translate(-50%, 0);*/
 
     @include breakpoint(phablet) {
     	display: none;
@@ -1666,6 +1680,10 @@
 
 		@include breakpoint(mobile) {
 			font-size: 12px;
+		}
+
+		span {
+			display: block;
 		}
 	}
 
@@ -2668,7 +2686,9 @@
 		margin: 0px auto;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
-
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
 
 	}
 

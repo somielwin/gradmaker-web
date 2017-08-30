@@ -239,6 +239,9 @@
   @if $point == maxwidth {
     @media (max-width: $maxWidth) { @content; }
   }
+  @else if $point == desktoplarge {
+    @media (max-width: 1200px) { @content; }
+  }
   @else if $point == desktop {
     @media (max-width: 1024px) { @content; }
   }
@@ -260,7 +263,7 @@
   }
 
   @else if $point == mobilesmall {
-    @media (max-width: 400px)  { @content; }
+    @media (max-width: 374px)  { @content; }
   }
   
 }

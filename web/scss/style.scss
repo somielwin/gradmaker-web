@@ -7,11 +7,16 @@
 @import 'reset'; // this includes all normalize or reset css
 @import 'typography'; // for the paragraphs including header, p, line-height,etc
 
+
 // unique imports
 @import 'pace'; // for pace preloader
+@import 'animate'; // for all embedded fonts
 
 // all customized styles
 @import 'header'; // the main style css
 @import 'footer'; // the main style css
 @import 'main'; // the main style css
+
+@import 'cocreator'; // the co-creator style css
+@import 'contact'; // the contact us style css
 @import 'mobile'; // the main style css
