@@ -273,6 +273,7 @@
 		width: 180px;
 		height: 180px;
 		margin-bottom: 20px;
+		background: linear-gradient(#f3f3f3, #ececed);
 
 		@include breakpoint(desktoplarge) {
 			width: 160px;

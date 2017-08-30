@@ -6151,7 +6151,11 @@ footer {
   .co-creator-list .cc-img {
     width: 180px;
     height: 180px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#ececed));
+    background: -webkit-linear-gradient(#f3f3f3, #ececed);
+    background: -o-linear-gradient(#f3f3f3, #ececed);
+    background: linear-gradient(#f3f3f3, #ececed); }
     @media (max-width: 1200px) {
       .co-creator-list .cc-img {
         width: 160px;
