@@ -890,6 +890,9 @@
 	        e.preventDefault();
 	        var wH = $('header').outerHeight(false);
 	        $("html, body").animate({ scrollTop: $('#section7').offset().top - (wH - 2) }, 700);
+
+	        $('.mobile-menu').removeClass('active');
+	        $('.header-hamburger').removeClass('active');
 	    });
 
 	    $('.btn-get-app, .btn-start').click(function(e){
