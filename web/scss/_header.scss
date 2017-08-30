@@ -349,3 +349,11 @@ nav {
 .header-hamburger.active span:after {
  	@include transform(rotate(-45deg));
 }
+
+.innerpage-wrap {
+	padding: 60px 0;
+}
+
+.inner-bg {
+	background: linear-gradient(#f3f3f3, #ededed);
+}

@@ -901,6 +901,15 @@ nav {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
+.innerpage-wrap {
+  padding: 60px 0; }
+
+.inner-bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#ededed));
+  background: -webkit-linear-gradient(#f3f3f3, #ededed);
+  background: -o-linear-gradient(#f3f3f3, #ededed);
+  background: linear-gradient(#f3f3f3, #ededed); }
+
 footer {
   z-index: 2;
   position: relative;
@@ -1433,6 +1442,20 @@ footer {
   @media (max-width: 767px) {
     .sec-wrap {
       padding: 40px 0; } }
+
+.sec-head-title h1 {
+  margin-bottom: 30px; }
+  @media (max-width: 767px) {
+    .sec-head-title h1 {
+      margin-bottom: 10px; } }
+  @media (max-width: 767px) {
+    .sec-head-title h1 {
+      font-size: 42px;
+      line-height: 50px; } }
+  @media (max-width: 640px) {
+    .sec-head-title h1 {
+      font-size: 32px;
+      line-height: 42px; } }
 
 .sec-head-title h2 {
   margin-bottom: 30px; }
@@ -2777,13 +2800,11 @@ footer {
       visibility: hidden; } }
   .carousel-cocreate .owl-dots .owl-dot {
     width: 90px;
-    border-radius: 4px;
-    height: 3px;
+    height: 8px;
     display: inline-block;
     margin: 0px 10px;
     position: relative;
-    background: #00673C;
-    opacity: 0.10;
+    background: transparent;
     overflow: hidden;
     -webkit-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
@@ -2795,11 +2816,12 @@ footer {
         width: 60px; } }
     .carousel-cocreate .owl-dots .owl-dot:after {
       content: '';
-      width: 0;
+      width: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
+      height: 3px;
+      border-radius: 4px;
       background: #00673C;
       opacity: 0.10;
       -webkit-transition: all 0.4s linear;
@@ -3015,13 +3037,11 @@ footer {
   bottom: -30px; }
   .dream-dots .dream-dot {
     width: 80px;
-    border-radius: 4px;
-    height: 3px;
+    height: 8px;
     display: inline-block;
     margin: 0px 10px;
     position: relative;
-    background: #ffffff;
-    opacity: 0.10;
+    background: transparent;
     overflow: hidden;
     -webkit-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
@@ -3034,14 +3054,18 @@ footer {
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
+      height: 3px;
+      width: 100%;
       background: #ffffff;
       opacity: 0.10;
+      border-radius: 4px;
       -webkit-transition: all 0.4s linear;
       -moz-transition: all 0.4s linear;
       -ms-transition: all 0.4s linear;
       -o-transition: all 0.4s linear;
       transition: all 0.4s linear; }
+    .dream-dots .dream-dot span {
+      opacity: 0; }
     .dream-dots .dream-dot:hover {
       opacity: 0.8; }
       .dream-dots .dream-dot:hover:after {
@@ -3250,6 +3274,9 @@ footer {
       margin: 0px auto;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden; } }
+  @media (max-width: 480px) {
+    #dream-carousel-mobile {
+      max-width: 340px; } }
   @media (max-width: 480px) {
     #dream-carousel-mobile {
       height: 300px; } }

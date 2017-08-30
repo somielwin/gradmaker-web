@@ -932,9 +932,17 @@
 		  	var rotate, timeline;
 
 			rotate = function() {
-				return $('#dream-carousel-mobile .dc-item:first-child').fadeOut(400, 'swing', function() {
-				return $('#dream-carousel-mobile .dc-item:first-child').appendTo('#dream-carousel-mobile').hide();
-				}).fadeIn(400, 'swing');
+				// return $('#dream-carousel-mobile .dc-item:first-child').animate(400, 'swing', function() {
+				// return $('#dream-carousel-mobile .dc-item:first-child').appendTo('#dream-carousel-mobile').hide();
+				// }).fadeIn(400, 'swing');
+
+				$('#dream-carousel-mobile .dc-item:first-child').animate({'opacity' : 0, transform : 'scale(0)'}, 'swing', function(){
+					$('#dream-carousel-mobile .dc-item:first-child').appendTo('#dream-carousel-mobile').css({'opacity' : 0, transform : 'scale(0)'});
+				}).animate({'opacity' : 1, transform : 'scale(1)', 'display' : 'block'}, function(){
+					setTimeout(function(){
+						$('#dream-carousel-mobile .dc-item:last-child').removeAttr('style');
+					}, 100);
+				});
 			};
 
 
@@ -966,11 +974,19 @@
 				$('#dream-dots-mobile .dream-dot').removeClass('active');
 				$(this).closest('.dream-dot').addClass('active');
 				var _this = $(this).data('num');
-				var test = $('#dream-carousel-mobile .dc-item[data-num='+ _this +']').prevAll('.dc-item');
+				var test = $('#dream-carousel-mobile .dc-item[data-num='+ _this +']').prevAll('.dc-item').css({'opacity' : 0});
 
-				$('#dream-carousel-mobile  .dc-item[data-num='+ _this +']').prevAll('.dc-item').fadeOut(400, 'swing', function() {
-				$('#dream-carousel-mobile').append(test);
-				}).fadeIn(400, 'swing');
+				// $('#dream-carousel-mobile  .dc-item[data-num='+ _this +']').prevAll('.dc-item').fadeOut(400, 'swing', function() {
+				// 	$('#dream-carousel-mobile').append(test);
+				// }).fadeIn(400, 'swing');
+
+				$('#dream-carousel-mobile  .dc-item[data-num='+ _this +']').prevAll('.dc-item').animate({'opacity' : 0,  transform : 'scale(0)'}, 'swing', function(){
+					$('#dream-carousel-mobile').append(test).css({'opacity' : 1,  transform : 'scale(1)'}).removeAttr('style');
+				}).animate({'opacity' : 1,  transform : 'scale(1)', 'display' : 'block'}, function(){
+					setTimeout(function(){
+						$('#dream-carousel-mobile .dc-item').removeAttr('style');
+					}, 100);
+				});
 
 				return clearInterval(timeline);
 			});
