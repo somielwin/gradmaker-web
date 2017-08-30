@@ -987,6 +987,44 @@
 				return clearInterval(timeline);
 			});
 
+			var isBusyFill = false;
+
+			$('#dream-carousel-mobile')[0].addEventListener('touchstart', function(e) {
+				var touch = e.touches[0] || e.changedTouches[0];
+				currentX = touch["clientX"];
+				currentY = touch["clientY"];
+			});
+			$('#dream-carousel-mobile')[0].addEventListener('touchmove', function(e) {
+				var touch = e.touches[0] || e.changedTouches[0];
+				var newX = touch["clientX"];
+				var newY = touch["clientY"];
+				if (Math.abs(newX - currentX) > Math.abs(newY - currentY)) {
+					e.preventDefault();
+					var itScrolledDir = "";
+					if (newX > currentX) {
+
+						if( isBusyFill == false) {
+							isBusyFill = true;
+							$('#dream-carousel-mobile .dc-item').click();
+							setTimeout(function(){
+								isBusyFill = false;
+							},500);
+						}
+						
+					} else {
+						if( isBusyFill == false) {
+							isBusyFill = true;
+							$('#dream-carousel-mobile .dc-item').click();
+							setTimeout(function(){
+								isBusyFill = false;
+							},500);
+						}
+					}
+				}
+				currentX = newX;
+				currentY = newY;
+			});
+
 		}).call(this);
 	});
 </script>

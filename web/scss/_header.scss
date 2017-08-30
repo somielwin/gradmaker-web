@@ -286,6 +286,9 @@ nav {
 	@include transform(translate(0, 0));
 	@include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
 	outline: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 
 	&.active {
 		@include transform(translate(220px, 0));

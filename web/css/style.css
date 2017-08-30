@@ -832,7 +832,11 @@ nav {
   -ms-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  outline: none; }
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   .header-hamburger.active {
     -webkit-transform: translate(220px, 0);
     -moz-transform: translate(220px, 0);
@@ -3047,7 +3051,11 @@ footer {
     -moz-transition: all 0.4s linear;
     -ms-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
-    transition: all 0.4s linear; }
+    transition: all 0.4s linear;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
     .dream-dots .dream-dot:after {
       content: '';
       width: 0;
@@ -3296,7 +3304,11 @@ footer {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
     @media (max-width: 480px) {
       #dream-carousel-mobile .dc-item .dc-box {
         min-height: 145px; } }

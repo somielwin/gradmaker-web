@@ -2329,6 +2329,9 @@
 		background: transparent;
 		overflow: hidden;
 		@include transition(all 0.4s linear);
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
 
 		&:after {
 			content:'';
@@ -2673,6 +2676,9 @@
 		transform-style: preserve-3d;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
 
 		.dc-box {
 			@include breakpoint(mobile) {
