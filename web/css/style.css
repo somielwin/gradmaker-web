@@ -6169,7 +6169,7 @@ footer {
         transform: translate(0, 30px); }
       @media (max-width: 1024px) {
         .co-creator-list > ul > li {
-          width: 24.7%; } }
+          width: 24%; } }
       @media (max-width: 991px) {
         .co-creator-list > ul > li {
           width: 32.7%; } }
