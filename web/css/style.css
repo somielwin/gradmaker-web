@@ -30,7 +30,7 @@
 @font-face {
   font-family: 'roboto';
   src: url("../fonts/Roboto-Thin-webfont.eot");
-  src: url("../fonts/Roboto-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Thin-webfont.woff") format("woff"), url("../fonts/Roboto-Thin-webfont.ttf") format("truetype"), url("../fonts/Roboto-Thin-webfont.svg#roboto") format("svg");
+  src: url("../fonts/Roboto-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Thin-webfont.ttf") format("truetype"), url("../fonts/Roboto-Thin-webfont.svg#roboto") format("svg");
   font-weight: 100;
   font-style: normal; }
 
@@ -5324,7 +5324,8 @@ footer {
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-      z-index: 1; }
+      z-index: 1;
+      opacity: 1; }
     @media (max-width: 640px) {
       .popup-right figure {
         margin-bottom: 15px;
@@ -5336,7 +5337,8 @@ footer {
       max-height: 100%;
       max-width: 100%;
       position: relative;
-      z-index: 2; }
+      z-index: 101;
+      background: #ffffff; }
   .popup-right h4 {
     font-size: 36px;
     color: #00673C;
