@@ -82,6 +82,8 @@
 							<div class="wavy-loader"><span></span><span></span><span></span></div>
 							<input type="submit" class="btn" name="" value="Send">
 						</div>
+
+						<p class="ty-message text-center">Thank you for submitting you inquiry. <br>We will contact you as soon as able.</p>
 					</form>
 				</div>
 			</div>
@@ -163,8 +165,8 @@
 
 	        if( IsEmail($('#contact-email').val()) && !$('#contact-name').val() == '' && !$('#contact-subj').val() == '' && $('#contact-num').val().length >= 6 && $('#contact-num').val() != '' && isvalidate == true) {
 	        	
-	            $('.wavy-loader').css({'opacity' : 1});
-	        	$('.ty-message').addClass('active');
+	            //$('.wavy-loader').css({'opacity' : 1});
+	        	$('.ty-message').css({'display' : 'block'});
 	            return false;
 	        } else {
 	        	e.preventDefault();

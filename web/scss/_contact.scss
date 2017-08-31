@@ -22,7 +22,18 @@
 }
 
 .contact-wrap {
-	
+
+	.ty-message {
+		display: none;
+
+		@include breakpoint(tablet2) {
+
+			br {
+				display: none;
+			}
+		}
+	}
+
 	.contact-info-text {
 		font-size: 16px;
 		color: $coGreen;
