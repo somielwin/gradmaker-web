@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="15px" viewBox="0 0 9 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title> </title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="90.1637316%" y1="61.8896484%" x2="90.1637316%" y2="-9.7265625%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.400758605" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop---FINAL" transform="translate(-792.000000, -3551.000000)" fill="#00673C">
+            <g id="5" transform="translate(-16.000000, 3362.000000)">
+                <g id="btn" transform="translate(618.000000, 164.000000)">
+                    <path d="M188.497502,35.3250083 L188.497502,28.2414796 C188.497502,27.5515687 187.938418,27 187.248751,27 C186.554277,27 186,27.5558294 186,28.2414796 L186,36.5810312 C186,36.9247743 186.13879,37.2341745 186.363371,37.4581212 C186.590448,37.6849056 186.899849,37.8225108 187.24148,37.8225108 L195.581031,37.8225108 C196.270942,37.8225108 196.822511,37.2634258 196.822511,36.5737596 C196.822511,35.8792851 196.266681,35.3250083 195.581031,35.3250083 L188.497502,35.3250083 Z" id="-" transform="translate(191.411255, 32.411255) rotate(-135.000000) translate(-191.411255, -32.411255) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

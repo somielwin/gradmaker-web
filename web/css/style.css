@@ -54,6 +54,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-small-arrow:before {
+  content: "\e906";
+  color: #00673c; }
+
+.icon-access:before {
+  content: "\e907"; }
+
 .icon-watch-video:before {
   content: "\e900";
   color: #fff; }
@@ -78,6 +85,30 @@
   content: "\e905";
   color: #fff; }
 
+/*.icon-watch-video:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-icon-apple:before {
+  content: "\e901";
+  color: #fafafa;
+}
+.icon-icon-fb:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-icon-google:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-icon-twitter:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-icon-viber:before {
+  content: "\e905";
+  color: #fff;
+}*/
 /* Addresses margins handled incorrectly in IE 6/7. */
 * {
   margin: 0;
@@ -2724,6 +2755,14 @@ nav {
       margin-right: 10px;
       position: relative;
       top: -2px; }
+    .head-btn .btn-early-access span {
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      color: #424559;
+      position: relative;
+      top: -2px;
+      font-size: 18px; }
   .head-btn .btn-get-app {
     background: #008A50;
     color: #ffffff;
@@ -2871,9 +2910,13 @@ nav {
         -ms-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
         left: 50%;
-        width: 190px; }
+        width: 220px;
+        padding-top: 12px;
+        padding-bottom: 12px; }
         .mobile-menu .head-btn .btn-early-access {
-          color: #ffffff; } }
+          color: #ffffff; }
+          .mobile-menu .head-btn .btn-early-access span {
+            color: #ffffff; } }
 
 .header-hamburger {
   display: none;
@@ -2914,6 +2957,12 @@ nav {
   @media (max-width: 767px) {
     .header-hamburger {
       top: 4px; } }
+  @media (max-width: 640px) {
+    .header-hamburger {
+      left: 10px; } }
+  @media (max-width: 374px) {
+    .header-hamburger {
+      left: 0px; } }
 
 .header-hamburger span, .header-hamburger span:after, .header-hamburger span:before {
   content: '';
@@ -2974,6 +3023,13 @@ nav {
   padding: 60px 0;
   display: block;
   margin-top: 74px; }
+  @media (max-width: 991px) {
+    .innerpage-wrap {
+      margin-top: 60px;
+      padding: 40px 0; } }
+  @media (max-width: 640px) {
+    .innerpage-wrap {
+      padding: 20px 0; } }
 
 .inner-bg {
   background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#ededed));
@@ -3241,6 +3297,9 @@ footer {
 .explorer .preloader .spinner {
   display: none; }
 
+strong {
+  font-weight: 700; }
+
 .lazyload {
   opacity: 0;
   -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -3260,7 +3319,8 @@ footer {
   padding: 10px 30px;
   display: inline-block;
   border: 1px solid #ccc;
-  color: #424559; }
+  color: #424559;
+  outline: none; }
   @media (max-width: 767px) {
     .btn {
       font-size: 18px; } }
@@ -3269,6 +3329,12 @@ footer {
   max-width: 1090px;
   margin: 0 auto;
   padding: 0px 15px; }
+  @media (max-width: 640px) {
+    .container {
+      padding: 0px 25px; } }
+  @media (max-width: 374px) {
+    .container {
+      padding: 0px 15px; } }
   .container.max-container {
     max-width: 1250px; }
 
@@ -3402,7 +3468,8 @@ footer {
     background: #008C50;
     color: #FFFFFF; }
     .banner-text a.btn:hover {
-      background: #F5A623; }
+      background: #F5A623;
+      border: 1px solid #F5A623; }
     @media (max-width: 640px) {
       .banner-text a.btn {
         font-size: 16px; } }
@@ -3576,7 +3643,7 @@ footer {
   @media (max-width: 640px) {
     .sec-head-title p {
       font-size: 16px;
-      line-height: 28px; } }
+      line-height: 24px; } }
 
 .bg-green {
   background: -webkit-gradient(linear, left top, left bottom, from(#01bc75), to(#016d39));
@@ -4330,6 +4397,9 @@ footer {
 .input-wrap {
   background: transparent;
   margin-bottom: 15px; }
+  @media (max-width: 640px) {
+    .input-wrap {
+      margin-bottom: 10px; } }
   .input-wrap.input-half {
     width: 50%;
     float: left;
@@ -4344,59 +4414,61 @@ footer {
         clear: both; } }
   .input-wrap.error input[type="text"], .input-wrap.error input[type="tel"], .input-wrap.error input[type="email"] {
     border-bottom: 1px solid #d2181c; }
-  .input-wrap input[type="text"], .input-wrap input[type="tel"], .input-wrap input[type="email"] {
+  .input-wrap input[type="text"], .input-wrap input[type="tel"], .input-wrap input[type="email"], .input-wrap textarea {
     background: transparent;
     border: none;
     width: 100%;
     padding: 10px 10px;
     border-bottom: 1px solid #5eaf84;
-    color: #ffffff; }
+    color: #ffffff;
+    outline: none;
+    resize: none; }
     @media (max-width: 480px) {
-      .input-wrap input[type="text"], .input-wrap input[type="tel"], .input-wrap input[type="email"] {
+      .input-wrap input[type="text"], .input-wrap input[type="tel"], .input-wrap input[type="email"], .input-wrap textarea {
         padding: 8px 10px; } }
-    .input-wrap input[type="text"]::-webkit-input-placeholder, .input-wrap input[type="tel"]::-webkit-input-placeholder, .input-wrap input[type="email"]::-webkit-input-placeholder {
+    .input-wrap input[type="text"]::-webkit-input-placeholder, .input-wrap input[type="tel"]::-webkit-input-placeholder, .input-wrap input[type="email"]::-webkit-input-placeholder, .input-wrap textarea::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
       color: #ffffff;
       opacity: 0.30;
       font-size: 22px; }
       @media (max-width: 640px) {
-        .input-wrap input[type="text"]::-webkit-input-placeholder, .input-wrap input[type="tel"]::-webkit-input-placeholder, .input-wrap input[type="email"]::-webkit-input-placeholder {
+        .input-wrap input[type="text"]::-webkit-input-placeholder, .input-wrap input[type="tel"]::-webkit-input-placeholder, .input-wrap input[type="email"]::-webkit-input-placeholder, .input-wrap textarea::-webkit-input-placeholder {
           font-size: 18px; } }
       @media (max-width: 480px) {
-        .input-wrap input[type="text"]::-webkit-input-placeholder, .input-wrap input[type="tel"]::-webkit-input-placeholder, .input-wrap input[type="email"]::-webkit-input-placeholder {
+        .input-wrap input[type="text"]::-webkit-input-placeholder, .input-wrap input[type="tel"]::-webkit-input-placeholder, .input-wrap input[type="email"]::-webkit-input-placeholder, .input-wrap textarea::-webkit-input-placeholder {
           font-size: 16px; } }
-    .input-wrap input[type="text"]::-moz-placeholder, .input-wrap input[type="tel"]::-moz-placeholder, .input-wrap input[type="email"]::-moz-placeholder {
+    .input-wrap input[type="text"]::-moz-placeholder, .input-wrap input[type="tel"]::-moz-placeholder, .input-wrap input[type="email"]::-moz-placeholder, .input-wrap textarea::-moz-placeholder {
       /* Firefox 19+ */
       color: #ffffff;
       opacity: 0.30;
       font-size: 22px; }
       @media (max-width: 640px) {
-        .input-wrap input[type="text"]::-moz-placeholder, .input-wrap input[type="tel"]::-moz-placeholder, .input-wrap input[type="email"]::-moz-placeholder {
+        .input-wrap input[type="text"]::-moz-placeholder, .input-wrap input[type="tel"]::-moz-placeholder, .input-wrap input[type="email"]::-moz-placeholder, .input-wrap textarea::-moz-placeholder {
           font-size: 18px; } }
       @media (max-width: 480px) {
-        .input-wrap input[type="text"]::-moz-placeholder, .input-wrap input[type="tel"]::-moz-placeholder, .input-wrap input[type="email"]::-moz-placeholder {
+        .input-wrap input[type="text"]::-moz-placeholder, .input-wrap input[type="tel"]::-moz-placeholder, .input-wrap input[type="email"]::-moz-placeholder, .input-wrap textarea::-moz-placeholder {
           font-size: 16px; } }
-    .input-wrap input[type="text"]:-ms-input-placeholder, .input-wrap input[type="tel"]:-ms-input-placeholder, .input-wrap input[type="email"]:-ms-input-placeholder {
+    .input-wrap input[type="text"]:-ms-input-placeholder, .input-wrap input[type="tel"]:-ms-input-placeholder, .input-wrap input[type="email"]:-ms-input-placeholder, .input-wrap textarea:-ms-input-placeholder {
       /* IE 10+ */
       color: #ffffff;
       opacity: 0.30;
       font-size: 22px; }
       @media (max-width: 640px) {
-        .input-wrap input[type="text"]:-ms-input-placeholder, .input-wrap input[type="tel"]:-ms-input-placeholder, .input-wrap input[type="email"]:-ms-input-placeholder {
+        .input-wrap input[type="text"]:-ms-input-placeholder, .input-wrap input[type="tel"]:-ms-input-placeholder, .input-wrap input[type="email"]:-ms-input-placeholder, .input-wrap textarea:-ms-input-placeholder {
           font-size: 18px; } }
       @media (max-width: 480px) {
-        .input-wrap input[type="text"]:-ms-input-placeholder, .input-wrap input[type="tel"]:-ms-input-placeholder, .input-wrap input[type="email"]:-ms-input-placeholder {
+        .input-wrap input[type="text"]:-ms-input-placeholder, .input-wrap input[type="tel"]:-ms-input-placeholder, .input-wrap input[type="email"]:-ms-input-placeholder, .input-wrap textarea:-ms-input-placeholder {
           font-size: 16px; } }
-    .input-wrap input[type="text"]:-moz-placeholder, .input-wrap input[type="tel"]:-moz-placeholder, .input-wrap input[type="email"]:-moz-placeholder {
+    .input-wrap input[type="text"]:-moz-placeholder, .input-wrap input[type="tel"]:-moz-placeholder, .input-wrap input[type="email"]:-moz-placeholder, .input-wrap textarea:-moz-placeholder {
       /* Firefox 18- */
       color: #ffffff;
       opacity: 0.30;
       font-size: 22px; }
       @media (max-width: 640px) {
-        .input-wrap input[type="text"]:-moz-placeholder, .input-wrap input[type="tel"]:-moz-placeholder, .input-wrap input[type="email"]:-moz-placeholder {
+        .input-wrap input[type="text"]:-moz-placeholder, .input-wrap input[type="tel"]:-moz-placeholder, .input-wrap input[type="email"]:-moz-placeholder, .input-wrap textarea:-moz-placeholder {
           font-size: 18px; } }
       @media (max-width: 480px) {
-        .input-wrap input[type="text"]:-moz-placeholder, .input-wrap input[type="tel"]:-moz-placeholder, .input-wrap input[type="email"]:-moz-placeholder {
+        .input-wrap input[type="text"]:-moz-placeholder, .input-wrap input[type="tel"]:-moz-placeholder, .input-wrap input[type="email"]:-moz-placeholder, .input-wrap textarea:-moz-placeholder {
           font-size: 16px; } }
 
 .row-wrap:after {
@@ -5002,6 +5074,9 @@ footer {
   @media (max-width: 991px) {
     .dc-wrap {
       padding-top: 80px; } }
+  @media (max-width: 991px) {
+    .dc-wrap {
+      padding-top: 60px; } }
   .dc-wrap figure {
     width: 60%;
     position: absolute;
@@ -5067,6 +5142,9 @@ footer {
   width: 40%;
   float: right;
   padding: 40px 15px; }
+  @media (max-width: 640px) {
+    .dc-content {
+      padding: 40px 15px 40px 0; } }
 
 .dc-box {
   min-height: 263px;
@@ -5449,7 +5527,7 @@ footer {
       #dream-carousel-mobile .dc-item .dc-box {
         min-height: 145px; } }
     #dream-carousel-mobile .dc-item .dc-content {
-      width: 45%; }
+      width: 48%; }
     #dream-carousel-mobile .dc-item .dc-link {
       -webkit-filter: none;
       filter: none;
@@ -6148,6 +6226,9 @@ footer {
   margin-top: 60px; }
   .co-creator-list > ul {
     margin: 0px -1%; }
+    @media (max-width: 480px) {
+      .co-creator-list > ul {
+        margin: 0px -15px; } }
     .co-creator-list > ul > li {
       display: inline-block;
       width: 19.6%;
@@ -6363,6 +6444,9 @@ footer {
   -ms-transition: opacity 0.4s ease;
   -o-transition: opacity 0.4s ease;
   transition: opacity 0.4s ease; }
+  @media (max-width: 640px) {
+    .wavy-loader {
+      margin-bottom: 10px; } }
   .wavy-loader.active {
     opacity: 1; }
 
@@ -6389,6 +6473,10 @@ footer {
   height: 10px;
   background-color: #04b972;
   margin: 0 5px; }
+  @media (max-width: 640px) {
+    .wavy-loader span {
+      width: 8px;
+      height: 8px; } }
 
 @-webkit-keyframes heartbeatUp {
   0% {
@@ -6779,3 +6867,146 @@ footer {
   100% {
     -webkit-transform: translateY(0px);
     transform: translateY(0px); } }
+
+.contact-wrap .sec-head-title h1 {
+  font-size: 50px; }
+  @media (max-width: 991px) {
+    .contact-wrap .sec-head-title h1 {
+      font-size: 42px; } }
+  @media (max-width: 767px) {
+    .contact-wrap .sec-head-title h1 {
+      font-size: 32px; } }
+
+.contact-wrap .sec-head-title p {
+  opacity: 0.80; }
+
+.contact-wrap .contact-info-text {
+  font-size: 16px;
+  color: #00673C;
+  margin-top: 20px; }
+  @media (max-width: 640px) {
+    .contact-wrap .contact-info-text {
+      line-height: 18px; } }
+  .contact-wrap .contact-info-text a {
+    margin: 0px 20px;
+    display: inline-block;
+    color: #00673C; }
+    @media (max-width: 640px) {
+      .contact-wrap .contact-info-text a {
+        font-size: 12px;
+        line-height: 18px; } }
+    .contact-wrap .contact-info-text a:hover {
+      color: #008C50; }
+
+.contact-wrap .contact-form-wrap {
+  max-width: 610px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #D5D5D5;
+  border-radius: 20px;
+  padding: 30px 50px;
+  margin-top: 50px; }
+  @media (max-width: 991px) {
+    .contact-wrap .contact-form-wrap {
+      padding: 30px 40px;
+      margin-top: 40px; } }
+  @media (max-width: 640px) {
+    .contact-wrap .contact-form-wrap {
+      padding: 30px 20px;
+      margin-top: 30px; } }
+
+.contact-form-wrap p small {
+  text-align: center;
+  display: block;
+  font-size: 10px; }
+  @media (max-width: 480px) {
+    .contact-form-wrap p small {
+      font-size: 9px; } }
+
+.contact-form-wrap .input-wrap:last-child {
+  margin-bottom: 0; }
+
+.contact-form-wrap .input-wrap textarea {
+  height: auto;
+  max-height: 250px;
+  min-height: 120px;
+  overflow: hidden; }
+  @media (max-width: 640px) {
+    .contact-form-wrap .input-wrap textarea {
+      min-height: 40px; } }
+
+.contact-form-wrap .input-wrap.error input[type="text"], .contact-form-wrap .input-wrap.error input[type="tel"], .contact-form-wrap .input-wrap.error input[type="email"] {
+  border-bottom: 1px solid #d2181c; }
+
+.contact-form-wrap .input-wrap input[type="text"], .contact-form-wrap .input-wrap input[type="tel"], .contact-form-wrap .input-wrap input[type="email"], .contact-form-wrap .input-wrap textarea {
+  border-bottom: 1px solid #eaeaea;
+  padding-left: 0;
+  color: #424559;
+  font-weight: 300; }
+  .contact-form-wrap .input-wrap input[type="text"]::-webkit-input-placeholder, .contact-form-wrap .input-wrap input[type="tel"]::-webkit-input-placeholder, .contact-form-wrap .input-wrap input[type="email"]::-webkit-input-placeholder, .contact-form-wrap .input-wrap textarea::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #424559;
+    opacity: 0.20;
+    font-size: 18px;
+    font-weight: 300; }
+    @media (max-width: 640px) {
+      .contact-form-wrap .input-wrap input[type="text"]::-webkit-input-placeholder, .contact-form-wrap .input-wrap input[type="tel"]::-webkit-input-placeholder, .contact-form-wrap .input-wrap input[type="email"]::-webkit-input-placeholder, .contact-form-wrap .input-wrap textarea::-webkit-input-placeholder {
+        font-size: 16px; } }
+    @media (max-width: 480px) {
+      .contact-form-wrap .input-wrap input[type="text"]::-webkit-input-placeholder, .contact-form-wrap .input-wrap input[type="tel"]::-webkit-input-placeholder, .contact-form-wrap .input-wrap input[type="email"]::-webkit-input-placeholder, .contact-form-wrap .input-wrap textarea::-webkit-input-placeholder {
+        font-size: 14px; } }
+  .contact-form-wrap .input-wrap input[type="text"]::-moz-placeholder, .contact-form-wrap .input-wrap input[type="tel"]::-moz-placeholder, .contact-form-wrap .input-wrap input[type="email"]::-moz-placeholder, .contact-form-wrap .input-wrap textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #424559;
+    opacity: 0.20;
+    font-size: 18px;
+    font-weight: 300; }
+    @media (max-width: 640px) {
+      .contact-form-wrap .input-wrap input[type="text"]::-moz-placeholder, .contact-form-wrap .input-wrap input[type="tel"]::-moz-placeholder, .contact-form-wrap .input-wrap input[type="email"]::-moz-placeholder, .contact-form-wrap .input-wrap textarea::-moz-placeholder {
+        font-size: 16px; } }
+    @media (max-width: 480px) {
+      .contact-form-wrap .input-wrap input[type="text"]::-moz-placeholder, .contact-form-wrap .input-wrap input[type="tel"]::-moz-placeholder, .contact-form-wrap .input-wrap input[type="email"]::-moz-placeholder, .contact-form-wrap .input-wrap textarea::-moz-placeholder {
+        font-size: 14px; } }
+  .contact-form-wrap .input-wrap input[type="text"]:-ms-input-placeholder, .contact-form-wrap .input-wrap input[type="tel"]:-ms-input-placeholder, .contact-form-wrap .input-wrap input[type="email"]:-ms-input-placeholder, .contact-form-wrap .input-wrap textarea:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #424559;
+    opacity: 0.20;
+    font-size: 18px;
+    font-weight: 300; }
+    @media (max-width: 640px) {
+      .contact-form-wrap .input-wrap input[type="text"]:-ms-input-placeholder, .contact-form-wrap .input-wrap input[type="tel"]:-ms-input-placeholder, .contact-form-wrap .input-wrap input[type="email"]:-ms-input-placeholder, .contact-form-wrap .input-wrap textarea:-ms-input-placeholder {
+        font-size: 16px; } }
+    @media (max-width: 480px) {
+      .contact-form-wrap .input-wrap input[type="text"]:-ms-input-placeholder, .contact-form-wrap .input-wrap input[type="tel"]:-ms-input-placeholder, .contact-form-wrap .input-wrap input[type="email"]:-ms-input-placeholder, .contact-form-wrap .input-wrap textarea:-ms-input-placeholder {
+        font-size: 14px; } }
+  .contact-form-wrap .input-wrap input[type="text"]:-moz-placeholder, .contact-form-wrap .input-wrap input[type="tel"]:-moz-placeholder, .contact-form-wrap .input-wrap input[type="email"]:-moz-placeholder, .contact-form-wrap .input-wrap textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #424559;
+    opacity: 0.20;
+    font-size: 18px;
+    font-weight: 300; }
+    @media (max-width: 640px) {
+      .contact-form-wrap .input-wrap input[type="text"]:-moz-placeholder, .contact-form-wrap .input-wrap input[type="tel"]:-moz-placeholder, .contact-form-wrap .input-wrap input[type="email"]:-moz-placeholder, .contact-form-wrap .input-wrap textarea:-moz-placeholder {
+        font-size: 16px; } }
+    @media (max-width: 480px) {
+      .contact-form-wrap .input-wrap input[type="text"]:-moz-placeholder, .contact-form-wrap .input-wrap input[type="tel"]:-moz-placeholder, .contact-form-wrap .input-wrap input[type="email"]:-moz-placeholder, .contact-form-wrap .input-wrap textarea:-moz-placeholder {
+        font-size: 14px; } }
+
+.contact-form-wrap .btn {
+  margin-top: 5px;
+  background: #008C50;
+  border: 1px solid #008C50;
+  color: #ffffff;
+  font-size: 20px;
+  min-width: 198px;
+  padding-top: 14px;
+  padding-bottom: 14px; }
+  @media (max-width: 640px) {
+    .contact-form-wrap .btn {
+      min-width: 132px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px; } }
+  .contact-form-wrap .btn:hover {
+    background: #F5A623;
+    border: 1px solid #F5A623; }

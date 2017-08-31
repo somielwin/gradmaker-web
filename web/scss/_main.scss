@@ -16,6 +16,10 @@
 
 // Above the fold
 
+strong {
+	font-weight: 700;
+}
+
 .lazyload {
 	opacity: 0;
 	transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -38,6 +42,7 @@
 	display: inline-block;
 	border: 1px solid #ccc;
 	color: $defaultColor;
+	outline: none;
 
 	@include breakpoint(tablet2) {
 		font-size: 18px;
@@ -48,6 +53,14 @@
 	max-width: 1090px;
 	margin: 0 auto;
 	padding: 0px 15px;
+
+	@include breakpoint(phablet) {
+		padding: 0px 25px;
+	}
+
+	@include breakpoint(mobilesmall) {
+		padding: 0px 15px;
+	}
 
 	&.max-container {
 		max-width: 1250px;
@@ -238,6 +251,7 @@
 
 		&:hover {
 			background: #F5A623;
+			border: 1px solid #F5A623;
 		}
 
 		@include breakpoint(phablet) {
@@ -467,7 +481,7 @@
 
 		@include breakpoint(phablet) {
 			font-size: 16px;
-			line-height: 28px;
+			line-height: 24px;
 		}
 	}
 }
@@ -1394,6 +1408,10 @@
 	background: transparent;
 	margin-bottom: 15px;
 
+	@include breakpoint(phablet) {
+		margin-bottom: 10px;
+	}
+
 	&.input-half {
 		width: 50%;
 		float: left;
@@ -1417,13 +1435,15 @@
 		}		
 	}
 
-	input[type="text"], input[type="tel"], input[type="email"] {
+	input[type="text"], input[type="tel"], input[type="email"], textarea {
 		background: transparent;
 		border: none;
 		width: 100%;
 		padding: 10px 10px;
 		border-bottom: 1px solid #5eaf84;
 		color: $coWhite;
+		outline: none;
+		resize: none;
 
 		@include breakpoint(mobile) {
 	  		padding: 8px 10px;
@@ -2215,6 +2235,10 @@
 		padding-top: 80px;
 	}
 
+	@include breakpoint(tablet) {
+		padding-top: 60px;
+	}
+
 	figure {
 		width: 60%;
 		position: absolute;
@@ -2296,6 +2320,10 @@
 	width: 40%;
 	float: right;
 	padding: 40px 15px;
+
+	@include breakpoint(phablet) {
+		padding: 40px 15px 40px 0;
+	}
 }
 
 .dc-box {
@@ -2780,7 +2808,7 @@
 		}
 		
 		.dc-content {
-			width: 45%;
+			width: 48%;
 		}
 
 		.dc-link {

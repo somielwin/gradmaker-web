@@ -19,40 +19,65 @@
 <section id="main-container" class="inner-bg">
 	<div class="header-hamburger"><span></span></div>
 	<header>
-		<div class="logo"><a href="#"><img src="images/home/logo.png" alt=""></a></div>
+		<div class="logo"><a href="index.html"><img src="images/page_template/logo.png" alt=""></a></div>
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="#">FAQs</a></li>
-				<li><a href="#">Co-creators</a></li>
+				<li><a href="co-creator.html">Co-creators</a></li>
 				<li class="active"><a href="#">Contact Us</a></li>
 			</ul>
 		</nav>
 		<div class="head-btn">
-			<a href="#" class="btn btn-early-access"><figure><img src="images/home/early-access.svg"></figure>Get Early Access</a>
-			<!-- <a href="#" class="btn btn-get-app">Get the app</a> -->
+			<!-- <a href="#" class="btn btn-early-access"><figure><img src="images/home/early-access.svg"></figure>Get Early Access</a> -->
+			<a href="#" class="btn btn-get-app">Get the app</a>
 		</div>
 	</header>
 
 	<div class="mobile-menu">
 		<nav>
 			<ul>
-				<li class="active"><a href="#">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="#">FAQs</a></li>
-				<li><a href="#">Co-creators</a></li>
-				<li><a href="#">Contact Us</a></li>
+				<li><a href="co-creator.html">Co-creators</a></li>
+				<li class="active"><a href="#">Contact Us</a></li>
 			</ul>
 		</nav>
 		<div class="head-btn">
-			<a href="#" class="btn btn-early-access">Get Early Access</a>
+			<a href="index-v2.html#section7" class="btn btn-early-access"><span class="i-icon icon-access"></span>Get Early Access</a>
 		</div>
 	</div>
 	<section id="main-wrapper">
-		<din class="innerpage-wrap">
+		<din class="innerpage-wrap contact-wrap">
 			<div class="container"> 
 				<div class="sec-head-title text-center">
 					<h1>Contact Us</h1>
 					<p>If you have any questions not answered in our Help page, please feel free to contact us.</p>
+					<p class="contact-info-text"><a href="#"><strong>E</strong>: phcustomercare@manulife.com</a> <a href="#"><strong>T</strong>: +63 (02) 884 7000</a></p>
+				</div>
+				<div class="contact-form-wrap">
+					<form id="contact-form" method="" post="" novalidate>
+						<div class="input-wrap">
+							<input type="text" name="" value="" id="contact-name" placeholder="Name(First/MI/Last)">
+						</div>
+						<div class="input-wrap">
+							<input type="text" name="" value="" id="contact-num" placeholder="Mobile Number" maxlength="15" onkeypress="return event.charCode === 0 || /[\d-+=,()]/.test(String.fromCharCode(event.charCode));">
+						</div>
+						<div class="input-wrap">
+							<input type="text" name="" value="" id="contact-email" placeholder="Email Address">
+						</div>
+						<div class="input-wrap">
+							<input type="text" name="" value="" id="contact-subj" placeholder="Subject">
+						</div>
+						<div class="input-wrap">
+							<textarea cols="4" rows="4" placeholder="Message" onkeyup="auto_grow(this)"></textarea>
+						</div>
+						<p><small>Manulife values your privacy. By clicking <strong>Send</strong>, this gives us consent to gather your provided information.</small></p>
+						<div class="input-wrap text-center">
+							<div class="wavy-loader"><span></span><span></span><span></span></div>
+							<input type="submit" class="btn" name="" value="Send">
+						</div>
+					</form>
 				</div>
 			</div>
 		</din>
@@ -90,201 +115,63 @@
 </footer>
 
 <script src="js/lib/jquery.min.js"></script>
-<script src="js/lib/jquery-ui.min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/owl.carousel.js"></script>
 <script src="js/TweenMax.js"></script>
-<script src="js/jquery.waterwheelCarousel.js"></script>
 <script src="js/custom.js"></script>
-
+<script src="js/jquery.appear.js"></script>
 <script type="text/javascript">
 	$(document).ready(function () {
-		$('.carousel-cocreate').owlCarousel({
-	        loop: false,
-	        margin: 0,
-	        nav: true,
-	        dots: true,
+		$('#contact-form').submit(function(e){
+	        e.preventDefault();
+	        $('.input-wrap').addClass('error');
+	        isvalidate = false;
 
-	        responsive: {
-	            0: {
-	                items: 1,
-	                center: true,
-	                loop:true,
-	            },
 
-	            520: {
-	                items: 1,
-	                center: true,
-	                loop:true,
-	                margin: 0,
-	            },
-
-	            640: {
-	                items: 2,
-	                center: true,
-	                loop:true,
-	                margin: 30,
-	            },
-
-	            767: {
-	                items: 2
-	            },
-
-	            1000: {
-	                items: 3
-	            }
+	        if( IsEmail($('#contact-email').val() )) {
+	            $('#contact-email').closest('.input-wrap').removeClass('error');
+	            isvalidate = true;
+	        } else {
+	            isvalidate = false;
 	        }
-	    })
 
-	    $('.carousel-feature').owlCarousel({
-	        loop: false,
-	        margin: 10,
-	        nav: false,
-	        dots: true,
 
-	        responsive: {
-	            0: {
-	                items: 1,
-	                center: true,
-	                loop:true
-	            },
-
-	            640: {
-	                items: 1,
-	                margin: 0,
-	                center: true,
-	                loop:true,
-
-	            },
-
-	            767: {
-	                items: 2,
-	                center: true,
-	                loop:true
-	            },
-	            1000: {
-	                items: 3
-	            }
+	        if( !$('#contact-name').val() == '') {
+	            $('#contact-name').closest('.input-wrap').removeClass('error');
+	            isvalidate = true;
+	        } else {
+	            isvalidate = false;
 	        }
-	    })
 
-	    if($("#dream-carousel").length > 0) {
+	        if( !$('#contact-subj').val() == '') {
+	            $('#contact-subj').closest('.input-wrap').removeClass('error');
+	            isvalidate = true;
+	        } else {
+	            isvalidate = false;
+	        }
 
-		    var carousel = $("#dream-carousel").waterwheelCarousel({
-				flankingItems: 3,
-				separation: ($(window).width() < 1024) ? 200 : 290,
-				opacityMultiplier: 1,
-				animationEasing: 'swing',
-				activeClassName: 'active',
-				keyboardNav: true,
-	          	
-	        });
+	        if(!$('#contact-num').val() == '' && $('#contact-num').val().length >= 6) {
+	        	$('#contact-num').closest('.input-wrap').removeClass('error');
+	        	isvalidate = true;
+	        } else {
+	        	isvalidate = false;
+	        }
 
-	        // $("#dream-carousel").on("swipeleft",function(){
-	        //   carousel.next();
-	        // });
-	        // $("#dream-carousel").on("swiperight",function(){
-	        //   carousel.prev();
-	        // });
+	        if( IsEmail($('#contact-email').val()) && !$('#contact-name').val() == '' && !$('#contact-subj').val() == '' && $('#contact-num').val().length >= 6 && $('#contact-num').val() != '' && isvalidate == true) {
+	        	
+	            $('.wavy-loader').css({'opacity' : 1});
+	        	$('.ty-message').addClass('active');
+	            return false;
+	        } else {
+	        	e.preventDefault();
+	        }
 
-	        $(window).resize(function(){
-	        	carousel.reload({
-	        		lankingItems: 3,
-					separation: ($(window).width() < 1024) ? 200 : 290,
-					opacityMultiplier: 1,
-					animationEasing: 'swing',
-					activeClassName: 'active',
-					keyboardNav: true,
-	        	});
-	          	return false;
-	        });
-
-	        $('.dc-item').click(function(){
-
-		    	var _thisNum = $(this).data('num');
-
-		    	console.log(_thisNum);
-
-		    	$('.dream-dot').removeClass('active');
-		    	$('.dream-dots .dream-dot[data-num='+ _thisNum +']').addClass('active');
-		    });
-
-		    $('.dream-dots .dream-dot').click(function(e){
-		    	e.preventDefault();
-
-		    	var _thisNum = $(this).data('num');
-		    	console.log(_thisNum);
-		    	$('.dream-dots .dream-dot').removeClass('active');
-		    	$(this).addClass('active');
-		    	$('#item-'+_thisNum+'').closest('.dc-item').click();
-		    });
-        }
-
-
-	    $('.ii-circle a').click(function(e){
-	    	e.preventDefault();
-	    	var _this = $(this).attr('href');
-
-	    	$('.popup-wrap').removeClass('active');
-	    	$(_this).addClass('active');
 	    });
-
-	    $(document).on('click', '.popup-close', function(e){
-	    	e.preventDefault();
-
-	    	$(this).closest('.popup-wrap').removeClass('active');
-	    });
-
-
-	    (function() {
-		  	var rotate, timeline;
-
-			rotate = function() {
-				return $('#dream-carousel-mobile .dc-item:first-child').fadeOut(400, 'swing', function() {
-				return $('#dream-carousel-mobile .dc-item:first-child').appendTo('#dream-carousel-mobile').hide();
-				}).fadeIn(400, 'swing');
-			};
-
-
-			timeline = setInterval(rotate, 7000);
-
-			$('#dream-carousel-mobile').hover(function() {
-				return clearInterval(timeline);
-			});
-
-			isBusy = false;
-
-			$('#dream-carousel-mobile .dc-item').click(function(e) {
-				e.preventDefault();
-
-				if( isBusy == false) {
-
-					isBusy = true;
-					setTimeout(function(){
-						isBusy = false;
-					}, 400);
-					return rotate();
-				} 
-
-			});
-
-			$('#dream-dots-mobile a').click(function(e){
-				e.preventDefault();
-
-				$('#dream-dots-mobile .dream-dot').removeClass('active');
-				$(this).closest('.dream-dot').addClass('active');
-				var _this = $(this).data('num');
-				var test = $('#dream-carousel-mobile .dc-item[data-num='+ _this +']').prevAll('.dc-item');
-
-				$('#dream-carousel-mobile  .dc-item[data-num='+ _this +']').prevAll('.dc-item').fadeOut(400, 'swing', function() {
-				$('#dream-carousel-mobile').append(test);
-				}).fadeIn(400, 'swing');
-
-				return clearInterval(timeline);
-			});
-
-		}).call(this);
 	});
+
+	function auto_grow(element) {
+	    element.style.height = "10px";
+	    element.style.height = (element.scrollHeight)+"px";
+	}
 </script>
 
 </body>

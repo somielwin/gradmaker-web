@@ -125,6 +125,16 @@ nav {
 			top: -2px;
 		}
 
+		span {
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			color: #424559;
+			position: relative;
+			top: -2px;
+			font-size: 18px;
+		}
+
 	}
 
 	.btn-get-app {
@@ -268,11 +278,17 @@ nav {
 			bottom: 50px;
 			transform: translate(-50%, 0);
 			left: 50%;
-			width: 190px;
+			width: 220px;
+			padding-top: 12px;
+			padding-bottom: 12px;
 
 
 			.btn-early-access {
 				color: $coWhite;
+
+				span {
+					color: $coWhite;
+				}
 			}
 		}
 	}
@@ -309,8 +325,17 @@ nav {
 
 	}
 
+
 	@include breakpoint(tablet2) {
 		top: 4px;
+	}
+
+	@include breakpoint(phablet) {
+		left: 10px;
+	}
+
+	@include breakpoint(mobilesmall) {
+		left: 0px;
 	}
 }
 
@@ -367,6 +392,15 @@ nav {
 	padding: 60px 0;
 	display: block;
 	margin-top: 74px;
+
+	@include breakpoint(tablet) {
+		margin-top: 60px;
+		padding: 40px 0;
+	}
+
+	@include breakpoint(phablet) {
+		padding: 20px 0;
+	}
 }
 
 .inner-bg {

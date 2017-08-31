@@ -235,6 +235,10 @@
 	> ul {
 		margin: 0px -1%;
 
+		@include breakpoint(mobile) {
+			margin: 0px -15px;
+		}
+
 		> li {
 			display: inline-block;
 			width: 19.6%;
@@ -532,6 +536,10 @@
 	opacity: 0;
 	@include transition(opacity 0.4s ease);
 
+	@include breakpoint(phablet) {
+		margin-bottom: 10px;
+	}
+
 	&.active {
 		opacity: 1;
 	}
@@ -564,6 +572,11 @@
 	height: 10px;
 	background-color: #04b972;
 	margin:0 5px;
+
+	@include breakpoint(phablet) {
+		width: 8px;
+		height: 8px;
+	}
 
 }
 

@@ -59,11 +59,15 @@ $(document).ready(function() {
     }
 
     // Lazyload image
-    $('.lazyload').unveil(200, function() {
-        $(this).load(function() {
-            this.style.opacity = 1;
+    if($('.lazyload').length > 0 ){
+
+        $('.lazyload').unveil(200, function() {
+            $(this).load(function() {
+                this.style.opacity = 1;
+            });
         });
-    });
+
+    }
 
 	$('.header-hamburger').click(function(e){
 		e.preventDefault();
