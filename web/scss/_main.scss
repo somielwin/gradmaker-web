@@ -1503,12 +1503,21 @@
 	max-width: 600px;
 	margin: 40px auto 0;
 
+	.wavy-loader span {
+		background-color: #F3A624;
+	}
+
 	input[type="submit"] {
 		background: transparent;
 		font-size: 22px;
 		padding: 13px 40px;
 		color: $coWhite;
 		margin-top: 20px;
+
+		&:hover {
+			border: 1px solid #F3A624;
+			background: #F3A624;
+		}
 	}
 
 	p {

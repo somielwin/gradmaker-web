@@ -579,7 +579,7 @@
 				<!-- <div class="slots-left">
 					<div class="slots-content">
 						<span>Slots Left</span>
-						<h4>500</h4>
+						<h4 class="slot-num">500</h4>
 					</div>
 				</div>
 				<div class="get-early-access">
@@ -588,28 +588,30 @@
 						<p>Be one of the first to experience mobile investing.</p>
 					</div>
 					<div class="form-wrapper">
-						<form method="post" action="">
+						<form id="access-form" method="post" action="" novalidate="">
 							<div class="row-wrap">
 								<div class="input-wrap input-half">
 									<input type="text" id="first-name" name="" placeholder="First Name">
 								</div>
 								<div class="input-wrap input-half">
-									<input type="text" id="first-name" name="" placeholder="Last Name">
+									<input type="text" id="last-name" name="" placeholder="Last Name">
 								</div>
 							</div>
 							<div class="row-wrap">
 								<div class="input-wrap input-half">
-									<input type="email" id="first-name" name="" placeholder="Email Address">
+									<input type="email" id="email-account" name="" placeholder="Email Address">
 								</div>
 								<div class="input-wrap input-half">
-									<input type="tel" id="first-name" name="" placeholder="Mobile Number">
+									<input type="tel" id="contact-num" name="" placeholder="Mobile Number" maxlength="15" onkeypress="return event.charCode === 0 || /[\d-+=,()]/.test(String.fromCharCode(event.charCode));">
 								</div>
 							</div>
 							<p>Manulife values your privacy. By clicking I’m in!, this gives us consent to gather your provided information.</p>
 							<div class="text-center">
+								<div class="wavy-loader"><span></span><span></span><span></span></div>
 								<div class="input-wrap">
 									<input class="btn" type="submit" name="" value="I'm in!">
 								</div>
+								<p class="ty-message">You've secured your slot to get notified when the app is ready. Thanks and we'll be in touch!</p>
 							</div>
 						</form>
 					</div>

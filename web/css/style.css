@@ -2696,7 +2696,7 @@ nav {
   left: 50%;
   width: 216px;
   margin-left: -108px;
-  top: 15px; }
+  top: 17px; }
   @media (max-width: 767px) {
     .logo {
       width: 150px;
@@ -4412,12 +4412,17 @@ footer {
 .form-wrapper {
   max-width: 600px;
   margin: 40px auto 0; }
+  .form-wrapper .wavy-loader span {
+    background-color: #F3A624; }
   .form-wrapper input[type="submit"] {
     background: transparent;
     font-size: 22px;
     padding: 13px 40px;
     color: #ffffff;
     margin-top: 20px; }
+    .form-wrapper input[type="submit"]:hover {
+      border: 1px solid #F3A624;
+      background: #F3A624; }
   .form-wrapper p {
     font-weight: 400;
     padding: 15px 36px;

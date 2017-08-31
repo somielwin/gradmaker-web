@@ -58,11 +58,12 @@ $(document).ready(function() {
         $('.hiding').css({'opacity' : 1});
     }
 
+    // Lazyload image
     $('.lazyload').unveil(200, function() {
-            $(this).load(function() {
-                this.style.opacity = 1;
-            });
+        $(this).load(function() {
+            this.style.opacity = 1;
         });
+    });
 
 	$('.header-hamburger').click(function(e){
 		e.preventDefault();
@@ -72,9 +73,13 @@ $(document).ready(function() {
             _this.toggleClass('active');
     });
 
+    var slot = 500;
+
     $('#access-form').submit(function(e){
+        e.preventDefault();
         $('.input-wrap').addClass('error');
         isvalidate = false;
+
 
         if( IsEmail($('#email-account').val() )) {
             $('#email-account').closest('.input-wrap').removeClass('error');
@@ -105,13 +110,19 @@ $(document).ready(function() {
         }
 
         if( IsEmail($('#email-account').val()) && !$('#last-name').val() == '' && !$('#first-name').val() == '' && $('#contact-num').val().length >= 6 && $('#contact-num').val() != '' && isvalidate == true) {
-
-        	e.preventDefault();
+        	
         	// $('#email-account').val('')
         	// $('#last-name').val('')
         	// $('#first-name').val('')
         	// $('#contact-num').val('')
+            $('.wavy-loader').css({'opacity' : 1});
+            var remainingSlot = slot - 1;
+            $('.slot-num').html(remainingSlot);
+
         	$('.ty-message').addClass('active');
+            slot = remainingSlot;
+            console.log(slot);
+            return false;
         } else {
         	e.preventDefault();
         }
