@@ -1,6 +1,11 @@
 var windowWidth = 0;
 var windowHeight = 0;
 
+var isScrollingAllowed = true;
+var win = $(window);
+var doc = $(document);
+
+
 function resize() {
 	windowWidth = $(window).outerWidth();
 	windowHeight = $(window).outerHeight();
@@ -41,11 +46,12 @@ $(window).resize(function() {
 
 $(document).ready(function() {
 
+    smoothScroll();
+
     $(document).keydown(function(e){
        
         if(e.keyCode == 27) {
             $('.popup-wrap').removeClass('active');
-            
         }
     });
 
@@ -186,4 +192,28 @@ function updateNav() {
 function IsEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
+}
+
+function smoothScroll() {
+    var scrollTime = 0.7;
+    var scrollDistance = 150;
+
+    $(window).on("mousewheel DOMMouseScroll", function(event) {
+        event.preventDefault();
+        if (isScrollingAllowed) {
+
+            // var delta = event.originalEvent.wheelDelta / 120 || -event.originalEvent.detail / 3;
+            var delta = ( Math.abs(event.originalEvent.wheelDelta) < 120 ? event.originalEvent.wheelDelta / 6 : event.originalEvent.wheelDelta / 120 ) || -event.originalEvent.detail;
+            var scrollTop = win.scrollTop();
+            var finalScroll = scrollTop - parseInt(delta * scrollDistance);
+
+            TweenMax.to(win, scrollTime, {
+                scrollTo: { y: finalScroll, autoKill: true },
+                ease: Power1.easeOut,
+                autoKill: true,
+                overwrite: 5
+            });
+        }
+    });
+
 }
