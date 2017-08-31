@@ -17,7 +17,11 @@
 // Above the fold
 
 strong {
-	font-weight: 700;
+	font-weight: 500;
+}
+
+a {
+	color: $coOrange;
 }
 
 .lazyload {
@@ -147,6 +151,7 @@ strong {
 
 		@include breakpoint(phablet) {
 			max-width: 320px;
+			margin: 0 auto;
 		}
 
 		@include breakpoint(mobile) {
@@ -1235,6 +1240,7 @@ strong {
 		position: relative;
 		top: -1px;
 		right: 0;
+		color: $coGreen;
 		@include transition(all 0.4s ease);
 	}
 
