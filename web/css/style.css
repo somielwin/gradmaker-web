@@ -3896,6 +3896,8 @@ a {
           bottom: -2px; } }
   .cg-bank .cg-bot {
     border: 1px dashed #ffac5d; }
+    .cg-bank .cg-bot h4 {
+      color: #F5A623; }
 
 .cg-top-content {
   position: relative;
