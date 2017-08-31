@@ -1055,16 +1055,29 @@
 						carouselPopBusy = true;
 
 						// console.log($(this).find('.popup-menu li.active'));
-						$(this).find('.popup-menu li.active').prev().find('a').click();
-						setTimeout(function(){
-							carouselPopBusy = false;
-						},500);
+						if($(this).find('.popup-menu li.active').is(':first-child')) {
+							$(this).find('.popup-menu li:last-child > a').click();
+							setTimeout(function(){
+								carouselPopBusy = false;
+							},500);
+						} else {
+							$(this).find('.popup-menu li.active').prev().find('a').click();
+							setTimeout(function(){
+								carouselPopBusy = false;
+							},500);
+						}
+						
 					}
 					
 				} else {
 					if( carouselPopBusy == false) {
 						carouselPopBusy = true;
-						$(this).find('.popup-menu li.active').next().find('a').click();
+						if($(this).find('.popup-menu li.active').is(':last-child')) {
+							$(this).find('.popup-menu li:first-child > a').click();
+						} else {
+							$(this).find('.popup-menu li.active').next().find('a').click();
+						}
+						
 						setTimeout(function(){
 							carouselPopBusy = false;
 						},500);

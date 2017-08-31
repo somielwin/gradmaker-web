@@ -1063,29 +1063,38 @@
 			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
 			var newX = touch["clientX"];
 			var newY = touch["clientY"];
-			if (Math.abs(newX - currentX) > Math.abs(newY - currentY)) {
-				e.preventDefault();
-				if (newX > currentX) {
+			if (newX > currentX) {
 
-					if( carouselPopBusy == false) {
-						carouselPopBusy = true;
+				if( carouselPopBusy == false) {
+					carouselPopBusy = true;
 
-						// console.log($(this).find('.popup-menu li.active'));
+					// console.log($(this).find('.popup-menu li.active'));
+					if($(this).find('.popup-menu li.active').is(':first-child')) {
+						$(this).find('.popup-menu li:last-child > a').click();
+						setTimeout(function(){
+							carouselPopBusy = false;
+						},500);
+					} else {
 						$(this).find('.popup-menu li.active').prev().find('a').click();
 						setTimeout(function(){
 							carouselPopBusy = false;
 						},500);
 					}
 					
-				} else {
-					if( carouselPopBusy == false) {
-						carouselPopBusy = true;
-						console.log($(this).find('.popup-menu li.active'));
+				}
+				
+			} else {
+				if( carouselPopBusy == false) {
+					carouselPopBusy = true;
+					if($(this).find('.popup-menu li.active').is(':last-child')) {
+						$(this).find('.popup-menu li:first-child > a').click();
+					} else {
 						$(this).find('.popup-menu li.active').next().find('a').click();
-						setTimeout(function(){
-							carouselPopBusy = false;
-						},500);
 					}
+					
+					setTimeout(function(){
+						carouselPopBusy = false;
+					},500);
 				}
 			}
 			currentX = newX;
@@ -1228,7 +1237,6 @@
 
 		    	var _thisNum = $(this).data('num');
 
-		    	console.log(_thisNum);
 
 		    	$('.dream-dot').removeClass('active');
 		    	$('.dream-dots .dream-dot[data-num='+ _thisNum +']').addClass('active');
@@ -1238,7 +1246,6 @@
 		    	e.preventDefault();
 
 		    	var _thisNum = $(this).data('num');
-		    	console.log(_thisNum);
 		    	$('.dream-dots .dream-dot').removeClass('active');
 		    	$(this).addClass('active');
 		    	$('#item-'+_thisNum+'').closest('.dc-item').click();
