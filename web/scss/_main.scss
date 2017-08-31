@@ -579,6 +579,11 @@ a {
 		letter-spacing: 24px;
 		margin-left: 24px;
 
+		@include breakpoint(phablet) {
+			letter-spacing: 16px;
+			margin-left: 16px;
+		}
+
 		@include breakpoint(mobilesmall) {
 			margin-left: 16px;
 			font-size: 10px;
@@ -869,6 +874,7 @@ a {
 
 .carousel-feature {
 	margin: 70px -30px 30px;
+	width: auto !important;
 
 	/*&.owl-carousel {
 
@@ -1572,6 +1578,12 @@ a {
 			font-size: 12px;
 		}
 
+		&.form-privacy {
+			i {
+				font-style: normal;
+				opacity: 0.70;
+			}
+		}
 
 		&.ty-message {
 
@@ -2252,6 +2264,9 @@ a {
 	border-radius: 20px;
 	overflow: hidden;
 	padding-top: 120px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 
 	@include breakpoint(tablet) {
 		padding-top: 80px;
@@ -2342,6 +2357,9 @@ a {
 	width: 40%;
 	float: right;
 	padding: 40px 15px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 
 	@include breakpoint(phablet) {
 		padding: 40px 15px 40px 0;
@@ -3009,6 +3027,8 @@ a {
 	top: 0;
 	margin-left: -20px;
 	@include transition(all 0.4s ease);
+	text-align: center;
+	z-index: 101;
 
 	&:hover {
 		background: #F3A624;
@@ -3029,6 +3049,58 @@ a {
 		line-height: 26px;
 		margin-top: -15px;
 		margin-left: -15px;
+	}
+}
+
+#youtube-video {
+
+	&.popup-wrap {
+		background: rgba(255,255,255,0.8);
+		@include transition(all 0.4s ease);
+		@include transform(scale(0));
+		visibility: hidden;
+		opacity: 0;
+
+		@include breakpoint(tablet2) {
+			background: rgba(255,255,255,1);
+		}
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			@include transform(scale(1));
+		}
+	}
+
+	.popup-content {
+		background: $coWhite;
+		max-width: 1024px;
+		margin: 30px auto 0;
+		
+
+		position: relative;
+		width: 100%;
+
+
+	}
+
+	.popup-ratio {
+		height: 0;
+		width: 100%;
+		padding-bottom: 60%;
+	}
+
+	.video-holder {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;	
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 

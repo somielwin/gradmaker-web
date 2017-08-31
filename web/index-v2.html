@@ -15,6 +15,14 @@
 
 </head>
 <body>
+<div class="popup-wrap" id="youtube-video">
+	<div class="popup-content">
+		<div class="popup-ratio">
+			<a href="#" class="popup-close"><img src="images/home/icon-close.svg" alt=""></a>
+			<div class="video-holder"></div>
+		</div>
+	</div>
+</div>
 <div class="popup-wrap" id="product">
 	<div class="table-wrap">
 		<div class="table-cell">
@@ -219,7 +227,7 @@
 						<div class="banner-text animated hiding" data-animation="fadeInUp">
 							<h1><span>Make your </span>Child’s <br>Dream <br class="mobile-br">Come True</h1>
 							<p>Now made easy for you with the GradMaker <br>Mobile App.</p>
-							<a href="#" class="btn btn-primary"> <span class="i-icon icon-watch-video"></span>Watch How</a>
+							<a href="#" class="btn btn-primary play-video" data-videoid="BZP1rYjoBgI"> <span class="i-icon icon-watch-video"></span>Watch How</a>
 						</div>
 					</div>
 				</div>
@@ -605,7 +613,7 @@
 									<input type="tel" id="contact-num" name="" placeholder="Mobile Number" maxlength="15" onkeypress="return event.charCode === 0 || /[\d-+=,()]/.test(String.fromCharCode(event.charCode));">
 								</div>
 							</div>
-							<p>Manulife values your privacy. By clicking I’m in!, this gives us consent to gather your provided information.</p>
+							<p class="form-privacy"><i>Manulife values your privacy. By clicking </i><strong>I’m in!</strong><i>, this gives us consent to gather your provided information.</i></p>
 							<div class="text-center">
 								<div class="wavy-loader"><span></span><span></span><span></span></div>
 								<div class="input-wrap">
@@ -804,10 +812,26 @@
 <script src="js/jquery.unveil.js"></script>
 <script src="js/custom.js"></script>
 
+
 <script type="text/javascript">
+	var player;
+	var playerVideo = "unloaded";
+
+	$(window).load(function(){
+		// Youtube Video
+		setupYTAPI();
+
+		$(document).on('click', '#youtube-video .popup-close', function(e){
+	        e.preventDefault();
+	        player.pauseVideo(2);
+	        $('.popup-wrap').removeClass('active');
+	    });
+	});
+
 	$(document).ready(function () {
 		
-
+		
+		// Carousel Co-Creator
 		$('.carousel-cocreate').owlCarousel({
 	        loop: false,
 	        margin: 0,
@@ -845,6 +869,7 @@
 	        }
 	    })
 
+		// Carousel Feature
 	    $('.carousel-feature').owlCarousel({
 	        loop: false,
 	        margin: 10,
@@ -877,6 +902,7 @@
 	        }
 	    });
 
+	    // Section Menu
 	    $('.sn-menu ul li a').click(function(e){
 			e.preventDefault();
 
@@ -888,6 +914,7 @@
 	        
 		});
 
+	    // Early Access 
 	    $('.btn-early-access').click(function(e){
 	        e.preventDefault();
 	        var wH = $('header').outerHeight(false);
@@ -897,12 +924,14 @@
 	        $('.header-hamburger').removeClass('active');
 	    });
 
+	    // 
 	    $('.btn-get-app, .btn-start').click(function(e){
 	        e.preventDefault();
 	        var wH = $('header').outerHeight(false);
 	        $("html, body").animate({ scrollTop: $('#section7').offset().top - (wH - 2) }, 700);
 	    });
 
+	    // Section 2 Carousel
 	    if($("#dream-carousel").length > 0) {
 
 		    var carousel = $("#dream-carousel").waterwheelCarousel({
@@ -963,7 +992,7 @@
 	    	$('.popup-wrap').removeClass('active');
 	    	$(_this).addClass('active');
 
-	    	$(_this).find('.lazyload-trigger').unveil();
+			$(_this).find('.lazyload-trigger').unveil();
 	    });
 
 	    $(document).on('click', '.popup-close', function(e){
@@ -973,6 +1002,7 @@
 	    });
 
 
+	    // Mobile Section 2 Carousel
 	    (function() {
 		  	var rotate, timeline;
 
@@ -1080,6 +1110,78 @@
 
 		}).call(this);
 	});
+
+	
+	function setupYTAPI() {
+	    tag = document.createElement('script');
+	    tag.src = "https://www.youtube.com/iframe_api";
+	    firstScriptTag = document.getElementsByTagName('script')[0];
+	    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	}
+	        
+	
+
+	function onYouTubeIframeAPIReady() {
+	    playerVideo = "ready";
+	    //$(".home-slide-thumb li").each(function(index) {
+	    $(document).on('click', '.play-video', function(e) {
+	        e.preventDefault();
+	        var _thisbtn = $(this);
+	        var videoId = $(this).attr('data-videoid');
+
+	        if ( $(_thisbtn).hasClass("isPlaying") ) {
+	            
+	        	if($(_thisbtn).hasClass('pause')) {
+	                $('#youtube-video').addClass('active');
+	        		player.playVideo();
+	        	} 
+	        } else {
+	        	stopVideo();
+	        	$('#youtube-video').addClass('active');
+	            $('.play-video').removeClass('isPlaying').removeClass('pause');
+	        	$(_thisbtn).addClass("isPlaying").addClass('pause');
+	        	$('#youtube-video').find('.video-holder').append("<div id='player'></div>");
+	            $(_thisbtn).closest('li').addClass('active');
+	            player = new YT.Player('player', {
+	                height: $(".video-holder").height(),
+	                width: $(".video-holder").width(),
+	                playerVars: { 'controls':0, 'showinfo':0, 'cc_load_policy':0, 'rel':0, 'autoplay':1},
+	                videoId: videoId,
+	                events: {
+	                    'onReady': onPlayerReady,
+	                    'onStateChange': onPlayerStateChange
+	                }
+	            });
+	        }
+	    });
+
+	}
+
+	function onPlayerReady(event) {
+	}
+
+	function onPlayerStateChange(event) {
+	    if (event.data == YT.PlayerState.ENDED) {
+	        playerVideo = "complete";
+	        stopVideo();
+	    }
+
+	    if(event.data == YT.PlayerState.PLAYING ) {
+	    	
+	    }
+	}
+
+	function stopVideo() {
+	    if (player) {
+			player = null;
+			$("#player").attr("src","");
+			$("#player").remove();
+			$('.popup-wrap').removeClass('active');
+			$(".play-video.isPlaying").removeClass("isPlaying").removeClass('pause');
+	        $('.video-holder').html('');
+	    }
+
+	}
 </script>
 
 </body>

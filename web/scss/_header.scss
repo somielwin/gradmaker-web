@@ -39,6 +39,40 @@ header {
 		float: none;
 		clear: both;
 	}
+
+	&.for-app {
+
+		.head-btn {
+			@include breakpoint(tablet) {
+				display: block;
+			}
+
+			@include breakpoint(tablet2) {
+				margin-top: 10px;
+				padding-right: 10px;
+
+				.btn-get-app {
+					padding-top: 8px;
+					padding-bottom: 8px;
+					padding-left: 18px;
+					font-size: 14px;
+
+					&:hover {
+						padding-right: 50px;
+					}
+				}
+			}
+
+			@include breakpoint(mobilesmall) {
+				
+				.btn-get-app {
+					font-size: 13px;
+					padding-left: 15px;
+				}
+			}
+
+		}	
+	}
 }
 
 nav {
@@ -100,6 +134,30 @@ nav {
 		height: auto;
 	}
 
+	&.icon-only {
+
+		.mobile-logo {
+			display: none;
+			width: 35px;
+			margin: 0 auto;
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
+
+			@include breakpoint(tablet2) {
+				display: block;
+			}
+		}
+
+		.desktop-logo {
+			@include breakpoint(tablet2) {
+				display: none;
+			}
+		}
+	}
+
 }
 
 .head-btn {
@@ -145,6 +203,7 @@ nav {
 		padding-right: 50px;
 		@include transition(padding 0.4s ease);
 		font-size: 16px;
+		font-weight: 700;
 
 		&:hover {
 			padding-right: 80px;
