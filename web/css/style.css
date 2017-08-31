@@ -55,35 +55,28 @@
   -moz-osx-font-smoothing: grayscale; }
 
 .icon-small-arrow:before {
-  content: "\e906";
-  color: #00673c; }
+  content: "\e906"; }
 
 .icon-access:before {
   content: "\e907"; }
 
 .icon-watch-video:before {
-  content: "\e900";
-  color: #fff; }
+  content: "\e900"; }
 
 .icon-icon-apple:before {
-  content: "\e901";
-  color: #fafafa; }
+  content: "\e901"; }
 
 .icon-icon-fb:before {
-  content: "\e902";
-  color: #fff; }
+  content: "\e902"; }
 
 .icon-icon-google:before {
-  content: "\e903";
-  color: #fff; }
+  content: "\e903"; }
 
 .icon-icon-twitter:before {
-  content: "\e904";
-  color: #fff; }
+  content: "\e904"; }
 
 .icon-icon-viber:before {
-  content: "\e905";
-  color: #fff; }
+  content: "\e905"; }
 
 /*.icon-watch-video:before {
   content: "\e900";
@@ -3070,6 +3063,10 @@ footer {
       .social-wrap ul li a:hover {
         opacity: 1;
         color: #F5A623; }
+        .social-wrap ul li a:hover span {
+          color: #F5A623; }
+      .social-wrap ul li a span {
+        color: #ffffff; }
       @media (max-width: 767px) {
         .social-wrap ul li a {
           font-size: 24px; } }
@@ -4251,10 +4248,26 @@ strong {
   margin-top: 40px;
   padding-top: 13px;
   padding-bottom: 13px; }
+  .btn-start span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: 14px;
+    position: relative;
+    top: -1px;
+    right: 0;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
   .btn-start:hover {
     color: #ffffff;
     background: #F5A623;
     border: 1px solid #F5A623; }
+    .btn-start:hover span {
+      color: #ffffff;
+      right: -10px; }
   @media (max-width: 767px) {
     .btn-start {
       padding-top: 8px;

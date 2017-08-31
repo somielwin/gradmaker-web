@@ -78,6 +78,7 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  @include transition(all 0.4s ease);
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -86,34 +87,27 @@
 
 .icon-small-arrow:before {
   content: "\e906";
-  color: #00673c;
 }
 .icon-access:before {
   content: "\e907";
 }
 .icon-watch-video:before {
   content: "\e900";
-  color: #fff;
 }
 .icon-icon-apple:before {
   content: "\e901";
-  color: #fafafa;
 }
 .icon-icon-fb:before {
   content: "\e902";
-  color: #fff;
 }
 .icon-icon-google:before {
   content: "\e903";
-  color: #fff;
 }
 .icon-icon-twitter:before {
   content: "\e904";
-  color: #fff;
 }
 .icon-icon-viber:before {
   content: "\e905";
-  color: #fff;
 }
 
 /*.icon-watch-video:before {
