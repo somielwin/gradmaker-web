@@ -37,8 +37,18 @@ $(window).resize(function() {
 
 });
 
+
+
 $(document).ready(function() {
-	
+
+    $(document).keydown(function(e){
+       
+        if(e.keyCode == 27) {
+            $('.popup-wrap').removeClass('active');
+            
+        }
+    });
+
     if($(window).width() >  768) {
         $('.animated').appear(function() {
             var element = $(this);
