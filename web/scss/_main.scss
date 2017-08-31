@@ -3105,7 +3105,7 @@ a {
 }
 
 
-@-webkit-keyframes clouds {
+@keyframes clouds {
   0% {
     -webkit-transform : translate(0, 0);
     -moz-transform : translate(0, 0);
@@ -3131,7 +3131,7 @@ a {
   }
 }
 
-@-webkit-keyframes clouds1 {
+@keyframes clouds1 {
   0% {
     @include transform(translate(-300px, 0));
   }
