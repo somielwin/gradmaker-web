@@ -3456,7 +3456,8 @@ a {
 
 .banner-text {
   position: relative;
-  z-index: 200; }
+  z-index: 200;
+  max-width: 700px; }
   @media (max-width: 767px) {
     .banner-text {
       text-align: center; } }
@@ -5171,13 +5172,32 @@ a {
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden; }
 
-#item-5 figure {
+#item-5 figure, #item-10 figure, #item-9 figure, #item-8 figure {
   left: 5%;
   -webkit-transform: scale(0.7);
   -moz-transform: scale(0.7);
   -ms-transform: scale(0.7);
   -o-transform: scale(0.7);
   transform: scale(0.7); }
+
+#item-7 figure {
+  left: 2%;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9); }
+  @media (max-width: 640px) {
+    #item-7 figure {
+      left: 0; } }
+
+@media (max-width: 640px) {
+  #item-7 .dc-content h3 {
+    font-size: 32px; } }
+
+@media (max-width: 640px) {
+  #item-10 .dc-content h3 {
+    font-size: 32px; } }
 
 #item-2 figure {
   -webkit-transform: scale(0.7);
@@ -5197,10 +5217,10 @@ a {
     #item-1 figure {
       bottom: -25px; } }
 
-#item-3 .dc-content h3, #item-5 .dc-content h3 {
+#item-3 .dc-content h3, #item-5 .dc-content h3, #item-6 .dc-content h3 {
   font-size: 34px; }
   @media (max-width: 640px) {
-    #item-3 .dc-content h3, #item-5 .dc-content h3 {
+    #item-3 .dc-content h3, #item-5 .dc-content h3, #item-6 .dc-content h3 {
       font-size: 26px; } }
 
 .dream-carousel {
@@ -5267,7 +5287,7 @@ a {
 
 .dc-item.active {
   opacity: 1; }
-  .dc-item.active #item-5 figure {
+  .dc-item.active #item-5 figure, .dc-item.active #item-10 figure, .dc-item.active #item-9 figure {
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
     -ms-transform: scale(0.8);

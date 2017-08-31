@@ -186,6 +186,7 @@ a {
 .banner-text {
 	position: relative;
 	z-index: 200;
+	max-width: 700px;
 
 	@include breakpoint(tablet2) {
 		text-align: center;
@@ -2300,11 +2301,45 @@ a {
 }
 
 
-#item-5 {
+#item-5, #item-10, #item-9, #item-8 {
 
 	figure {
 		left: 5%;
 		@include transform(scale(0.7));
+	}
+}
+
+#item-7 {
+	figure {
+		left: 2%;
+		@include transform(scale(0.9));
+
+		@include breakpoint(phablet) {
+			left: 0;
+		}	
+	}
+
+	.dc-content {
+
+		h3 {
+
+			@include breakpoint(phablet) {
+				font-size: 32px;
+			}
+		}
+	}
+}
+
+#item-10 {
+	
+	.dc-content {
+
+		h3 {
+
+			@include breakpoint(phablet) {
+				font-size: 32px;
+			}
+		}
 	}
 }
 
@@ -2337,7 +2372,7 @@ a {
 	}
 }
 
-#item-3, #item-5 {
+#item-3, #item-5, #item-6 {
 
 	.dc-content {
 
@@ -2418,7 +2453,7 @@ a {
 .dc-item.active  {
 	opacity: 1;
 
-	#item-5 {
+	#item-5, #item-10, #item-9 {
 
 		figure {
 			@include transform(scale(0.8));
