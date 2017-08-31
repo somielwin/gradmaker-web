@@ -1263,7 +1263,11 @@
 	    	$('.popup-wrap').removeClass('active');
 	    	$(_this).addClass('active');
 
-			$(_this).find('.lazyload-trigger').unveil();
+			$(_this).find('.lazyload-trigger').unveil(200, function() {
+            	$(this).load(function() {
+                	$(this).siblings('.wavy-loader').remove();
+                });
+            });
 	    });
 
 	    $(document).on('click', '.popup-close', function(e){
