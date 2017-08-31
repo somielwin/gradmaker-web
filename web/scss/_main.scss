@@ -1786,6 +1786,7 @@ a {
 	p {
 		font-size: 22px;
 		line-height: 34px;
+		opacity: 0.80;
 
 		@include breakpoint(tablet) {
 			font-size: 18px;
@@ -2331,7 +2332,7 @@ a {
 }
 
 #item-10 {
-	
+
 	.dc-content {
 
 		h3 {
@@ -2632,11 +2633,12 @@ a {
 	z-index: 3006;
 	visibility: hidden;
 	opacity: 0;
-	@include transition(all 0.4s ease);
+	@include transition(all 0.4s 0.4s ease);
 
 	&.active {
 		opacity: 1;
 		visibility: visible;
+		@include transition(all 0.4s  ease);
 	}
 
 	.popup-content {
@@ -2672,6 +2674,12 @@ a {
 			line-height: 40px;
 
 		}
+
+		@include breakpoint(mobile) {
+			font-size: 28px;
+			line-height: 36px;
+
+		}
 	}
 
 	p {
@@ -2683,6 +2691,10 @@ a {
 			line-height: 24px;
 		}
 		
+		@include breakpoint(phablet) {
+			font-size: 14px;
+			line-height: 20px;
+		}
 	}
 }
 
@@ -2745,6 +2757,8 @@ a {
 		margin-bottom: 20px;
 		width: auto;
 		height: auto;
+		position: relative;
+		min-height: 100px;
 
 		.wavy-loader {
 			position: absolute;
@@ -2829,6 +2843,7 @@ a {
 		@include breakpoint(tablet2) {
 			width: 50px;
 			margin: 0px 5px;
+			display: none;
 		}
 	}
 }
@@ -3137,6 +3152,48 @@ a {
 		iframe {
 			width: 100%;
 			height: 100%;
+		}
+	}
+}
+
+.popup-menu {
+	margin-top: 10px;
+
+	ul {
+
+		li {
+			display: inline-block;
+			margin: 0px 5px;
+
+			&.active {
+
+				a {
+					background: $coOrange;
+				}
+			}
+
+			a {
+				display: block;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				position: relative;
+				overflow: hidden;
+				background: #D8D8D8;	
+				text-indent: -9999px;
+
+
+			}
+		}
+	}
+}
+
+#rewards, #security {
+
+	figure {
+		@include breakpoint(tablet2) {
+			max-width: 80%;
+			margin: 0 auto;
 		}
 	}
 }

@@ -41,6 +41,16 @@
 						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-product.png" alt="">
 						<div class="wavy-loader"><span></span><span></span><span></span></div>
 						</figure>
+						<div class="popup-menu">
+							<ul>
+								<li class="active"><a href="#product">1</a></li>
+								<li><a href="#company">2</a></li>
+								<li><a href="#security">3</a></li>
+								<li><a href="#payitforward">4</a></li>
+								<li><a href="#rewards">5</a></li>
+								<li><a href="#payonline">5</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -64,6 +74,16 @@
 						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-company.svg" alt="">
 							<div class="wavy-loader"><span></span><span></span><span></span></div>
 						</figure>
+						<div class="popup-menu">
+							<ul>
+								<li><a href="#product">1</a></li>
+								<li class="active"><a href="#company">2</a></li>
+								<li><a href="#security">3</a></li>
+								<li><a href="#payitforward">4</a></li>
+								<li><a href="#rewards">5</a></li>
+								<li><a href="#payonline">5</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -88,6 +108,16 @@
 						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-security.svg" alt="">
 							<div class="wavy-loader"><span></span><span></span><span></span></div>
 						</figure>
+						<div class="popup-menu">
+							<ul>
+								<li><a href="#product">1</a></li>
+								<li><a href="#company">2</a></li>
+								<li class="active"><a href="#security">3</a></li>
+								<li><a href="#payitforward">4</a></li>
+								<li><a href="#rewards">5</a></li>
+								<li><a href="#payonline">5</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -112,6 +142,16 @@
 						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-payit.svg" alt="">
 							<div class="wavy-loader"><span></span><span></span><span></span></div>
 						</figure>
+						<div class="popup-menu">
+							<ul>
+								<li><a href="#product">1</a></li>
+								<li><a href="#company">2</a></li>
+								<li><a href="#security">3</a></li>
+								<li class="active"><a href="#payitforward">4</a></li>
+								<li><a href="#rewards">5</a></li>
+								<li><a href="#payonline">5</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -136,6 +176,16 @@
 						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-reward.svg" alt="">
 							<div class="wavy-loader"><span></span><span></span><span></span></div>
 						</figure>
+						<div class="popup-menu">
+							<ul>
+								<li><a href="#product">1</a></li>
+								<li><a href="#company">2</a></li>
+								<li><a href="#security">3</a></li>
+								<li><a href="#payitforward">4</a></li>
+								<li class="active"><a href="#rewards">5</a></li>
+								<li><a href="#payonline">5</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -160,6 +210,16 @@
 						<figure><img class="lazyload-trigger" src="images/page_template/lazyload.jpg" data-src="images/home/pop-payonline.svg" alt="">
 							<div class="wavy-loader"><span></span><span></span><span></span></div>
 						</figure>
+						<div class="popup-menu">
+							<ul>
+								<li><a href="#product">1</a></li>
+								<li><a href="#company">2</a></li>
+								<li><a href="#security">3</a></li>
+								<li><a href="#payitforward">4</a></li>
+								<li><a href="#rewards">5</a></li>
+								<li class="active"><a href="#payonline">5</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -967,11 +1027,71 @@
 	        player.pauseVideo(2);
 	        $('.popup-wrap').removeClass('active');
 	    });
+
+	    $(document).on('click', '.popup-menu a', function(e){
+	    	e.preventDefault();
+
+	    	var _this = $(this).attr('href');
+
+	    	$('.popup-wrap').removeClass('active');
+	    	$(_this).addClass('active');
+	    	$(_this).find('.lazyload-trigger').unveil();
+	    });
+
+
+		
 	});
 
 	$(document).ready(function () {
+
+		// $('.popup-wrap').bind('touchmove',function(e){
+		//     e.preventDefault();
+
+		//     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+		//     console.log(touch.pageX);
+		// });
 		
-		
+		$('.popup-wrap').bind('touchstart', function(e) {
+			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+			currentX = touch["clientX"];
+			currentY = touch["clientY"];
+		});
+
+		var carouselPopBusy = false;
+
+		$('.popup-wrap').bind('touchmove', function(e) {
+			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+			var newX = touch["clientX"];
+			var newY = touch["clientY"];
+			if (Math.abs(newX - currentX) > Math.abs(newY - currentY)) {
+				e.preventDefault();
+				if (newX > currentX) {
+
+					if( carouselPopBusy == false) {
+						carouselPopBusy = true;
+
+						// console.log($(this).find('.popup-menu li.active'));
+						$(this).find('.popup-menu li.active').prev().find('a').click();
+						setTimeout(function(){
+							carouselPopBusy = false;
+						},500);
+					}
+					
+				} else {
+					if( carouselPopBusy == false) {
+						carouselPopBusy = true;
+						console.log($(this).find('.popup-menu li.active'));
+						$(this).find('.popup-menu li.active').next().find('a').click();
+						setTimeout(function(){
+							carouselPopBusy = false;
+						},500);
+					}
+				}
+			}
+			currentX = newX;
+			currentY = newY;
+		});
+
 		// Carousel Co-Creator
 		$('.carousel-cocreate').owlCarousel({
 	        loop: false,
