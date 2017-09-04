@@ -7462,7 +7462,7 @@ br.mobile-br {
   font-weight: 300; }
   .contact-form-wrap .custom-checkbox [type="checkbox"]:not(:checked) + label span, .contact-form-wrap .custom-checkbox [type="checkbox"]:checked + label span {
     color: #424559;
-    opacity: 0.20; }
+    opacity: 0.50; }
   .contact-form-wrap .custom-checkbox [type="checkbox"]:not(:checked) + label br, .contact-form-wrap .custom-checkbox [type="checkbox"]:checked + label br {
     display: none; }
 
