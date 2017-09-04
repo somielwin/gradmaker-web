@@ -16,7 +16,7 @@ h2 {
 		font-size: 48px;
 	}
 
-	@include breakpoint(phablet) {
+	@include breakpoint(mobilesmall) {
 		font-size: 32px;
 		line-height: 42px;
 	}

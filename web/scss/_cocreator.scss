@@ -38,6 +38,10 @@
 	bottom: 23px;
 	@include transform(translate(-50%, 0));
 
+	img {
+		width: 1200px;
+	}
+
 	@include breakpoint(tablet2) {
 		bottom: 10px;
 	}
@@ -62,9 +66,6 @@
 	left: 50%;
 	margin-left: 190px;
 	bottom: 380px;
-	-webkit-animation: heartbeatUp 5s linear infinite;
-	-moz-animation: heartbeatUp 5s linear infinite;
-	animation: heartbeatUp  5s linear infinite;
 
 	@include breakpoint(tablet) {
 		margin-left: 110px;
@@ -103,9 +104,6 @@
 		&.heart-anim1 {
 			opacity: 0.27;
 			@include transform(scale(0.9));
-			-webkit-animation: heartbeatX 5s linear infinite;
-			-moz-animation: heartbeatX  5s linear infinite;
-			animation: heartbeatX  5s linear infinite;
 
 			@include breakpoint(phablet) {
 				bottom: 70px;
@@ -117,9 +115,6 @@
 			bottom: 45px;
 			opacity: 0.5;
 			@include transform(scale(0.7));
-			-webkit-animation: heartbeatY 5s linear infinite;
-			-moz-animation: heartbeatY  5s linear infinite;
-			animation: heartbeatY 5s linear infinite;
 
 			@include breakpoint(phablet) {
 				bottom: 60px;
@@ -525,10 +520,16 @@
 			}
 
 			@include breakpoint(mobile) {
-				font-size: 10px;
+				font-s-loadize: 10px;
 			}
 		}
 	}
+}
+
+.btn-load-more {
+	border-radius: 50px;
+	border: 2px solid #ccc;
+	color: #8e8f9b;
 }
 
 .wavy-loader {
