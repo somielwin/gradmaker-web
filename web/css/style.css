@@ -3454,7 +3454,7 @@ a {
     height: 100vh; }
     @media (max-width: 640px) {
       .section1.sec-full {
-        height: calc(100vh - 25px); } }
+        height: calc(100vh + 15px); } }
   .section1:after {
     content: '';
     position: absolute;

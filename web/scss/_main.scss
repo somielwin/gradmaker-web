@@ -89,7 +89,7 @@ a {
 		height: 100vh;
 
 		@include breakpoint(phablet) {
-			height: calc(100vh - 25px);
+			height: calc(100vh + 15px);
 		}
 	}
 
