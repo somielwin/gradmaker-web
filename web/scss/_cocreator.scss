@@ -530,6 +530,11 @@
 	border-radius: 50px;
 	border: 2px solid #ccc;
 	color: #8e8f9b;
+	margin-bottom: 60px;
+
+	@include breakpoint(tablet2) {
+		margin-bottom: 30px;
+	}
 }
 
 .wavy-loader {

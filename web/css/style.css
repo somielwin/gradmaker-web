@@ -6955,7 +6955,11 @@ br.mobile-br {
 .btn-load-more {
   border-radius: 50px;
   border: 2px solid #ccc;
-  color: #8e8f9b; }
+  color: #8e8f9b;
+  margin-bottom: 60px; }
+  @media (max-width: 767px) {
+    .btn-load-more {
+      margin-bottom: 30px; } }
 
 .wavy-loader {
   margin-bottom: 15px;
