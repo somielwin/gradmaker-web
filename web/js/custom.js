@@ -95,6 +95,19 @@ $(document).ready(function() {
 
     var slot = 500;
 
+    $('#term-checkbox').change(function(){
+        
+        //$('.fill-up-correctly').removeClass('is-open');
+
+        if( $('#terms-checkbox').is(':checked')) {
+            $('#terms-checkbox').closest('.custom-checkbox').removeClass('error')
+
+        } else {
+            $('#terms-checkbox').closest('.custom-checkbox').addClass('error');
+        }
+
+    });
+
     $('#access-form').submit(function(e){
         e.preventDefault();
         $('.input-wrap').addClass('error');
@@ -129,7 +142,15 @@ $(document).ready(function() {
         	isvalidate = false;
         }
 
-        if( IsEmail($('#email-account').val()) && !$('#last-name').val() == '' && !$('#first-name').val() == '' && $('#contact-num').val().length >= 6 && $('#contact-num').val() != '' && isvalidate == true) {
+        if( $('#term-checkbox').prop('checked')) {
+            $('#term-checkbox').closest('.custom-checkbox').removeClass('error')
+            isvalidate = true;
+        } else {
+            $('#term-checkbox').closest('.custom-checkbox').addClass('error');
+            isvalidate = false;
+        }
+
+        if( IsEmail($('#email-account').val()) && !$('#last-name').val() == '' && !$('#first-name').val() == '' && $('#contact-num').val().length >= 6 && $('#contact-num').val() != ''  && isvalidate == true) {
         	
         	// $('#email-account').val('')
         	// $('#last-name').val('')

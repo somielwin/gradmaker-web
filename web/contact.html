@@ -77,7 +77,10 @@
 						<div class="input-wrap">
 							<textarea cols="4" rows="4" placeholder="Message" onkeyup="auto_grow(this)"></textarea>
 						</div>
-
+						<div class="custom-checkbox">
+							<input type="checkbox" name="" id="term-checkbox">
+							<label for="term-checkbox"><span>I agree to allow Manulife to use my information to contact me about<br>Manulife products and information.</span></label>
+						</div>
 						<p><small>Manulife values your privacy. By clicking <strong>Send</strong>, <br>I am giving Manulife consent to process the data and information that I provide.</small></p>
 						<div class="input-wrap text-center">
 							<div class="wavy-loader"><span></span><span></span><span></span></div>
@@ -130,6 +133,20 @@
 
 <script type="text/javascript">
 	$(document).ready(function () {
+
+		$('#term-checkbox').change(function(){
+        
+	        //$('.fill-up-correctly').removeClass('is-open');
+
+	        if( $('#terms-checkbox').is(':checked')) {
+	            $('#terms-checkbox').closest('.custom-checkbox').removeClass('error')
+
+	        } else {
+	            $('#terms-checkbox').closest('.custom-checkbox').addClass('error');
+	        }
+
+	    });
+		
 		$('#contact-form').submit(function(e){
 	        e.preventDefault();
 	        $('.input-wrap').addClass('error');
@@ -163,6 +180,14 @@
 	        	isvalidate = true;
 	        } else {
 	        	isvalidate = false;
+	        }
+
+	        if( $('#term-checkbox').prop('checked')) {
+	            $('#term-checkbox').closest('.custom-checkbox').removeClass('error')
+	            isvalidate = true;
+	        } else {
+	            $('#term-checkbox').closest('.custom-checkbox').addClass('error');
+	            isvalidate = false;
 	        }
 
 	        if( IsEmail($('#contact-email').val()) && !$('#contact-name').val() == '' && !$('#contact-subj').val() == '' && $('#contact-num').val().length >= 6 && $('#contact-num').val() != '' && isvalidate == true) {

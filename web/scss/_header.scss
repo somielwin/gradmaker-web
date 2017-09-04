@@ -181,6 +181,16 @@ nav {
 		font-size: 16px;
 		color: #424559;
 
+		&:hover {
+			border: 1px solid $coOrange;
+			background: $coOrange;
+			color: $coWhite;
+
+			span {
+				color: $coWhite;
+			}
+		}
+
 		figure {
 			display: inline-block;
 			vertical-align: middle;
@@ -211,8 +221,12 @@ nav {
 		font-size: 16px;
 		font-weight: 700;
 
+
+
 		&:hover {
 			padding-right: 80px;
+			border: 1px solid $coOrange;
+			background: $coOrange;
 		}
 	}
 }
@@ -383,7 +397,8 @@ nav {
 			}
 		}
 
-		.head-btn {display: block;
+		.head-btn {
+			display: block;
 			float: none;
 			clear: both;
 			text-align: center;
