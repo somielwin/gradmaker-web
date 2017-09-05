@@ -4347,7 +4347,6 @@ br.mobile-br {
   border: 1px solid #f2f2f2;
   border-radius: 8px;
   padding: 25px 25px 10px;
-  margin-left: -25px;
   margin-top: 30px;
   max-width: 82%; }
   @media (max-width: 1024px) {
