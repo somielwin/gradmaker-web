@@ -59,6 +59,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-instagram:before {
+  content: "\e909"; }
+
+.icon-linkedin:before {
+  content: "\e90a"; }
+
+.icon-youtube:before {
+  content: "\e908"; }
+
 .icon-small-arrow:before {
   content: "\e906"; }
 
@@ -83,29 +92,29 @@
 .icon-icon-viber:before {
   content: "\e905"; }
 
-/*.icon-watch-video:before {
+/*.icon-small-arrow:before {
+  content: "\e906";
+}
+.icon-access:before {
+  content: "\e907";
+}
+.icon-watch-video:before {
   content: "\e900";
-  color: #fff;
 }
 .icon-icon-apple:before {
   content: "\e901";
-  color: #fafafa;
 }
 .icon-icon-fb:before {
   content: "\e902";
-  color: #fff;
 }
 .icon-icon-google:before {
   content: "\e903";
-  color: #fff;
 }
 .icon-icon-twitter:before {
   content: "\e904";
-  color: #fff;
 }
 .icon-icon-viber:before {
   content: "\e905";
-  color: #fff;
 }*/
 /* Addresses margins handled incorrectly in IE 6/7. */
 * {
@@ -3160,11 +3169,34 @@ footer {
     .social-wrap ul li a {
       font-size: 30px;
       opacity: 0.8; }
+      .social-wrap ul li a span {
+        display: block;
+        opacity: 0.8; }
       .social-wrap ul li a:hover {
         opacity: 1;
         color: #F5A623; }
         .social-wrap ul li a:hover span {
-          color: #F5A623; }
+          color: #F5A623;
+          opacity: 1; }
+      .social-wrap ul li a .icon-instagram {
+        font-size: 27px; }
+        @media (max-width: 767px) {
+          .social-wrap ul li a .icon-instagram {
+            font-size: 22px; } }
+      .social-wrap ul li a .icon-linkedin, .social-wrap ul li a .icon-youtube {
+        font-size: 36px; }
+        @media (max-width: 767px) {
+          .social-wrap ul li a .icon-linkedin, .social-wrap ul li a .icon-youtube {
+            font-size: 28px;
+            position: relative;
+            top: 1px; } }
+      .social-wrap ul li a .icon-youtube {
+        font-size: 34px;
+        position: relative;
+        top: 1px; }
+        @media (max-width: 767px) {
+          .social-wrap ul li a .icon-youtube {
+            top: 2px; } }
       .social-wrap ul li a span {
         color: #ffffff; }
       @media (max-width: 767px) {
@@ -4273,7 +4305,11 @@ br.mobile-br {
 
 .compa-content h2 {
   color: #424559;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  font-size: 42px; }
+  @media (max-width: 991px) {
+    .compa-content h2 {
+      font-size: 48px; } }
   @media (max-width: 767px) {
     .compa-content h2 {
       font-size: 42px;
@@ -4286,9 +4322,9 @@ br.mobile-br {
 
 .compa-content p {
   opacity: 0.8;
-  font-size: 22px;
+  font-size: 20px;
   color: #424559;
-  line-height: 38px; }
+  line-height: 34px; }
   @media (max-width: 640px) {
     .compa-content p {
       font-size: 16px;
@@ -4322,10 +4358,10 @@ br.mobile-br {
       max-width: 100%;
       padding: 15px 15px 10px; } }
   .cc-box p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
     margin-bottom: 15px;
-    text-indent: 40px; }
+    text-indent: 20px; }
     @media (max-width: 640px) {
       .cc-box p {
         font-size: 12px;
