@@ -1699,9 +1699,9 @@ a {
   overflow: hidden; }
   .section3.sec-wrap {
     padding-bottom: 30px; }
-    @media (max-width: 991px) {
+    @media (max-width: 767px) {
       .section3.sec-wrap {
-        padding-bottom: 30px; } }
+        padding-bottom: 40px; } }
 
 .table-wrap {
   display: table;

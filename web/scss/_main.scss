@@ -184,8 +184,8 @@ a {
 	&.sec-wrap {
 		padding-bottom: 30px;
 
-		@include breakpoint(tablet) {
-			padding-bottom: 30px;
+		@include breakpoint(tablet2) {
+			padding-bottom: 40px;
 		}
 	}
 
