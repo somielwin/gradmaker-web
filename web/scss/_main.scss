@@ -132,6 +132,13 @@ a {
 		min-height: auto;
 	}
 
+	&.sec-wrap {
+
+		@include breakpoint(tablet2) {
+			padding-bottom: 40px;
+		}
+	}
+
 	/*@include breakpoint(desktop) {
 		display: none;
 	}*/
@@ -153,6 +160,11 @@ a {
 
 	.sec-head-title {
 
+		@include breakpoint(tablet) {
+			max-width: 580px;
+			margin: 0 auto;
+		}
+
 		/*@include breakpoint(phablet) {
 			max-width: 320px;
 			margin: 0 auto;
@@ -170,10 +182,10 @@ a {
 	overflow: hidden;
 
 	&.sec-wrap {
-		padding-bottom: 0;
+		padding-bottom: 30px;
 
 		@include breakpoint(tablet) {
-			padding-bottom: 20px;
+			padding-bottom: 30px;
 		}
 	}
 
@@ -462,7 +474,7 @@ br.mobile-br {
 	padding: 80px 0;
 
 	@include breakpoint(tablet2) {
-		padding: 40px 0;
+		padding: 60px 0;
 	}
 }
 
@@ -758,8 +770,8 @@ br.mobile-br {
 
 
 	.cg-bot {
-		border: 2px dashed #ffac5d;
-	    margin-top: -40px;
+		border: 2.5px dashed #ffac5d;
+	    margin-top: -35px;
 	    padding-top: 40px;
 
 	    @include breakpoint(phablet) {
@@ -768,7 +780,7 @@ br.mobile-br {
 
 
 	    p {
-	    	padding-top: 25px;
+	    	padding-top: 20px;
 
 
 
@@ -890,10 +902,10 @@ br.mobile-br {
 }
 
 .cg-bot {
-	padding: 50px 0 15px 0;
+	padding: 50px 0 25px 0;
 	position: relative;
 	margin-top: -45px;
-	border: 2px dashed $coGreen;
+	border: 2.5px dashed $coGreen;
 	border-radius: 20px;
 	position: relative;
 
@@ -902,7 +914,7 @@ br.mobile-br {
 	p {
 		padding-top: 20px;
 		text-transform: uppercase;
-		padding-bottom: 5px;
+		padding-bottom: 0px;
 		opacity: 0.52;
 		font-size: 14px;
 		letter-spacing: 0.88px;
@@ -923,6 +935,7 @@ br.mobile-br {
 		color: $coGreen;
 		font-weight: 400;
 		text-align: center;
+		line-height: 28px;
 
 		@include breakpoint(phablet) {
 			font-size: 18px;
@@ -1237,11 +1250,11 @@ br.mobile-br {
 	}
 
 	@include breakpoint(tablet2) {
-		padding-top: 40px;
+		padding-top: 60px;
 	}
 
 	@include breakpoint(phablet) {
-		padding-top: 40px;
+		padding-top: 60px;
 		min-height: 480px;
 		padding-bottom: 0;
 		height: auto;
@@ -1630,6 +1643,10 @@ br.mobile-br {
 
 .section4 {
 	margin-bottom: 60px;
+
+	@include breakpoint(tablet2) {
+		margin-bottom: 0;
+	}
 }
 
 .form-wrapper {
@@ -1786,6 +1803,10 @@ br.mobile-br {
 .carousel-cocreate {
 	margin-top: 60px;
 	margin-bottom: 40px;
+
+	@include breakpoint(tablet2) {
+		margin-bottom: 0;
+	}
 
 	@include breakpoint(mobilelarge) {
 		padding-left: 100px;
@@ -1947,14 +1968,30 @@ br.mobile-br {
 
 		}
 
+		.table-wrap {
+			min-height: auto;
+
+			.table-cell {
+				padding-bottom: 0;
+
+				@include breakpoint(tablet2) {
+					display: table-cell;
+				}
+			}
+
+			@include breakpoint(tablet2) {
+				height: 100%;
+				display: table;
+				position: absolute;
+			}
+		}
+
 		.popup-right {
 			width: 100%;
 			max-height: 100%;
 			text-align: center;
-			position: absolute;
-			top: 50%;
-			@include transform(translate(0, -50%));
-			padding: 50px 60px 30px;
+			position: static;
+			padding: 30px 60px 30px;
 			@include transition(all 0.4s 0.4s ease);
 
 			@include breakpoint(tablet) {
@@ -2104,10 +2141,9 @@ br.mobile-br {
 	width: 140px;
 	height: 140px;
 	border-radius: 50%;
-	background: #f7f7f8;
-	border: 5px solid $coWhite;
-	box-shadow: 0 0 16px 0 rgba(0,0,0,0.08);
-	@include transition(all 0.4s ease);
+	background: $coWhite;
+	border: 5px solid #009558;
+	@include transition(background 0.4s ease);
 	position: absolute;
 	z-index: 9;
 
@@ -2128,10 +2164,14 @@ br.mobile-br {
 
 
 	&:hover {
-		xbox-shadow: 1px 1px 24px 1px rgba(243,166,36,0.36);
-		border: 5px solid $coGreen;	
-		xbackground: #F3A624;
+		box-shadow: 1px 1px 24px 1px rgba(243,166,36,0);
+		border: 5px solid $coOrange;
+		background: $coOrange;
+		color: $coWhite;
 
+		h5 {
+			color: $coWhite;
+		}
 
 		/*h5 {
 			color: #fff;
@@ -2160,11 +2200,11 @@ br.mobile-br {
 
 	h5 {
 		font-size: 22px;
-		font-weight: 400;
-		color: $coGreen;
+		font-weight: 500;
+		color: #009558;
 		line-height: 26px;
 		text-align: center;
-		@include transition(all 0.4s ease);
+		@include transition(all 0.2s ease);
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -2488,7 +2528,7 @@ br.mobile-br {
 }
 
 
-#item-5, #item-10, #item-9, #item-8 {
+#item-5, #item-10, #item-9, #item-6, #item-7 {
 
 	figure {
 		left: 5%;
@@ -2496,10 +2536,17 @@ br.mobile-br {
 	}
 }
 
+#item-8 {
+	figure {
+		left: 5%;
+		@include transform(scale(0.6));
+	}
+}
+
 #item-7 {
 	figure {
 		left: 2%;
-		@include transform(scale(0.9));
+		@include transform(scale(0.7));
 
 		@include breakpoint(phablet) {
 			left: 0;
@@ -2509,6 +2556,7 @@ br.mobile-br {
 	.dc-content {
 
 		h3 {
+			font-size: 40px;
 
 			@include breakpoint(phablet) {
 				font-size: 32px;
@@ -2564,7 +2612,7 @@ br.mobile-br {
 	.dc-content {
 
 		h3 {
-			font-size: 34px;
+			font-size: 40px;
 
 			@include breakpoint(phablet) {
 				font-size: 26px;
@@ -2609,7 +2657,7 @@ br.mobile-br {
 
 
 		h3 {
-			font-size: 50px;
+			font-size: 40px;
 			color: $coWhite;
 			margin-top: 10px;
 			font-weight: 300;
@@ -2642,10 +2690,28 @@ br.mobile-br {
 .dc-item.active  {
 	opacity: 1;
 
-	#item-5, #item-10, #item-9 {
+	#item-5, #item-10,  #item-6 {
 
 		figure {
-			@include transform(scale(0.8));
+			@include transform(scale(0.78));
+		}
+	}
+
+	#item-9 {
+		figure {
+			@include transform(scale(0.85));
+		}
+	}
+
+	#item-7 {
+		figure {
+			@include transform(scale(0.9));
+		}
+	}
+
+	#item-8 {
+		figure {
+			@include transform(scale(0.7));
 		}
 	}
 
@@ -2790,10 +2856,11 @@ br.mobile-br {
 				padding: 16px 30px 17px;
 				text-align: center;
 				background: transparent;
+				border: 2px solid rgba($coWhite, 0.8);
 
 				&:hover {
 					background: #F5A623;
-					border: 1px solid #F5A623;
+					border: 2px solid #F5A623;
 				}
 
 				@include breakpoint(phablet) {
@@ -2971,6 +3038,24 @@ br.mobile-br {
 		margin-bottom: 30px;
 		display: inline-block;
 		position: relative;
+		@include transition(all 0.4s ease);
+
+		&:hover {
+			color: $coOrange;
+
+			a {
+				color: $coOrange;
+			}
+
+			&:after {
+				background: $coOrange;
+			}
+		}
+
+		a {
+			color: $coGreen;
+			@include transition(all 0.4s ease);
+		}
 
 		@include breakpoint(tablet2) {
 			font-size: 28px;
@@ -2989,6 +3074,7 @@ br.mobile-br {
 			width: 100%;
 			height: 2px;
 			background: $coGreen;
+			@include transition(all 0.4s ease);
 		}
 	}
 
@@ -3345,6 +3431,10 @@ br.mobile-br {
 
 .popup-menu {
 	margin-top: 10px;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	@include transform(translate(-50%, 0));
 
 	ul {
 
@@ -3369,7 +3459,9 @@ br.mobile-br {
 				background: #D8D8D8;	
 				text-indent: -9999px;
 
-
+				&:hover {
+					background: $coOrange;
+				}
 			}
 		}
 	}
@@ -3381,6 +3473,19 @@ br.mobile-br {
 
 		@include breakpoint(tablet) {
 			max-width: 60%;
+		}
+	}
+}
+
+#payitforward , #payonline {
+
+	h4 {
+		&:after {
+			display: none;
+		}
+
+		&:hover {
+			color: $coGreen;
 		}
 	}
 }

@@ -217,14 +217,12 @@ nav {
 		border: 1px solid #008A50;
 		margin-right: -50px;
 		padding-right: 50px;
-		@include transition(padding 0.4s ease);
+		@include transition(all 0.4s ease);
 		font-size: 16px;
 		font-weight: 700;
 
 
-
 		&:hover {
-			padding-right: 80px;
 			border: 1px solid $coOrange;
 			background: $coOrange;
 		}
@@ -277,6 +275,7 @@ nav {
 			&.active {
 				height: 90px;
 
+
 				&:after {
 					height: 60px;
 					@include transition(all 0.4s linear);
@@ -284,9 +283,13 @@ nav {
 				}
 
 				a {
-					&:before {
+					@include transform(scale(1.7));
+					border: 2px solid $coWhite;
+					background: $coLightGreen;
+
+					/*&:before {
 						@include transform(scale(1));
-					}
+					}*/
 				}
 
 			}
@@ -304,8 +307,9 @@ nav {
 				text-indent: -9999px;
 				display: block;
 				position: relative;
+				border: 2px solid $coLightGreen;
 
-				&:before {
+				/*&:before {
 					content:'';
 					display: block;
 					float: none;
@@ -314,6 +318,7 @@ nav {
 					width: 8px;
 					height: 8px;
 					top: 50%;
+					display: none;
 					left: 50%;
 					background: $coGreen;
 					border-radius: 50%;
@@ -321,7 +326,7 @@ nav {
 					margin-left: -4px;
 					@include transform(scale(0));
 					@include transition(all 0.4s ease);
-				}
+				}*/
 
 				&:hover {
 					color: #F3A624;
