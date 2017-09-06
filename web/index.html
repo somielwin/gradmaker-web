@@ -104,6 +104,7 @@
 					<p>GradMaker is here to make that dream happen.</p>
 				</div>
 			</div>
+			<!-- Mobile Carousel Desktop -->
 			<div id="dream-carousel" class="dream-carousel animated hiding" data-animation="fadeInUp">
 				<div class="dc-item" data-num="1">
 					<div class="dc-link" id="item-1">
@@ -237,6 +238,7 @@
 				</div>
 			</div>
 
+			<!-- Mobile Carouse Mobile -->
 			<div class="container">
 				<div id="dream-carousel-mobile" class="dream-carousel">
 					<div class="dc-item" data-num="1">
@@ -692,52 +694,6 @@
 			<figure class="shape2 animated hiding" data-animation="fadeInUp"><img src="images/home/shape2.svg" alt=""></figure>
 			<figure class="shape4 animated hiding" data-animation="fadeInUp"><img src="images/home/shape4.svg" alt=""></figure>
 			<figure class="icon-download"><img src="images/home/icon-download.svg" alt=""></figure>
-			<!-- <div class="container">
-				<div class="slots-left">
-					<div class="slots-content">
-						<span>Slots Left</span>
-						<h4 class="slot-num">500</h4>
-					</div>
-				</div>
-				<div class="get-early-access">
-					<div class="get-access-title">
-						<h3>Get Early Access</h3>
-						<p>Be one of the first to experience mobile investing.</p>
-					</div>
-					<div class="form-wrapper">
-						<form id="access-form" method="post" action="" novalidate="">
-							<div class="row-wrap">
-								<div class="input-wrap input-half">
-									<input type="text" id="first-name" name="" placeholder="First Name">
-								</div>
-								<div class="input-wrap input-half">
-									<input type="text" id="last-name" name="" placeholder="Last Name">
-								</div>
-							</div>
-							<div class="row-wrap">
-								<div class="input-wrap input-half">
-									<input type="email" id="email-account" name="" placeholder="Email Address">
-								</div>
-								<div class="input-wrap input-half">
-									<input type="tel" id="contact-num" name="" placeholder="Mobile Number" maxlength="15" onkeypress="return event.charCode === 0 || /[\d-+=,()]/.test(String.fromCharCode(event.charCode));">
-								</div>
-							</div>
-							<div class="custom-checkbox">
-								<input type="checkbox" name="" id="term-checkbox">
-								<label for="term-checkbox">I agree to allow Manulife to use my information to contact me about<br>Manulife products and information.</label>
-							</div>
-							<p class="form-privacy"><i>Manulife values your privacy. By clicking</i> I’m in!, <i>You're giving Manulife consent to process the data and information that you provided.</i></p>
-							<div class="text-center">
-								<div class="wavy-loader"><span></span><span></span><span></span></div>
-								<div class="input-wrap">
-									<input class="btn" type="submit" name="" value="I'm in!">
-								</div>
-								<p class="ty-message">You've secured your slot to get notified when the app is ready. Thanks and we'll be in touch!</p>
-							</div>
-						</form>
-					</div>
-				</div> -->
-
 				<div class="act-now">
 					<div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
 						<h2>Download the <br class="mobile-br">app now!</h2>
@@ -936,7 +892,6 @@
 <script src="js/owl.carousel.js"></script>
 <script src="js/jquery.appear.js"></script>
 <script src="js/TweenMax.js"></script>
-<!-- <script src="js/ScrollToPlugin.min.js"></script> -->
 <script src="js/jquery.waterwheelCarousel.js"></script>
 <script src="js/jquery.unveil.js"></script>
 <script src="js/custom.js"></script>
@@ -970,13 +925,6 @@
                 });
             });
 
-	    	// $('.popup-wrap').removeClass('active');
-	    	// $(_this).addClass('active');
-	    	// $(_this).find('.lazyload-trigger').unveil(200, function() {
-	     //        $(_this).find('.wavy-loader').remove();
-	     //    });
-
-
 	    });
 
 
@@ -984,13 +932,6 @@
 	});
 
 	$(document).ready(function () {
-
-		// $('.popup-wrap').bind('touchmove',function(e){
-		//     e.preventDefault();
-
-		//     var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-		//     console.log(touch.pageX);
-		// });
 		
 		$('.popup-right').bind('touchstart', function(e) {
 			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
@@ -1124,24 +1065,6 @@
 			_this.closest('li').addClass('active');
 			scrollToDiv($targetDiv, 0);
 
-			// if($(this).parent('li:nth-child(4)').hasClass('active')) {
-   //              $('.sn-menu').addClass('sn-green');
-
-   //          } 
-   //          else if($(this).parent('li:nth-child(6)').hasClass('active')) {    
-   //              $('.sn-menu').addClass('sn-green');
-
-   //          } else if($(this).parent('li:nth-child(8)').hasClass('active')) {    
-   //              $('.sn-menu').addClass('sn-green');
-   //          } 
-   //          else {
-   //              $('.sn-menu').removeClass('sn-green');
-   //          }
-
-
-
-			
-	        
 		});
 
 	    // Early Access 
@@ -1154,7 +1077,7 @@
 	        $('.header-hamburger').removeClass('active');
 	    });
 
-	    // 
+	    // Scroll To section7
 	    $('.btn-get-app, .btn-start').click(function(e){
 	        e.preventDefault();
 	        var wH = $('header').outerHeight(false);
@@ -1239,9 +1162,6 @@
 		  	var rotate, timeline;
 
 			rotate = function() {
-				// return $('#dream-carousel-mobile .dc-item:first-child').animate(400, 'swing', function() {
-				// return $('#dream-carousel-mobile .dc-item:first-child').appendTo('#dream-carousel-mobile').hide();
-				// }).fadeIn(400, 'swing');
 
 				$('#dream-carousel-mobile .dc-item:first-child').animate({'opacity' : 0, transform : 'scale(0)'}, 'swing', function(){
 					$('#dream-carousel-mobile .dc-item:first-child').appendTo('#dream-carousel-mobile').css({'opacity' : 0, transform : 'scale(0)'});
@@ -1252,7 +1172,7 @@
 				});
 			};
 
-
+			// Automatic Rotate
 			//timeline = setInterval(rotate, 7000);
 
 			$('#dream-carousel-mobile').hover(function() {
@@ -1282,10 +1202,6 @@
 				$(this).closest('.dream-dot').addClass('active');
 				var _this = $(this).data('num');
 				var test = $('#dream-carousel-mobile .dc-item[data-num='+ _this +']').prevAll('.dc-item').css({'opacity' : 0});
-
-				// $('#dream-carousel-mobile  .dc-item[data-num='+ _this +']').prevAll('.dc-item').fadeOut(400, 'swing', function() {
-				// 	$('#dream-carousel-mobile').append(test);
-				// }).fadeIn(400, 'swing');
 
 				$('#dream-carousel-mobile  .dc-item[data-num='+ _this +']').prevAll('.dc-item').animate({'opacity' : 0,  transform : 'scale(0)'}, 'swing', function(){
 					$('#dream-carousel-mobile').append(test).css({'opacity' : 1,  transform : 'scale(1)'}).removeAttr('style');
@@ -1343,7 +1259,7 @@
 		}).call(this);
 	});
 
-	
+	// Youtube Api
 	function setupYTAPI() {
 	    tag = document.createElement('script');
 	    tag.src = "https://www.youtube.com/iframe_api";
