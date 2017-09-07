@@ -158,7 +158,7 @@ article {
 		font-size: 20px;
 		color: $defaultColor;
 		font-weight: 500;
-		margin-top: 10px;
+		margin-top: 20px;
 
 		@include breakpoint(tablet2) {
 			font-size: 18px;
@@ -190,6 +190,15 @@ article {
 		font-size: 18px;
 		line-height: 30px;
 
+		&.small {
+			line-height: 24px;
+			text-indent: 30px;
+
+			@include breakpoint(mobile) {
+				line-height: 18px;
+			}
+		}
+
 		@include breakpoint(tablet) {
 			font-size: 16px;
 			line-height: 24px;
@@ -207,6 +216,37 @@ article {
 		padding-bottom: 15px;
 		font-size: 18px;
 		line-height: 30px;
+		margin-left: 20px;
+
+		&.check-list {
+
+			> li {
+
+				&:before {
+					content: '✓';
+					color: $coLightGreen;
+					background: none;
+					width: auto;
+					height: auto;
+					border-radius: 0;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+
+		&.no-style {
+
+			> li {
+				padding-left: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+
+
 
 		@include breakpoint(tablet) {
 			font-size: 16px;
@@ -215,22 +255,23 @@ article {
 
 		@include breakpoint(mobile) {
 			font-size: 14px;
+			margin-left: 10px;
 		}
 
 		> li {
 			padding-left: 20px;
 			position: relative;
-			padding-bottom: 5px;
 
 			&:before {
 				content:'';
 				width: 6px;
 				height: 6px;
 				border-radius: 50%;
-				background: $defaultColor;
+				background: $coLightGreen;
 				position: absolute;
 				left: 5px;
 				top: 12px;
+
 
 				@include breakpoint(tablet) {
 					top: 8px;
@@ -244,6 +285,7 @@ article {
 		display: block;
 		font-size: 18px;
 		line-height: 30px;
+		margin-left: 20px;
 
 		@include breakpoint(tablet) {
 			font-size: 16px;
@@ -252,14 +294,40 @@ article {
 
 		@include breakpoint(mobile) {
 			font-size: 14px;
+			margin-left: 10px;
 		}
 
 		li {
 			padding-left: 0px;
 			position: relative;
-			padding-bottom: 5px;
 			list-style-position: outside;
 			list-style-type: decimal;
+		}
+	}
+
+	.performed-history {
+
+		@include breakpoint(mobile) {
+			margin-left: 0;
+		}
+
+		span {
+			display: inline-block;
+			min-width: 280px;
+
+			@include breakpoint(mobile) {
+				min-width: 205px;
+			}
+
+			@include breakpoint(mobilesmall) {
+				min-width: 180px;
+			}
+
+
+			&.ph-detail {
+				min-width: 50px;
+				text-align: center;
+			}
 		}
 	}
 
@@ -269,5 +337,73 @@ article {
 
 	u {
 		text-decoration: underline;
+	}
+
+	.lower-latin-wrap {
+		padding-left: 20px;
+
+		@include breakpoint(mobile) {
+			padding-left: 10px;
+		}
+
+		span {
+			padding-left: 30px;
+			display: block;
+
+			&.lower-latin-text {
+				width: 30px;
+				float: left;
+				padding-left: 0;
+			}
+		}
+	}
+
+
+	table {
+		width: 100%;
+		border: 1px solid #ccc;
+		margin: 0px 30px 15px;
+
+		@include breakpoint(tablet2) {
+			margin: 0 0 15px;
+		}
+
+		@include breakpoint(mobile) {
+			font-size: 14px;
+			line-height: 20px;
+			
+		}
+
+		@include breakpoint(mobilesmall) {
+			width: auto;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		tr {
+			th {
+				padding: 3px 5px;
+				font-weight: 500;
+				border: 1px solid #ccc;
+				text-align: center;
+			}
+
+			td {
+				border: 1px solid #ccc;
+				padding: 3px 5px;
+			}
+		}
+
+		.dot-indi {
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background: $defaultColor;
+			display: inline-block;
+			position: relative;
+			top: 0;
+			left: 0;
+
+		}
 	}
 }

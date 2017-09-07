@@ -5982,7 +5982,7 @@ article h5 {
   font-size: 20px;
   color: #424559;
   font-weight: 500;
-  margin-top: 10px; }
+  margin-top: 20px; }
   @media (max-width: 767px) {
     article h5 {
       font-size: 18px; } }
@@ -6005,6 +6005,12 @@ article p {
   padding-bottom: 15px;
   font-size: 18px;
   line-height: 30px; }
+  article p.small {
+    line-height: 24px;
+    text-indent: 30px; }
+    @media (max-width: 480px) {
+      article p.small {
+        line-height: 18px; } }
   @media (max-width: 991px) {
     article p {
       font-size: 16px;
@@ -6019,24 +6025,38 @@ article ul {
   list-style-type: none;
   padding-bottom: 15px;
   font-size: 18px;
-  line-height: 30px; }
+  line-height: 30px;
+  margin-left: 20px; }
+  article ul.check-list > li:before {
+    content: '✓';
+    color: #008C50;
+    background: none;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    top: 0;
+    left: 0; }
+  article ul.no-style > li {
+    padding-left: 0; }
+    article ul.no-style > li:before {
+      display: none; }
   @media (max-width: 991px) {
     article ul {
       font-size: 16px;
       line-height: 24px; } }
   @media (max-width: 480px) {
     article ul {
-      font-size: 14px; } }
+      font-size: 14px;
+      margin-left: 10px; } }
   article ul > li {
     padding-left: 20px;
-    position: relative;
-    padding-bottom: 5px; }
+    position: relative; }
     article ul > li:before {
       content: '';
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #424559;
+      background: #008C50;
       position: absolute;
       left: 5px;
       top: 12px; }
@@ -6048,23 +6068,88 @@ article ol {
   padding-left: 20px;
   display: block;
   font-size: 18px;
-  line-height: 30px; }
+  line-height: 30px;
+  margin-left: 20px; }
   @media (max-width: 991px) {
     article ol {
       font-size: 16px;
       line-height: 24px; } }
   @media (max-width: 480px) {
     article ol {
-      font-size: 14px; } }
+      font-size: 14px;
+      margin-left: 10px; } }
   article ol li {
     padding-left: 0px;
     position: relative;
-    padding-bottom: 5px;
     list-style-position: outside;
     list-style-type: decimal; }
+
+@media (max-width: 480px) {
+  article .performed-history {
+    margin-left: 0; } }
+
+article .performed-history span {
+  display: inline-block;
+  min-width: 280px; }
+  @media (max-width: 480px) {
+    article .performed-history span {
+      min-width: 205px; } }
+  @media (max-width: 374px) {
+    article .performed-history span {
+      min-width: 180px; } }
+  article .performed-history span.ph-detail {
+    min-width: 50px;
+    text-align: center; }
 
 article b, article strong {
   font-weight: 500; }
 
 article u {
   text-decoration: underline; }
+
+article .lower-latin-wrap {
+  padding-left: 20px; }
+  @media (max-width: 480px) {
+    article .lower-latin-wrap {
+      padding-left: 10px; } }
+  article .lower-latin-wrap span {
+    padding-left: 30px;
+    display: block; }
+    article .lower-latin-wrap span.lower-latin-text {
+      width: 30px;
+      float: left;
+      padding-left: 0; }
+
+article table {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0px 30px 15px; }
+  @media (max-width: 767px) {
+    article table {
+      margin: 0 0 15px; } }
+  @media (max-width: 480px) {
+    article table {
+      font-size: 14px;
+      line-height: 20px; } }
+  @media (max-width: 374px) {
+    article table {
+      width: auto;
+      margin-left: -15px;
+      margin-right: -15px; } }
+  article table tr th {
+    padding: 3px 5px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    text-align: center; }
+  article table tr td {
+    border: 1px solid #ccc;
+    padding: 3px 5px; }
+  article table .dot-indi {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #424559;
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0; }
