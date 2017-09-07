@@ -4369,6 +4369,9 @@ br.mobile-br {
     .custom-checkbox {
       margin-bottom: 8px;
       padding: 0px 10px; } }
+  @media (max-width: 767px) {
+    .custom-checkbox label br {
+      display: none; } }
 
 .custom-checkbox [type="checkbox"]:not(:checked),
 .custom-checkbox [type="checkbox"]:checked {
