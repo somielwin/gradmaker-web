@@ -14,7 +14,7 @@ if(!empty($_POST['data'])){
     fwrite($file, $fileData);
     fclose($file);
 
-    echo 1;
+    echo $fileData;
 }
 
 echo 0;
