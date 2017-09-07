@@ -93,7 +93,6 @@ $(document).ready(function() {
             _this.toggleClass('active');
     });
 
-    var slot = 500;
 
     $('#term-checkbox').change(function(){
         
@@ -157,12 +156,9 @@ $(document).ready(function() {
         	// $('#first-name').val('')
         	// $('#contact-num').val('')
             $('.wavy-loader').css({'opacity' : 1});
-            var remainingSlot = slot - 1;
-            $('.slot-num').html(remainingSlot);
+            //$('.slot-num').html(remainingSlot);
 
         	$('.ty-message').addClass('active');
-            slot = remainingSlot;
-            console.log(slot);
 
             submitForm();
             return false;
@@ -188,6 +184,11 @@ function submitForm()
     // on success
     // NOTE: You can add this inside your success ajax or after submitting the form. We just add temporarily a timeout for test
     setTimeout( function() {
+
+        var slotRemaining =  parseInt($('.slot-num').text()) - 1;
+
+        $('.slot-num').text(slotRemaining);
+
         //clear data
         $('#email-account').val('');
         $('#last-name').val('');
