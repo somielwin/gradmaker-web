@@ -15,6 +15,7 @@ if(!empty($_POST['data'])){
     fclose($file);
 
     echo $fileData;
+    exit;
 }
 
 echo 0;
