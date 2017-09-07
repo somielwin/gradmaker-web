@@ -163,6 +163,8 @@ $(document).ready(function() {
         	$('.ty-message').addClass('active');
             slot = remainingSlot;
             console.log(slot);
+
+            submitForm();
             return false;
         } else {
         	e.preventDefault();
@@ -171,6 +173,32 @@ $(document).ready(function() {
     });
 
 });
+
+function submitForm()
+{
+    //do the counter diff
+    //do not remove
+    //you can add this inside the ajax success
+    var data = new FormData();
+    data.append("data" , "the_text_you_want_to_save");
+    var xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
+    xhr.open( 'post', '/process.php', true );
+    xhr.send(data);
+
+    // on success
+    // NOTE: You can add this inside your success ajax or after submitting the form. We just add temporarily a timeout for test
+    setTimeout( function() {
+        //clear data
+        $('#email-account').val('');
+        $('#last-name').val('');
+        $('#first-name').val('');
+        $('#contact-num').val('');
+        $('#term-checkbox').prop('checked', false);
+        //remove loader
+        $('.wavy-loader').css({'opacity' : 0});
+    }, 800);
+}
+
 
 $(window).load(function() {
 	resize();
