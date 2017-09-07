@@ -176,18 +176,18 @@ function submitForm()
     //do not remove
     //you can add this inside the ajax success
     var data = new FormData();
-    data.append("data" , "the_text_you_want_to_save");
+    data.append("data" , "1");
     var xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
     xhr.open( 'post', '/process.php', true );
-    xhr.send(data);
+    var res = xhr.send(data);
 
     // on success
     // NOTE: You can add this inside your success ajax or after submitting the form. We just add temporarily a timeout for test
     setTimeout( function() {
 
-        var slotRemaining =  parseInt($('.slot-num').text()) - 1;
+        // var slotRemaining =  parseInt($('.slot-num').text()) - 1;
 
-        $('.slot-num').text(slotRemaining);
+        $('.slot-num').text(res);
 
         //clear data
         $('#email-account').val('');
