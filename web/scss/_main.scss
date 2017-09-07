@@ -3509,6 +3509,15 @@ br.mobile-br {
 		margin-bottom: 8px;
 		padding: 0px 10px;
 	}
+
+	label {
+
+		br {
+			@include breakpoint(tablet2) {
+				display: none;
+			}
+		}
+	}
 }
 
 .custom-checkbox [type="checkbox"]:not(:checked),
