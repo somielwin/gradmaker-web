@@ -934,7 +934,7 @@
                 <li><a href="https://twitter.com/ManulifePH" target="_blank"><span class="i-icon icon-icon-twitter"></span></a></li>
                 <li><a href="https://www.instagram.com/manulife/" target="_blank"><span class="i-icon icon-instagram"></span></a></li>
                 <li><a href="https://www.linkedin.com/company/manulife-financial" target="_blank"><span class="i-icon icon-linkedin"></span></a></li>
-                <li><a href="https://www.youtube.com/user/ManulifeFinancial" target="_blank"><img src="images/youtube-icon.png"></a></li>
+                <li><a href="https://www.youtube.com/user/ManulifeFinancial" target="_blank"><span class="i-icon icon-youtube"></span></a></li>
             </ul>
         </div>
         <div class="sitemap-wrap">

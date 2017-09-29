@@ -132,6 +132,10 @@ a {
 		min-height: auto;
 		padding-bottom: 60px;
 		padding-top: 70px;
+
+		@include breakpoint(tablet2) {
+			padding-top: 60px 0;
+		}
 	}
 
 	&.sec-wrap {
@@ -189,6 +193,7 @@ a {
 
 		@include breakpoint(tablet2) {
 			padding-bottom: 40px;
+			padding-top: 60px;
 		}
 	}
 
@@ -1312,6 +1317,7 @@ br.mobile-br {
 	@include breakpoint(tablet2) {
 		height: auto;
 		padding-bottom: 20px;
+		padding-top: 60px;
 		min-height: auto;
 	}
 
@@ -1666,15 +1672,20 @@ br.mobile-br {
 	overflow: visible;
 	padding-top: 100px;
 	padding-bottom: 55px;
+
+	@include breakpoint(tablet2) {
+		padding-top: 60px;
+	}
 }
 
 .section4 {
 	margin-bottom: 60px;
 	padding-bottom: 80px;
-	padding-top: 100px
+	padding-top: 100px;
 
 	@include breakpoint(tablet2) {
 		margin-bottom: 0;
+		padding-top: 60px;
 	}
 }
 
@@ -2185,6 +2196,7 @@ br.mobile-br {
 	@include breakpoint(desktop) {
 		width: 120px;
 		height: 120px;
+		border: 4px solid #f5f6f7;
 	}
 
 	@include breakpoint(tablet) {
@@ -3174,7 +3186,7 @@ br.mobile-br {
 	    height: 40px;
 	    display: block;
 	    border-radius: 50%;
-	    background: #DCDCDC url(/resource/1506108435000/GM_Web_Static_Res/images/home/icon-close.svg?orgId=00D90000000ycia) no-repeat center 
+	    background: #DCDCDC url(/resource/1506108435000/GM_Web_Static_Res/images/home/icon-close.svg?orgId=00D90000000ycia) no-repeat center;
 	    line-height: 37px;
 	    position: absolute;
 	    left: 50%;
