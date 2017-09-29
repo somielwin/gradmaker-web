@@ -75,12 +75,13 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 				}
 
 				.icon-youtube {
-					font-size: 34px;
+					font-size: 27px;
 					position: relative;
 					top: 1px;
 
 					@include breakpoint(tablet2) {
-						top: 2px;
+						top: 0px;
+						font-size: 22px;
 					}
 				}
 

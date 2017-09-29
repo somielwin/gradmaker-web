@@ -87,7 +87,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-instagram:before {
+/*.icon-instagram:before {
   content: "\e909";
 }
 .icon-linkedin:before {
@@ -119,9 +119,23 @@
 }
 .icon-icon-viber:before {
   content: "\e905";
-}
+}*/
 
-/*.icon-small-arrow:before {
+
+
+.icon-youtube:before {
+  content: "\e90b";
+}
+.icon-instagram:before {
+  content: "\e909";
+}
+.icon-linkedin:before {
+  content: "\e90a";
+}
+/*.icon-youtube:before {
+  content: "\e908";
+}*/
+.icon-small-arrow:before {
   content: "\e906";
 }
 .icon-access:before {
@@ -144,5 +158,5 @@
 }
 .icon-icon-viber:before {
   content: "\e905";
-}*/
+}
 

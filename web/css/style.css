@@ -59,15 +59,51 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+/*.icon-instagram:before {
+  content: "\e909";
+}
+.icon-linkedin:before {
+  content: "\e90a";
+}
+.icon-youtube:before {
+  content: "\e908";
+}
+.icon-small-arrow:before {
+  content: "\e906";
+}
+.icon-access:before {
+  content: "\e907";
+}
+.icon-watch-video:before {
+  content: "\e900";
+}
+.icon-icon-apple:before {
+  content: "\e901";
+}
+.icon-icon-fb:before {
+  content: "\e902";
+}
+.icon-icon-google:before {
+  content: "\e903";
+}
+.icon-icon-twitter:before {
+  content: "\e904";
+}
+.icon-icon-viber:before {
+  content: "\e905";
+}*/
+.icon-youtube:before {
+  content: "\e90b"; }
+
 .icon-instagram:before {
   content: "\e909"; }
 
 .icon-linkedin:before {
   content: "\e90a"; }
 
-.icon-youtube:before {
-  content: "\e908"; }
-
+/*.icon-youtube:before {
+  content: "\e908";
+}*/
 .icon-small-arrow:before {
   content: "\e906"; }
 
@@ -92,30 +128,6 @@
 .icon-icon-viber:before {
   content: "\e905"; }
 
-/*.icon-small-arrow:before {
-  content: "\e906";
-}
-.icon-access:before {
-  content: "\e907";
-}
-.icon-watch-video:before {
-  content: "\e900";
-}
-.icon-icon-apple:before {
-  content: "\e901";
-}
-.icon-icon-fb:before {
-  content: "\e902";
-}
-.icon-icon-google:before {
-  content: "\e903";
-}
-.icon-icon-twitter:before {
-  content: "\e904";
-}
-.icon-icon-viber:before {
-  content: "\e905";
-}*/
 /* Addresses margins handled incorrectly in IE 6/7. */
 * {
   margin: 0;
@@ -1346,12 +1358,13 @@ footer {
             position: relative;
             top: 1px; } }
       .social-wrap ul li a .icon-youtube {
-        font-size: 34px;
+        font-size: 27px;
         position: relative;
         top: 1px; }
         @media (max-width: 767px) {
           .social-wrap ul li a .icon-youtube {
-            top: 2px; } }
+            top: 0px;
+            font-size: 22px; } }
       .social-wrap ul li a span {
         color: #ffffff; }
       @media (max-width: 767px) {
