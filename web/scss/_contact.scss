@@ -35,6 +35,10 @@
 
 		p {
 			font-size: 20px;
+
+			@include breakpoint(tablet2) {
+				line-height: 1.4;
+			}
 		}
 	}
 

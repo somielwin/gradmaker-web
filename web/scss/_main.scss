@@ -14,7 +14,7 @@
 // this is area is for reserved class
 
 
-// Above the fold
+// Above the foldc
 
 strong {
 	font-weight: 500;
@@ -130,6 +130,8 @@ a {
 		max-height: 800px;
 		height: auto;
 		min-height: auto;
+		padding-bottom: 60px;
+		padding-top: 70px;
 	}
 
 	&.sec-wrap {
@@ -183,6 +185,7 @@ a {
 
 	&.sec-wrap {
 		padding-bottom: 30px;
+		padding-top: 100px;
 
 		@include breakpoint(tablet2) {
 			padding-bottom: 40px;
@@ -471,7 +474,7 @@ br.mobile-br {
 
 
 .sec-wrap {
-	padding: 80px 0;
+	padding: 90px 0;
 
 	@include breakpoint(tablet2) {
 		padding: 60px 0;
@@ -1112,6 +1115,10 @@ br.mobile-br {
 .col-wrap {
 	width: 50%;
 
+	p.p-small {
+		font-size: 12px;
+	}
+
 	@include breakpoint(tablet) {
 		width: 100%;
 		float: none;
@@ -1204,10 +1211,18 @@ br.mobile-br {
 		font-size: 15px;
 		line-height: 20px;
 		margin-bottom: 15px;
+		position: relative;
+		padding-left: 10px;
 
 		@include breakpoint(phablet) {
 			font-size: 12px;
 			line-height: 18px;
+		}
+
+		span.cc-star {
+			position: absolute;
+			top: 0;
+			left: -8px;
 		}
 	}
 }
@@ -1227,18 +1242,16 @@ br.mobile-br {
 		float: none;
 		clear: both;
 	}
-
-
-	
 }
 
 
 .section5 {
 	position: relative;
 	overflow: visible;
-	padding-top: 6px;
-	max-height: 800px;
+	padding-top: 30px;
 	min-height: 710px;
+	padding-bottom: 0;
+	height: auto;
 
 	@include breakpoint(desktop) {
 		min-height: auto;
@@ -1293,6 +1306,8 @@ br.mobile-br {
 
 .section6 {
 	min-height: 675px;
+	padding-top: 100px;
+	padding-bottom: 90px;
 
 	@include breakpoint(tablet2) {
 		height: auto;
@@ -1325,6 +1340,9 @@ br.mobile-br {
 	margin-top: 40px;
 	padding-top: 13px;
 	padding-bottom: 13px;
+	position: relative;
+	padding-right: 50px;
+	text-align: left;
 
 	span {
 		display: inline-block;
@@ -1336,6 +1354,11 @@ br.mobile-br {
 		right: 0;
 		color: $coGreen;
 		@include transition(all 0.4s ease);
+
+		position: absolute;
+		top: 50%;
+		right: 22px;
+		margin-top: -7px;
 	}
 
 	&:hover {
@@ -1357,11 +1380,12 @@ br.mobile-br {
 }
 
 .graph-whole {
-	position: absolute;
+	position: relative;
     bottom: 0;
     width: 100%;
     height: auto;
     margin: 0 auto;
+    margin-top: -200px;
     /*left: 50%;
     transform: translate(-50%, 0);*/
 
@@ -1373,7 +1397,6 @@ br.mobile-br {
 		width: 100%;
 		height: auto;
 		display: block;
-		max-width: 1440px;
 		margin: 0 auto;
 	}
 }
@@ -1551,7 +1574,7 @@ br.mobile-br {
 	&.error {
 		
 		input[type="text"], input[type="tel"], input[type="email"] {
-			border-bottom: 1px solid #d2181c;
+			border-bottom: 1px solid #FF5353;
 		}		
 	}
 
@@ -1565,6 +1588,9 @@ br.mobile-br {
 		outline: none;
 		resize: none;
 		font-size: 22px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 
 		@include breakpoint(mobile) {
 	  		padding: 8px 10px;
@@ -1638,10 +1664,14 @@ br.mobile-br {
 .section7 {
 	position: relative;
 	overflow: visible;
+	padding-top: 100px;
+	padding-bottom: 55px;
 }
 
 .section4 {
 	margin-bottom: 60px;
+	padding-bottom: 80px;
+	padding-top: 100px
 
 	@include breakpoint(tablet2) {
 		margin-bottom: 0;
@@ -1681,9 +1711,11 @@ br.mobile-br {
 		}
 
 		&.form-privacy {
+			opacity: 0.70;
+
 			i {
 				font-style: normal;
-				opacity: 0.70;
+				
 			}
 		}
 
@@ -1993,6 +2025,10 @@ br.mobile-br {
 			padding: 30px 60px 30px;
 			@include transition(all 0.4s 0.4s ease);
 
+			a {
+				color: $coGreen;
+			}
+
 			@include breakpoint(tablet) {
 				padding: 50px 30px 30px;
 			}
@@ -2141,7 +2177,7 @@ br.mobile-br {
 	height: 140px;
 	border-radius: 50%;
 	background: $coWhite;
-	border: 5px solid #009558;
+	border: 10px solid #f5f6f7;
 	@include transition(background 0.4s ease);
 	position: absolute;
 	z-index: 9;
@@ -2164,9 +2200,14 @@ br.mobile-br {
 
 	&:hover {
 		box-shadow: 1px 1px 24px 1px rgba(243,166,36,0);
-		border: 5px solid $coOrange;
-		background: $coOrange;
+		xborder: 10px solid $coOrange;
+		
 		color: $coWhite;
+
+		a {
+			border: 1px solid $coOrange;
+			background: $coOrange;
+		}
 
 		h5 {
 			color: $coWhite;
@@ -2179,9 +2220,12 @@ br.mobile-br {
 
 	a {
 		display: block;
-		line-height: 130px;
+		line-height: 120px;
 		text-align: center;
 		position: relative;
+		border: 1px solid #ccc;
+    	border-radius: 50%;
+    	@include transition(background 0.4s ease);
 
 		@include breakpoint(desktop) {
 			line-height: 110px;
@@ -2549,16 +2593,22 @@ br.mobile-br {
 
 		@include breakpoint(phablet) {
 			left: 0;
+			@include transform(scale(0.8));
 		}	
 	}
 
 	.dc-content {
 
 		h3 {
-			font-size: 40px;
+			font-size: 42px;
 
 			@include breakpoint(phablet) {
 				font-size: 32px;
+				line-height: 32px;
+			}
+
+			@include breakpoint(mobilesmall) {
+				font-size: 26px;
 			}
 		}
 	}
@@ -2572,6 +2622,11 @@ br.mobile-br {
 
 			@include breakpoint(phablet) {
 				font-size: 32px;
+				line-height: 32px;
+			}
+
+			@include breakpoint(mobilesmall) {
+				font-size: 26px;
 			}
 		}
 	}
@@ -2590,6 +2645,11 @@ br.mobile-br {
 
 			@include breakpoint(phablet) {
 				font-size: 32px;
+				line-height: 32px;
+			}
+
+			@include breakpoint(mobilesmall) {
+				font-size: 26px;
 			}
 		}
 	}
@@ -2611,9 +2671,14 @@ br.mobile-br {
 	.dc-content {
 
 		h3 {
-			font-size: 40px;
+			font-size: 42px;
 
 			@include breakpoint(phablet) {
+				font-size: 32px;
+				line-height: 32px;
+			}
+
+			@include breakpoint(mobilesmall) {
 				font-size: 26px;
 			}
 		}
@@ -2625,7 +2690,7 @@ br.mobile-br {
 }
 
 .dc-content {
-	width: 40%;
+	width: 45%;
 	float: right;
 	padding: 40px 15px;
 	-webkit-user-select: none;
@@ -2642,8 +2707,6 @@ br.mobile-br {
 	border-radius: 20px;
 	position: relative;
 
-
-
 	@include breakpoint(desktop) {
 		min-height: 223px;
 	}
@@ -2656,7 +2719,7 @@ br.mobile-br {
 
 
 		h3 {
-			font-size: 40px;
+			font-size: 42px;
 			color: $coWhite;
 			margin-top: 10px;
 			font-weight: 300;
@@ -2666,6 +2729,15 @@ br.mobile-br {
 
 			@include breakpoint(desktop) {
 				font-size: 42px;
+			}
+
+			@include breakpoint(phablet) {
+				font-size: 32px;
+				line-height: 32px;
+			}
+
+			@include breakpoint(mobilesmall) {
+				font-size: 26px;
 			}
 		}
 
@@ -3087,10 +3159,61 @@ br.mobile-br {
 	}
 }
 
+.modal-content {
+
+	a {
+		color: $coGreen;
+	}
+}
+
+.modal-header {
+	position: relative;
+
+	.close {
+		width: 40px;
+	    height: 40px;
+	    display: block;
+	    border-radius: 50%;
+	    background: #DCDCDC url(/resource/1506108435000/GM_Web_Static_Res/images/home/icon-close.svg?orgId=00D90000000ycia) no-repeat center 
+	    line-height: 37px;
+	    position: absolute;
+	    left: 50%;
+	    margin-top: -20px;
+	    top: -15px;
+	    margin-left: -15px;
+	    -webkit-transition: all 0.4s ease;
+	    -moz-transition: all 0.4s ease;
+	    -ms-transition: all 0.4s ease;
+	    -o-transition: all 0.4s ease;
+	    transition: all 0.4s ease;
+	    text-align: center;
+	    z-index: 101;
+	    text-indent: -9999px;
+	}
+}
+
+#ajaxResult-message {
+	p.pos-rel {
+		position: relative;
+		padding-left: 20px;
+
+
+		span.cc-star {
+			position: absolute;
+			top: 0px;
+			left: 4px;
+		}
+	}
+}
+
+#alertModal .modal-body, #qualified-alertModal .modal-body {
+	border-bottom: none !important;
+}
+
 .section8 {
 	position: relative;
 	overflow: hidden;
-
+	padding-bottom: 50px;
 
 	.sec-head-title {
 
@@ -3379,7 +3502,7 @@ br.mobile-br {
 #youtube-video {
 
 	&.popup-wrap {
-		background: rgba(255,255,255,0.8);
+		background: rgba(0,0,0,0.6);
 		@include transition(all 0.4s ease);
 		@include transform(scale(0));
 		visibility: hidden;
@@ -3400,18 +3523,28 @@ br.mobile-br {
 		background: $coWhite;
 		max-width: 1024px;
 		margin: 30px auto 0;
-		
-
+		padding: 0;
 		position: relative;
 		width: 100%;
+		top: 50%;
+    	@include transform(translate(0, -50%));
 
 
+	}
+
+	.popup-close {
+		background: none;
+		right: 15px;
+	    margin-top: 0;
+	    top: 15px;
+	    margin-left: 0;
+	    left: auto;
 	}
 
 	.popup-ratio {
 		height: 0;
 		width: 100%;
-		padding-bottom: 60%;
+		padding-bottom: 57.98%;
 	}
 
 	.video-holder {
@@ -3538,8 +3671,30 @@ br.mobile-br {
   font-size: 16px;
 
   span {
-  	opacity: 0.70;
+  	
+  	i {
+  		opacity: 0.70;
+  		font-style: normal;
+  	}
+
+  	
   }
+}
+
+#access-form {
+	.custom-checkbox [type="checkbox"]:not(:checked) + label,
+	.custom-checkbox [type="checkbox"]:checked + label {
+	  
+
+	  span {
+	  	
+	  	a {
+	  		color: $coWhite;
+	  	}
+
+	  	
+	  }
+	}
 }
 
 

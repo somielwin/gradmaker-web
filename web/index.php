@@ -23,9 +23,9 @@
 </head>
 <body>
 <div class="popup-wrap" id="youtube-video">
+    <a href="#" class="popup-close"><img src="images/home/icon-close.svg" alt=""></a>
     <div class="popup-content">
         <div class="popup-ratio">
-            <a href="#" class="popup-close"><img src="images/home/icon-close.svg" alt=""></a>
             <div class="video-holder"></div>
         </div>
     </div>
@@ -449,7 +449,7 @@
                         <h2>GradMaker <small>vs</small> Bank Savings <span>Comparison</span></h2>
                         <p>Compared to a regular bank savings account, GradMaker gives a higher potential yield.</p>
                         <div class="cc-box">
-                            <p>* Projection only; this is NOT GUARANTEED and will depend on actual fund performance. </p>
+                            <p><span class="cc-star">*</span> Projection only; this is NOT GUARANTEED and will depend on actual fund performance. </p>
                             <p>Your money in a savings account currently can earn a guaranteed interest rate of 0.2% annually.</p>
                             <p>You can contact your bank for the actual interest rate.</p>
                         </div>
@@ -498,7 +498,7 @@
                         </div>
 
                         <div class="cc-box">
-                            <p>* Projection only; this is NOT GUARANTEED and will depend on actual fund performance. </p>
+                            <p><span class="cc-star">*</span> Projection only; this is NOT GUARANTEED and will depend on actual fund performance. </p>
                             <p>Your money in a savings account currently can earn a guaranteed interest rate of 0.2% annually.</p>
                             <p>You can contact your bank for the actual interest rate.</p>
                         </div>
@@ -511,8 +511,8 @@
             <div class="container">
                 <div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
                     <h2>The Future <span>is Now</span></h2>
-                    <p>The longer you stay invested, the closer you get to securing your child's college fund.</p>
-                    <a href="#" class="btn btn-start">Start Investing <span class="i-icon icon-small-arrow"></span></a>
+                    <p>The longer you stay invested, the closer you get to securing your child's college fund. <br>Invest early and give your investment more time to grow.</p>
+                    <a href="#" class="btn btn-start">Start now for as <br>low as Php 10,000! <span class="i-icon icon-small-arrow"></span></a>
                 </div>
             </div>
             <figure class="graph-whole animated hiding" data-animation="fadeInUp" data-delay="700"><img src="images/home/graph.svg" alt=""></figure>
@@ -525,6 +525,7 @@
                     <div class="col-wrap iw-text fl animated hiding" data-animation="fadeInUp">
                         <h2><span>It’s</span> more than <br><span>an investment.</span></h2>
                         <p>Co-created with parents just like you, this app is packed with all the features you need and want!</p>
+                        <p class="p-small">Click the features to view details</p>
                     </div>
                     <div class="col-wrap investment-graph fr">
                         <div class="ii-tab-wrap">
@@ -538,6 +539,7 @@
                                         <figure><img class="lazyload-trigger" src="images/home/pop-product.svg" data-src="images/home/pop-product.svg" alt="">
                                             <div class="wavy-loader"><span></span><span></span><span></span></div>
                                         </figure>
+                                        <p><a href="https://www.manulife.com.ph/GradMaker_faqs">Learn about the Product</a></p>
                                         <div class="popup-menu">
                                             <ul>
                                                 <li class="active"><a href="#product">1</a></li>
@@ -735,7 +737,11 @@
                             </div>
                             <div class="custom-checkbox">
                                 <input type="checkbox" name="" id="term-checkbox">
-                                <label for="term-checkbox"><span>I agree to allow Manulife to use my information to contact me about<br>Manulife products and information.</span></label>
+                                <label for="term-checkbox"><span><i>I agree to allow Manulife to use my information to contact me about<br>Manulife products and information.</i></span></label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input id="qualified-checkbox" type="checkbox">
+                                <label for="qualified-checkbox"><span><i>Are you qualified to buy GradMaker? </i><a id="qualified-faq">Click here to find out</a></span></label>
                             </div>
                             <p class="form-privacy"><i>Manulife values your privacy. By clicking</i> I’m in!, <i>You're giving Manulife consent to process the data and information that you provided.</i></p>
                             <div class="text-center">
@@ -928,7 +934,7 @@
                 <li><a href="https://twitter.com/ManulifePH" target="_blank"><span class="i-icon icon-icon-twitter"></span></a></li>
                 <li><a href="https://www.instagram.com/manulife/" target="_blank"><span class="i-icon icon-instagram"></span></a></li>
                 <li><a href="https://www.linkedin.com/company/manulife-financial" target="_blank"><span class="i-icon icon-linkedin"></span></a></li>
-                <li><a href="https://www.youtube.com/user/ManulifeFinancial" target="_blank"><span class="i-icon icon-youtube"></span></a></li>
+                <li><a href="https://www.youtube.com/user/ManulifeFinancial" target="_blank"><img src="images/youtube-icon.png"></a></li>
             </ul>
         </div>
         <div class="sitemap-wrap">
@@ -939,6 +945,7 @@
                 <li><a href="https://www.manulife.com.ph/Terms-of-Use" target="_blank">Terms of Use</a></li>
             </ul>
         </div>
+        <p class="copyright m-b-space">"GradMaker - Investing in your child's future, made easy" is a Registered Trademark of Manulife Philippines.</p>
         <p class="copyright">Copyright © 2016, The Manufacturers Life Insurance Company and its subsidiaries. All rights reserved.</p>
     </div>
 </footer>

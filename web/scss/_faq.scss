@@ -224,7 +224,7 @@ article {
 
 				&:before {
 					content: '✓';
-					color: $coLightGreen;
+					color: #424559;
 					background: none;
 					width: auto;
 					height: auto;
@@ -267,7 +267,7 @@ article {
 				width: 6px;
 				height: 6px;
 				border-radius: 50%;
-				background: $coLightGreen;
+				background: #424559;
 				position: absolute;
 				left: 5px;
 				top: 12px;
@@ -407,3 +407,19 @@ article {
 		}
 	}
 }
+
+.beneficial-offer {
+	position: relative;
+    text-indent: 0 !important;
+    margin-left: 30px;
+
+	span.star {
+		position: absolute;
+		top: 0;
+		left: -15px;
+	}
+}
+
+
+
+

@@ -191,7 +191,7 @@
 		background: $coWhite;
 		display: inline-block;
 		position: relative;
-		padding: 0px 25px;
+		padding: 0px 30px;
 
 		@include breakpoint(mobile) {
 			padding: 0px 15px;
@@ -205,9 +205,11 @@
 			width: 50px;
 			height: 14px;
 			position: absolute;
-			top: 0;
+			top: 50%;
 			left: 100%;
-			background: url('../images/co-creator/tiles.svg') no-repeat;
+			background: #424559;
+			height: 1px;
+			xbackground: url('../images/co-creator/tiles.svg') no-repeat;
 
 			@include breakpoint(mobile) {
 				width: 35px;
