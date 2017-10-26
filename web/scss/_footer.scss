@@ -1,5 +1,5 @@
 // ionclude all your related style here in the footer, you can leave it empty if the page has no footer
-footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50px; text-align: center; }
+footer { z-index: 2; position: relative; background: #424559; padding: 50px 0 50px; text-align: center; }
 
 .copyright {
 	font-size: 12px;
@@ -35,16 +35,13 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 
 	ul {
 		text-align: center;
+		margin-bottom: 0;
 
 		&:after {
 			content:'';
 			display: block;
 			float: none;
 			clear: both;
-		}
-
-		@include breakpoint(phablet) {
-			margin-bottom: 15px;
 		}
 
 		li {
@@ -60,8 +57,9 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 
 
 			a {
-				font-size: 30px;
+				font-size: 22px;
 				opacity: 0.8;
+
 
 				span {
 					display: block;
@@ -79,7 +77,7 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 				}
 
 				.icon-instagram {
-					font-size: 27px;
+					font-size: 20px;
 
 					@include breakpoint(tablet2) {
 						font-size: 22px;
@@ -87,7 +85,7 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 				}
 
 				.icon-linkedin, .icon-youtube {
-					font-size: 36px;
+					font-size: 28px;
 
 					@include breakpoint(tablet2) {
 						font-size: 28px;
@@ -97,7 +95,7 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 				}
 
 				.icon-youtube {
-					font-size: 27px;
+					font-size: 19px;
 					position: relative;
 					top: 1px;
 
