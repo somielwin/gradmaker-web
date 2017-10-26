@@ -88,8 +88,13 @@ a {
 	&.sec-full {
 		height: 100vh;
 
+		@include breakpoint(tablet) {
+			min-height: 1000px;
+		}
+
 		@include breakpoint(tablet2) {
 			height: 830px;
+			min-height: 830px;
 		}
 	}
 
@@ -337,9 +342,6 @@ a {
 
 		@include breakpoint(phablet) {
 
-			span {
-				display: block;
-			}
 		}
 	}
 
@@ -473,9 +475,6 @@ a {
 		line-height: 36px;
 		margin-bottom: 40px;
 
-		@include breakpoint(tablet2) {
-			display: none;
-		}
 	}
 
 	a.btn {
@@ -1773,24 +1772,39 @@ br.mobile-br {
 }
 
 .get-access-title {
-	max-width: 615px;
+	max-width: 715px;
 	margin: 0 auto;
 	text-align: center;
 
-	p {
-		color: #fff;
+	h6 {
 		font-size: 24px;
 		line-height: 26px;
+		color: $coWhite;
+		opacity: 0.79px;
+		text-align: center;
+		font-weight: 300;
+		margin-bottom: 25px;
+	}
+
+	p {
+		color: #fff;
+		font-size: 16px;
+		line-height: 20px;
 		opacity: 0.79;
 		text-align: center;
+		margin-bottom: 10px;
 
-		@include breakpoint(phablet) {
-			font-size: 20px;
-
+		img {
+			max-width: 20px;
+			margin-left: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			top: -2px;
 		}
 
 		@include breakpoint(phablet) {
-			font-size: 18px;
+			font-size: 14px;
 		}
 	}
 }
@@ -1821,6 +1835,22 @@ br.mobile-br {
 	}
 
 	&.error {
+		position: relative;
+
+		&:after {
+			content:'';
+			width: 20px;
+			height: 20px;
+			background: url('../images/version2/i_error.svg') no-repeat center center;
+			position: absolute;
+			top: 50%;
+			right: 27px;
+    		margin-top: -10px;
+
+
+
+
+		}
 		
 		input[type="text"], input[type="tel"], input[type="email"] {
 			border-bottom: 1px solid #FF5353;
@@ -1939,6 +1969,10 @@ br.mobile-br {
 .form-wrapper {
 	max-width: 600px;
 	margin: 40px auto 0;
+
+	@include breakpoint(tablet2) {
+		margin-top: 20px;
+	}
 
 	.wavy-loader span {
 		background-color: #F3A624;
@@ -3942,7 +3976,7 @@ br.mobile-br {
 .custom-checkbox [type="checkbox"]:not(:checked) + label,
 .custom-checkbox [type="checkbox"]:checked + label {
   position: relative;
-  padding-left: 40px;
+  padding-left: 45px;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
@@ -3969,7 +4003,8 @@ br.mobile-br {
 	  span {
 	  	
 	  	a {
-	  		color: $coWhite;
+	  		color: $coOrange;
+	  		margin-left: 10px;
 	  	}
 
 	  	
@@ -4008,13 +4043,15 @@ br.mobile-br {
 
 
 	&:before {
-		content: "\f078";
-	    display: inline-block;
-	    font: normal normal normal 14px/1 FontAwesome;
-	    font-size: inherit;
-	    text-rendering: auto;
-	    -webkit-font-smoothing: antialiased;
-	    -moz-osx-font-smoothing: grayscale;
+		content: "\e906";
+		display: inline-block;
+		font-family: 'icomoon' !important;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
 	    font-size: 10px;
 	    position: absolute;
 	    top: 50%;
@@ -4022,6 +4059,7 @@ br.mobile-br {
 	    color: $coGreen;
 	    margin-top: -12px;
 	    z-index: 101;
+	    @include transform(rotate(90deg));
 	}
 
 	ul {
@@ -4029,6 +4067,14 @@ br.mobile-br {
 		max-height: 200px;
 		overflow: auto;
 		min-width: 150px;
+
+		&::-webkit-scrollbar { width:7px; background:#fff; }
+
+		/* Track */
+		&::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  }
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb { background: #5A882A	; }
 
 		li {
 			margin-bottom: 4px;
@@ -4454,6 +4500,10 @@ br.mobile-br {
 
 	@include breakpoint(tablet) {
 		width: 100%;
+		display: none;
+		opacity: 1;
+		visibility: visible;
+
 
 	}
 
@@ -4471,6 +4521,10 @@ br.mobile-br {
 		opacity: 1;
 		visibility: visible;
 		@include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+		@include breakpoint(tablet) {
+			display: block;
+		}
 	}
 
 	h4 {
@@ -4564,44 +4618,32 @@ br.mobile-br {
   position: absolute;
   left: 5px;
   top: -1px;
-  width: 17px;
-  height: 17px;
-  border: 1px solid #5eaf84;
+  width: 20px;
+  height: 21px;
   border-radius: none;
   color: #fff;
-  font-size: 27px;
- 	line-height: 13px;
+  background: url('../images/version2/checkbox_box.svg') no-repeat;
 
 }
 
-.custom-checkbox [type="checkbox"]:checked + label:before {
+/*.custom-checkbox [type="checkbox"]:checked + label:before {
     
     content: '✓';
-}
+}*/
 
 
 /* checked mark aspect */
 .custom-checkbox [type="checkbox"]:not(:checked) + label:after,
 .custom-checkbox [type="checkbox"]:checked + label:after {
-/*//   content: "\e915";
-//   font-family: 'icomoon' !important;
-//   speak: none;
-//   font-style: normal;
-//   font-weight: normal;
-//   font-variant: normal;
-//   text-transform: none;
-//   line-height: 1;*/
-  
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: absolute;
-  top: 4px;
-  left: 8px;
-  font-size: 13px;
-  line-height: 0.8;
-  color: #fff;
-  transition: all .2s;
+	content: '';
+	position: absolute;
+	left: 8px;
+	top: -5px;
+	width: 25px;
+	height: 21px;
+	border-radius: none;
+	color: #fff;
+	background: url('../images/version2/checkbox_tick.svg') no-repeat;
 }
 
 

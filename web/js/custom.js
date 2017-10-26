@@ -51,7 +51,9 @@ $(document).ready(function() {
     $(document).keydown(function(e){
        
         if(e.keyCode == 27) {
+            player.pauseVideo(2);
             $('.popup-wrap').removeClass('active');
+
         }
     });
 
@@ -109,7 +111,7 @@ $(document).ready(function() {
 
     $('#access-form').submit(function(e){
         e.preventDefault();
-        $('.input-wrap').addClass('error');
+        $('.input-wrap:not(.no-error)').addClass('error');
         isvalidate = false;
 
 
@@ -219,7 +221,7 @@ $(window).scroll(function (event) {
     //smoothScroll();
     var scroll = $(window).scrollTop();
 
-    console.log(scroll);
+    //console.log(scroll);
     // if (!Modernizr.touch && $(window).width() > 991 ) {
         
     //     // Do something
