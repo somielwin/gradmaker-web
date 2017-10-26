@@ -1082,41 +1082,47 @@
 		var carouselPopBusy = false;
 
 		$('.ii-tab-item').bind('touchmove', function(e) {
+			//e.preventDefault();
 			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
 			var newX = touch["clientX"];
 			var newY = touch["clientY"];
-			if (newX > currentX) {
+			
 
-				if( carouselPopBusy == false) {
-					carouselPopBusy = true;
+			if (Math.abs(newX - currentX) > Math.abs(newY - currentY)) {
+				e.preventDefault();
+				if (newX > currentX) {
 
-					// console.log($(this).find('.popup-menu li.active'));
-					if($(this).find('.popup-menu li.active').is(':first-child')) {
-						$(this).find('.popup-menu li:last-child > a').click();
-						setTimeout(function(){
-							carouselPopBusy = false;
-						},500);
-					} else {
-						$(this).find('.popup-menu li.active').prev().find('a').click();
+					if( carouselPopBusy == false) {
+						carouselPopBusy = true;
+
+						// console.log($(this).find('.popup-menu li.active'));
+						if($(this).find('.popup-menu li.active').is(':first-child')) {
+							$(this).find('.popup-menu li:last-child > a').click();
+							setTimeout(function(){
+								carouselPopBusy = false;
+							},500);
+						} else {
+							$(this).find('.popup-menu li.active').prev().find('a').click();
+							setTimeout(function(){
+								carouselPopBusy = false;
+							},500);
+						}
+						
+					}
+					
+				} else {
+					if( carouselPopBusy == false) {
+						carouselPopBusy = true;
+						if($(this).find('.popup-menu li.active').is(':last-child')) {
+							$(this).find('.popup-menu li:first-child > a').click();
+						} else {
+							$(this).find('.popup-menu li.active').next().find('a').click();
+						}
+						
 						setTimeout(function(){
 							carouselPopBusy = false;
 						},500);
 					}
-					
-				}
-				
-			} else {
-				if( carouselPopBusy == false) {
-					carouselPopBusy = true;
-					if($(this).find('.popup-menu li.active').is(':last-child')) {
-						$(this).find('.popup-menu li:first-child > a').click();
-					} else {
-						$(this).find('.popup-menu li.active').next().find('a').click();
-					}
-					
-					setTimeout(function(){
-						carouselPopBusy = false;
-					},500);
 				}
 			}
 			currentX = newX;

@@ -951,7 +951,7 @@
                                 <input id="qualified-checkbox" type="checkbox">
                                 <label for="qualified-checkbox"><span><i>Are you qualified to buy GradMaker? </i><a href="" id="qualified-faq">Click here to find out</a></span></label>
                             </div>
-                            <p class="form-privacy"><i>Manulife values your privacy. By clicking</i> I’m in!, <i>You're giving Manulife consent to process the data and information that you provided.</i></p>
+                            <p class="form-privacy"><i>Manulife values your privacy. By clicking</i> <strong>I’m in!</strong>, <i>You're giving Manulife consent to process the data and information that you provided.</i></p>
                             <div class="text-center">
                                 <div class="wavy-loader"><span></span><span></span><span></span></div>
                                 <div class="input-wrap no-error">
@@ -1145,38 +1145,41 @@
             var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
             var newX = touch["clientX"];
             var newY = touch["clientY"];
-            if (newX > currentX) {
+            if (Math.abs(newX - currentX) > Math.abs(newY - currentY)) {
+                e.preventDefault();
+                if (newX > currentX) {
 
-                if( carouselPopBusy == false) {
-                    carouselPopBusy = true;
+                    if( carouselPopBusy == false) {
+                        carouselPopBusy = true;
 
-                    // console.log($(this).find('.popup-menu li.active'));
-                    if($(this).find('.popup-menu li.active').is(':first-child')) {
-                        $(this).find('.popup-menu li:last-child > a').click();
-                        setTimeout(function(){
-                            carouselPopBusy = false;
-                        },500);
-                    } else {
-                        $(this).find('.popup-menu li.active').prev().find('a').click();
+                        // console.log($(this).find('.popup-menu li.active'));
+                        if($(this).find('.popup-menu li.active').is(':first-child')) {
+                            $(this).find('.popup-menu li:last-child > a').click();
+                            setTimeout(function(){
+                                carouselPopBusy = false;
+                            },500);
+                        } else {
+                            $(this).find('.popup-menu li.active').prev().find('a').click();
+                            setTimeout(function(){
+                                carouselPopBusy = false;
+                            },500);
+                        }
+                        
+                    }
+                    
+                } else {
+                    if( carouselPopBusy == false) {
+                        carouselPopBusy = true;
+                        if($(this).find('.popup-menu li.active').is(':last-child')) {
+                            $(this).find('.popup-menu li:first-child > a').click();
+                        } else {
+                            $(this).find('.popup-menu li.active').next().find('a').click();
+                        }
+                        
                         setTimeout(function(){
                             carouselPopBusy = false;
                         },500);
                     }
-                    
-                }
-                
-            } else {
-                if( carouselPopBusy == false) {
-                    carouselPopBusy = true;
-                    if($(this).find('.popup-menu li.active').is(':last-child')) {
-                        $(this).find('.popup-menu li:first-child > a').click();
-                    } else {
-                        $(this).find('.popup-menu li.active').next().find('a').click();
-                    }
-                    
-                    setTimeout(function(){
-                        carouselPopBusy = false;
-                    },500);
                 }
             }
             currentX = newX;

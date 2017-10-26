@@ -2020,6 +2020,11 @@ br.mobile-br {
 		&.form-privacy {
 			opacity: 0.70;
 
+			@include breakpoint(tablet2) {
+				text-align: left;
+				padding-left: 13px;
+			}
+
 			i {
 				font-style: normal;
 				
@@ -4020,6 +4025,11 @@ br.mobile-br {
 	  	a {
 	  		color: $coOrange;
 	  		margin-left: 10px;
+
+	  		@include breakpoint(tablet2) {
+	  			display: block;
+	  			margin-left: 0;
+	  		}
 	  	}
 
 	  	
