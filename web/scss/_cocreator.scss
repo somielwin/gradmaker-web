@@ -1,3 +1,30 @@
+.co-creator {
+	
+	.bottom-img-wrapper {
+		background: #00AD65;
+
+		@include breakpoint(tablet2) {
+			height: 34px;
+
+			.bi-pos-rel {
+				height: 34px;
+			}
+		}
+	}
+
+	.banner-text h1 span {
+		@include breakpoint(tablet2) {
+			display: inline-block;
+		}
+	}
+
+	.section1.sec-full {
+		@include breakpoint(tablet) {
+			min-height: auto;
+		}
+	}
+}
+
 .family {
 	position: absolute;
 	bottom: -27px;
@@ -74,7 +101,7 @@
 
 	@include breakpoint(phablet) {
 		margin-left: -29px;
-    	bottom: 110px;
+    	bottom: 150px;
 	}
 
 	.b-heart1 {
@@ -89,6 +116,8 @@
 		img {
 			@include breakpoint(phablet) {
 				width: 50%;
+				margin: 0 auto;
+				display: block;
 			}
 		}
 
@@ -118,6 +147,7 @@
 
 			@include breakpoint(phablet) {
 				bottom: 60px;
+				right: 13px;
 			}
 		}
 
@@ -146,9 +176,8 @@
 
 			@include breakpoint(tablet2) {
 				display: block;
-				font-size: 15px;
-				line-height: 24px;
-				padding: 0px 30px;
+				font-size: 16px;
+				line-height: 26px;
 				margin-bottom: 15px;
 
 				br {

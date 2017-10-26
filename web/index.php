@@ -81,7 +81,7 @@
     </div>
     <section id="main-wrapper">
 
-        <section id="section1" class="section1 sec-full jq-section">
+        <section id="section1" class="section1 home-section-banner sec-full jq-section">
             <div class="table-wrap">
                 <div class="table-cell">
                     <div class="bottom-group-img">
