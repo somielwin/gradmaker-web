@@ -5120,6 +5120,7 @@ br.mobile-br {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   -webkit-transition: all 0s cubic-bezier(0.645, 0.045, 0.355, 1);
   -moz-transition: all 0s cubic-bezier(0.645, 0.045, 0.355, 1);
   -ms-transition: all 0s cubic-bezier(0.645, 0.045, 0.355, 1);

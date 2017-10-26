@@ -4408,6 +4408,7 @@ br.mobile-br {
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
 	@include transition(all 0s cubic-bezier(0.645, 0.045, 0.355, 1));
 
 	@include breakpoint(tablet) {
