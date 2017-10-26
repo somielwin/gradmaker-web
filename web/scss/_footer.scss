@@ -7,6 +7,7 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 	font-size: 12px;
 	color: #FFFFFF;
 	line-height: 18px;
+	margin-top: 15px;
 }
 
 .m-b-space {
@@ -17,18 +18,39 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 	}
 }
 
+.manulife-logo {
+	display: inline-block;
+	margin-bottom: 35px;
+}
+
+
 .social-wrap {
+
+	padding: 25px 0;
+	border: 1px solid rgba(217, 218, 222, 0.24);
+	border-left: none;
+	border-right: none;
+	max-width: 520px;
+	margin: 0 auto 25px;
 
 	ul {
 		text-align: center;
-		margin-bottom: 30px;
+
+		&:after {
+			content:'';
+			display: block;
+			float: none;
+			clear: both;
+		}
 
 		@include breakpoint(phablet) {
 			margin-bottom: 15px;
 		}
 
 		li {
-			display: inline-block;
+			float: left;
+			width: 25%;
+
 			text-align: center;
 			padding: 0px 15px;
 
@@ -98,9 +120,8 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 }
 
 .top-footer, .sitemap-wrap {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 	padding-bottom: 15px;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 
 	ul {
 
@@ -111,10 +132,11 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 		li {
 			display: inline-block;
 			position: relative;
-			padding: 0px 2px;
+			padding: 0px 2px ;
 
 			@include breakpoint(phablet) {
 				line-height: 14px;
+				margin-bottom: 8px;
 			}
 
 
@@ -133,8 +155,11 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 				width: 1px;
 				top: 0;
 				right: -2px;
+				max-height: 15px;
 				background: rgba(255, 255, 255, 0.3);
 				z-index: 10;
+				top: 50%;
+				margin-top: -7px;
 
 				@include breakpoint(phablet) {
 					line-height: 18px;
@@ -143,7 +168,7 @@ footer { z-index: 2; position: relative; background: #424559; padding: 30px 0 50
 
 
 			a {
-				font-size: 16px;
+				font-size: 12px;
 				color: #e1e1e1;
 				line-height: 18px;
 				font-weight: 400;

@@ -168,6 +168,9 @@ $(document).ready(function() {
 
     });
 
+
+    
+
 });
 
 function submitForm()
@@ -206,11 +209,23 @@ function submitForm()
 $(window).load(function() {
 	resize();
 
-    
 });
 
 $(window).on('mousewheel DOMMouseScroll load', function(e) {
     updateNav();
+});
+
+$(window).scroll(function (event) {
+    //smoothScroll();
+    var scroll = $(window).scrollTop();
+
+    console.log(scroll);
+    // if (!Modernizr.touch && $(window).width() > 991 ) {
+        
+    //     // Do something
+        
+        
+    // }
 });
 
 function scrollToDiv(element) {

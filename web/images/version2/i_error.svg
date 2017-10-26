@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>i_error</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="i_error" transform="translate(-1.000000, 0.000000)">
+            <g transform="translate(1.000000, 0.000000)">
+                <path d="M18.8840168,12.8889149 L11.8536975,1.69045524 C11.4783277,0.978621849 10.7898571,0.5 10,0.5 C9.21030252,0.5 8.52183193,0.978621849 8.14646218,1.69045524 L1.11614286,12.8889149 C0.735504202,13.325738 0.5,13.922939 0.5,14.5823895 C0.5,15.9199474 1.4650084,17.0042017 2.65546218,17.0042017 C2.73673109,17.0042017 2.81640336,16.9982817 2.89527731,16.9884151 L2.90342017,17.0042017 L17.0967395,17.0042017 L17.1048824,16.9884151 C17.1837563,16.9982817 17.2634286,17.0042017 17.3445378,17.0042017 C18.5349916,17.0042017 19.5,15.9199474 19.5,14.5823895 C19.5,13.922939 19.2646555,13.325738 18.8840168,12.8889149" id="Fill-1" stroke="#FC4040" fill="#FF5353"></path>
+                <text id="!" font-family=".AppleSystemUIFont" font-size="11" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="8.19825655" y="14">!</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
