@@ -310,6 +310,21 @@ a {
 			width: 100%;
 			height: auto;
 			display: block;
+			position: relative;
+			z-index: 4;
+		}
+
+		.wavy-loader {
+			position: absolute;
+		    /* height: 100%; */
+		    top: 50%;
+		    left: 50%;
+		    @include transform(translate(-50%, -50%));
+		    opacity: 0;
+
+		    &.active {
+		    	opacity: 1;
+		    }
 		}
 	}
 }
@@ -4624,6 +4639,8 @@ br.mobile-br {
 		height: auto;
 		display: block;
 		margin: 0 auto;
+		position: relative;
+
 	}
 	
 }
@@ -4644,6 +4661,26 @@ br.mobile-br {
 		clear: both;
 		padding-top: 60px;
 		padding-left: 0;
+	}
+}
+
+.video-app-holder {
+	position: absolute;
+    bottom: 92px;
+    left: 26px;
+    width: 242px;
+    height: 437px;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 2;
+
+	video {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
 	}
 }
 

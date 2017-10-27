@@ -1850,7 +1850,22 @@ a {
   .home-section-banner .phone-app img {
     width: 100%;
     height: auto;
-    display: block; }
+    display: block;
+    position: relative;
+    z-index: 4; }
+  .home-section-banner .phone-app .wavy-loader {
+    position: absolute;
+    /* height: 100%; */
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0; }
+    .home-section-banner .phone-app .wavy-loader.active {
+      opacity: 1; }
 
 .section2 {
   min-height: 767px;
@@ -5293,7 +5308,8 @@ br.mobile-br {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
 
 .projected-tuition {
   padding-left: 30px; }
@@ -5308,6 +5324,22 @@ br.mobile-br {
       clear: both;
       padding-top: 60px;
       padding-left: 0; } }
+
+.video-app-holder {
+  position: absolute;
+  bottom: 92px;
+  left: 26px;
+  width: 242px;
+  height: 437px;
+  overflow: hidden;
+  opacity: 1;
+  z-index: 2; }
+  .video-app-holder video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 /* checkbox aspect */
 .custom-checkbox [type="checkbox"]:not(:checked) + label:before,

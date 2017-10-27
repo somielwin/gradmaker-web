@@ -113,6 +113,13 @@
                         </div>
                     </figure>   
                     <figure class="phone-app">
+                        <div class="video-app-holder">
+                            <video width="100%" height="100%" autoplay="true" loop="true" preload="none" muted>
+                                <source src="video/app-demo.mp4" type="video/mp4">
+                                <!-- <source src="videos/elephant-bg.webm" type="video/ogg"> -->
+                           </video>
+                        </div>
+                        <div class="wavy-loader"><span></span><span></span><span></span></div>
                         <img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/version2/phone-frame.png" alt="">
                 </div>
             </div>

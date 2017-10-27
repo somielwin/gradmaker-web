@@ -83,9 +83,22 @@ $(document).ready(function() {
             $(this).load(function() {
                 this.style.opacity = 1;
             });
+
+            $(this).siblings('.wavy-loader').addClass('active');
         });
 
     }
+
+    // if($('.lazyload-video').length > 0) {
+
+    //     $('.lazyload-video').unveil(200, function(){
+    //         $(this).load(function(){
+    //             this.style.opacity = 1;
+    //         });
+
+    //         $('.phone-app').find('.wavy-loader').addClass('active');
+    //     });
+    // }
 
 	$('.header-hamburger').click(function(e){
 		e.preventDefault();
