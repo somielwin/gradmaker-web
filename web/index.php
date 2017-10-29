@@ -120,7 +120,7 @@
                            </video>
                         </div>
                         <div class="wavy-loader"><span></span><span></span><span></span></div>
-                        <img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/version2/phone-frame.png" alt="">
+                        <img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/version2/phone_frame.png" alt="">
                 </div>
             </div>
         </section>
