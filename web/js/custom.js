@@ -84,7 +84,7 @@ $(document).ready(function() {
                 this.style.opacity = 1;
             });
 
-            $(this).siblings('.wavy-loader').addClass('active');
+            //$(this).siblings('.wavy-loader').addClass('active');
         });
 
     }
