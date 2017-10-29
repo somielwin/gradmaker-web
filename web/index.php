@@ -114,9 +114,9 @@
                     </figure>   
                     <figure class="phone-app">
                         <div class="video-app-holder">
-                            <video width="100%" height="100%" autoplay="true" loop="true" preload="none" muted>
+                            <video width="100%" height="100%" autoplay="true" loop="true" preload="none" muted playsinline>
                                 <source src="video/app-demo.mp4" type="video/mp4">
-                                <!-- <source src="videos/elephant-bg.webm" type="video/ogg"> -->
+                                <source src="videos/elephant-bg.webm" type="video/ogg">
                            </video>
                         </div>
                         <div class="wavy-loader"><span></span><span></span><span></span></div>
