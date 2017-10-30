@@ -5339,7 +5339,13 @@ br.mobile-br {
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    z-index: 10; }
+  .video-app-holder img {
+    display: none !important; }
+    @media (max-width: 991px) {
+      .video-app-holder img {
+        display: block !important; } }
 
 /* checkbox aspect */
 .custom-checkbox [type="checkbox"]:not(:checked) + label:before,

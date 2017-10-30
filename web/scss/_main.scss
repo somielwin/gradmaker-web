@@ -4680,7 +4680,16 @@ br.mobile-br {
 		position: absolute;
 		top: 0;
 		left: 0;
+		z-index: 10;
 
+	}
+
+	img {
+		display: none !important;
+
+		@include breakpoint(tablet) {
+			display: block !important;
+		}
 	}
 }
 

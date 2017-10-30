@@ -116,8 +116,8 @@
                         <div class="video-app-holder">
                             <video width="100%" height="100%" autoplay loop muted playsinline>
                                 <source src="video/app-demo.mp4" type="video/mp4">
-                                <source src="videos/app-demo.webm" type="video/ogg" onerror="fallback(parentNode)">
-                                <img src="images/version2/phone-frame-mobile.jpg">
+                                <source src="videos/app-demo.webm" type="video/ogg">
+                                
                            </video>
                         </div>
                         <img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/version2/phone_frame.png" alt="">
@@ -1016,6 +1016,17 @@
 </footer>
 
 <script src="js/lib/jquery.min.js"></script>
+<script type="text/javascript">
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if(isAndroid) {
+      // Do something!
+      // Redirect to Android-site?
+      //window.location = 'http://android.davidwalsh.name';
+      console.log('andriod');
+      $('#video-app-holder').children('video').remove();
+    }
+</script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/jquery.appear.js"></script>
 <script src="js/TweenMax.js"></script>
@@ -1025,15 +1036,7 @@
 <script src="js/custom.js"></script>
 
 <script type="text/javascript">
-    function fallback(video) {
-      var img = video.querySelector('img');
-      if (img)
-        video.parentNode.replaceChild(img, video);
-    }
-
-    var player;
-    var playerVideo = "unloaded";
-
+    
     $(window).load(function(){
         // Youtube Video
         setupYTAPI();
