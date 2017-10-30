@@ -5346,6 +5346,12 @@ br.mobile-br {
     @media (max-width: 991px) {
       .video-app-holder img {
         display: block !important; } }
+  .video-app-holder #video-img-bk {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 /* checkbox aspect */
 .custom-checkbox [type="checkbox"]:not(:checked) + label:before,

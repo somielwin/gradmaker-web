@@ -113,14 +113,15 @@
                         </div>
                     </figure>   
                     <figure class="phone-app">
-                        <div class="video-app-holder">
-                            <video width="100%" height="100%" autoplay loop muted playsinline>
+                        <div class="video-app-holder" id="video-app-holder">
+                            <video id="video-app" width="100%" height="100%" autoplay loop muted playsinline>
                                 <source src="video/app-demo.mp4" type="video/mp4">
                                 <source src="videos/app-demo.webm" type="video/ogg">
-                                
                            </video>
+                           <img src="images/version2/phone-frame-mobile.jpg" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
                         </div>
                         <img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/version2/phone_frame.png" alt="">
+                    </figure>
                 </div>
             </div>
         </section>
@@ -1020,10 +1021,6 @@
     var ua = navigator.userAgent.toLowerCase();
     var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
     if(isAndroid) {
-      // Do something!
-      // Redirect to Android-site?
-      //window.location = 'http://android.davidwalsh.name';
-      console.log('andriod');
       $('#video-app-holder').children('video').remove();
     }
 </script>

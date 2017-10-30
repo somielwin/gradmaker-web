@@ -4686,10 +4686,19 @@ br.mobile-br {
 
 	img {
 		display: none !important;
+		
 
 		@include breakpoint(tablet) {
 			display: block !important;
 		}
+	}
+
+	#video-img-bk {
+		height: 100%; 
+		width: 100%; 
+		position: absolute; 
+		top: 0;
+		left: 0;
 	}
 }
 
