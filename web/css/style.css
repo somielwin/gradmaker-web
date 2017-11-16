@@ -3867,7 +3867,7 @@ br.mobile-br {
       display: none; } }
   .carousel-cocreate .owl-nav .owl-prev {
     width: 54px;
-    height: 112px;
+    height: 80px;
     position: absolute;
     top: 50%;
     left: -100px;
@@ -3877,7 +3877,7 @@ br.mobile-br {
     background-size: contain; }
   .carousel-cocreate .owl-nav .owl-next {
     width: 54px;
-    height: 112px;
+    height: 80px;
     position: absolute;
     top: 50%;
     right: -100px;
