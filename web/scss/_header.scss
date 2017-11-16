@@ -57,6 +57,7 @@ header {
 					padding-left: 18px;
 					font-size: 14px;
 
+
 					&:hover {
 						padding-right: 50px;
 					}
@@ -71,7 +72,14 @@ header {
 				}
 			}
 
-		}	
+		}
+
+		/*&.is-fixed {
+
+			.head-btn .btn-get-app {
+				opacity: 1;
+			}
+		}	*/
 	}
 }
 
@@ -152,18 +160,40 @@ nav {
 				height: auto;
 			}
 
-			@include breakpoint(tablet2) {
+			/*@include breakpoint(tablet2) {
 				display: block;
-			}
+			}*/
 		}
 
 		.desktop-logo {
-			@include breakpoint(tablet2) {
+			/*@include breakpoint(tablet2) {
 				display: none;
-			}
+			}*/
 		}
 	}
+}
 
+.for-app {
+
+	&.is-fixed {
+
+		.logo {
+
+			.mobile-logo {
+
+				@include breakpoint(tablet2) {
+					display: block;
+				}
+			}
+
+			.desktop-logo {
+				
+				@include breakpoint(tablet2) {
+					display: none;
+				}
+			}
+		}	
+	}
 }
 
 .head-btn {
@@ -220,11 +250,28 @@ nav {
 		@include transition(all 0.4s ease);
 		font-size: 16px;
 		font-weight: 700;
+		position: relative;
+		opacity: 0;
+		@include transform(translate(100%, 0));
 
 
 		&:hover {
 			border: 1px solid $coOrange;
 			background: $coOrange;
+		}
+	}
+}
+
+.for-app {
+
+	&.is-fixed {
+
+		.head-btn {
+
+			.btn-get-app { 
+				@include transform(translate(0, 0));
+				opacity: 1;
+			}
 		}
 	}
 }

@@ -54,7 +54,7 @@ a {
 }
 
 .container {
-	max-width: 1110px;
+	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0px 25px;
 
@@ -78,8 +78,8 @@ a {
 
 .section1 {
 	min-height: 640px;
-	xbackground: linear-gradient(#f2f2f2, #eaeaec);
-	background: #f2f2f2;
+	xbackground: linear-gradient(#fafafa, #eaeaec);
+	background: #fafafa;
 
 	@include breakpoint(tablet2) {
 		min-height: 480px;
@@ -155,6 +155,17 @@ a {
 			position: relative;
 			height: 116px;
 
+
+			.container {
+				max-width: 1440px;
+				position: relative;
+				height: 116px;
+
+				@include breakpoint(tablet) {
+					position: static;
+					height: auto;
+				}
+			}
 			/*@include breakpoint(tablet2) {
 				height: 50px;
 			}*/
@@ -166,9 +177,11 @@ a {
 		position: absolute;
 		bottom: calc(100% - 3px);
 		left: 0;
+		width: 100%;
+		text-align: center;
 
 		.desktop {
-			display: block;
+			display: inline-block;
 
 			@include breakpoint(tablet2) {
 				display: none;
@@ -186,7 +199,7 @@ a {
 		}
 
 		img {
-			width: 100%;
+			max-width: 100%;
 
 			@include breakpoint(desktop) {
 				width: 100%;
@@ -503,6 +516,9 @@ a {
 			font-size: 16px;
 			line-height: 28px;
 			margin-bottom: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 80%;
 		}
 
 	}
@@ -510,10 +526,11 @@ a {
 	a.btn {
 		background: #008C50;
 		color: #FFFFFF;
-		padding-top: 14px;
-   		padding-bottom: 15px;
-   		padding-left: 50px;
-   		padding-right: 50px;
+		padding-top: 17px;
+   		padding-bottom: 17px;
+   		padding-left: 40px;
+   		padding-right: 40px;
+   		border: none;
 
 		&:hover {
 			background: #F5A623;
@@ -773,7 +790,7 @@ br.mobile-br {
 }
 
 .bg-grey {
-	background: #f2f2f2;
+	background: #FAFAFA;
 	border-top: 1px solid #D9DADE;
 }
 
@@ -808,16 +825,19 @@ br.mobile-br {
 
 		@include breakpoint(phablet) {
 			font-size: 30px;
+			margin-bottom: 10px;
 		}
 	}
 
 	p {
-		font-size: 16px;
-		line-height: 26px;
+		font-size: 18px;
+		line-height: 28px;
 		padding: 0px 30px;
 
 		@include breakpoint(tablet2) {
 			padding: 0px 0px;
+			font-size: 16px;
+			line-height: 26px;
 
 
 		}
@@ -829,12 +849,14 @@ br.mobile-br {
 	}
 
 	figure {
-		margin-bottom: 20px;
+		margin-bottom: 50px;
 		margin-top: 60px;
 		text-align: center;
 
 		@include breakpoint(phablet) {
 			margin-top: 30px;
+			padding: 0px 20px;
+			margin-bottom: 20px;
 		}
 
 		img {
@@ -895,7 +917,7 @@ br.mobile-br {
 
 .cg-item {
 	max-width: 203px;
-	width: 33.33%;
+	width: 40%;
 	margin: 0px 5px;
 	position: relative;
 	/*display: -webkit-flex;
@@ -952,6 +974,15 @@ br.mobile-br {
 
 		@include breakpoint(phablet) {
 			height: 212px;
+		}
+	}
+
+	.up-to {
+		line-height: 25px;
+		margin-bottom: 20px;
+
+		sup {
+			top: 0;
 		}
 	}
 }
@@ -1044,7 +1075,7 @@ br.mobile-br {
 		height: auto;
 		display: block;
 		text-align: center;
-		margin: 0 auto 20px;
+		margin: 0 auto 10px;
 
 		@include breakpoint(phablet) {
 			width: 43px;
@@ -1116,7 +1147,7 @@ br.mobile-br {
 	span {
 		display: inline-block;
 		vertical-align: middle;
-		background: #f2f2f2;
+		background: #fafafa;
 		padding: 10px 5px;
 		font-weight: 500;
 		font-size: 20px;
@@ -1278,7 +1309,7 @@ br.mobile-br {
 		}
 
 
-		&:hover {
+		/*&:hover {
 
 			.cf-box {
 				background-image: linear-gradient(-180deg, #FFFFFF 0%, #F4F4F4 100%);
@@ -1300,7 +1331,7 @@ br.mobile-br {
 					opacity: 1;
 				}
 			}
-		}
+		}*/
 
 
 	}
@@ -1499,6 +1530,14 @@ br.mobile-br {
 		display: block;
 		float: none;
 		clear: both;
+	}
+
+	.cc-box {
+		margin-left: -35px;
+
+		@include breakpoint(tablet2) {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -2734,8 +2773,8 @@ br.mobile-br {
 		}
 
 		.owl-prev {
-			width: 100px;
-			height: 44px;
+			width: 54px;
+			height: 112px;
 			position: absolute;
 			top: 50%;
 			left: -100px;
@@ -2746,8 +2785,8 @@ br.mobile-br {
 		}
 
 		.owl-next {
-			width: 100px;
-			height: 44px;
+			width: 54px;
+			height: 112px;
 			position: absolute;
 			top: 50%;
 			right: -100px;
@@ -3159,10 +3198,10 @@ br.mobile-br {
 	bottom: -30px;
 
 	.dream-dot {
-		width: 80px;
+		width: 40px;
 		height: 8px;
 		display: inline-block;
-		margin: 0px 10px;
+		margin: 0px 4px;
 		position: relative;
 		background: transparent;
 		overflow: hidden;
@@ -3183,6 +3222,10 @@ br.mobile-br {
 			opacity: 0.10;
 			border-radius: 4px;
 			@include transition(all 0.4s linear);
+
+			@include breakpoint(tablet2) {
+				height: 2px;
+			}
 		}
 
 		span {
@@ -3570,7 +3613,7 @@ br.mobile-br {
 
 		@include breakpoint(tablet2) {
 			width: 50px;
-			margin: 0px 5px;
+			margin: 0px 4px;
 		}
 
 		@include breakpoint(phablet) {
@@ -4112,6 +4155,10 @@ br.mobile-br {
 	    margin-top: -12px;
 	    z-index: 101;
 	    @include transform(rotate(90deg));
+
+	    @include breakpoint(tablet2) {
+	    	margin-top: -10px;
+	    }
 	}
 
 	ul {
@@ -4154,7 +4201,7 @@ br.mobile-br {
 	}
 
 	> .selected {
-		padding: 0px 2px 8px 2px;
+		padding: 0px 8px 8px 8px;
 		display: inline-block;
 	    line-height: 25px;
 	    color: $coGreen;
@@ -4202,9 +4249,11 @@ br.mobile-br {
 	}
 
 	.cc-box {
+		margin-left: -35px;
 
 		@include breakpoint(tablet) {
 			display: none;
+			margin-left: 0;
 		}
 	}
 
@@ -4383,7 +4432,7 @@ br.mobile-br {
 
 		li {
 			padding: 0px 30px;
-			background: #f2f2f2;
+			background: #fafafa;
 			position: relative;
 			
 
@@ -4486,12 +4535,6 @@ br.mobile-br {
 	}
 }
 
-#product {
-
-	figure {
-		margin-top: 50px;
-	}
-}
 
 #company {
 
@@ -4519,6 +4562,10 @@ br.mobile-br {
 	img {
 		@include breakpoint(desktop) {
 			max-width: 75%;
+		}
+
+		@include breakpoint(tablet2) {
+			max-width: 100%;
 		}
 	}
 }
@@ -4641,6 +4688,29 @@ br.mobile-br {
 		margin: 0 auto;
 		position: relative;
 
+	}
+
+	figure {
+
+		@include breakpoint(tablet2) {
+			width: 100%;
+			height: 0;
+			padding-bottom: 75%;
+			position: relative;
+
+			img {
+				padding: 0px 10px;
+			    position: absolute;
+			    max-width: 100%;
+			    max-height: 100%;
+			    display: block;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+			    margin: auto;
+			}
+		}
 	}
 	
 }

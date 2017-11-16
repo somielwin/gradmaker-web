@@ -111,7 +111,7 @@
                             <figure class="b-heart1 heart-anim2"><img src="images/home/heart.svg" alt=""></figure>
                             <figure class="b-heart1 heart-anim3"><img src="images/home/heart.svg" alt=""></figure>
                         </div>
-                    </figure>   
+                    </figure>       
                     <figure class="phone-app">
                         <div class="video-app-holder" id="video-app-holder">
                             <video id="video-app" width="100%" height="100%" autoplay loop muted playsinline>
@@ -488,6 +488,9 @@
                                         <li><a href="#" data-value="8">8</a></li>
                                         <li><a href="#" data-value="9">9</a></li>
                                         <li><a href="#" data-value="10">10</a></li>
+                                        <li><a href="#" data-value="11">11</a></li>
+                                        <li><a href="#" data-value="12">12</a></li>
+                                        <li><a href="#" data-value="13">13</a></li>
                                     </ul>
                                 </div>
                             </div>

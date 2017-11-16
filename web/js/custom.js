@@ -243,6 +243,30 @@ $(window).scroll(function (event) {
     // }
 });
 
+$(window).on('scroll load', function(){
+    var swH = $(window).height() - 74;
+    var _cur_top = $(window).scrollTop();
+
+    console.log(swH);
+
+    if($('header').hasClass('adjusted')) {
+        if(  _cur_top >=  swH) {
+            $('header').addClass('is-fixed');
+        } else {
+            $('header').removeClass('is-fixed');
+        }
+    } else {
+        if(  _cur_top >=  swH) {
+            $('header').addClass('is-fixed');
+
+        } else {
+            $('header').removeClass('is-fixed');
+        }
+    }
+    
+
+});
+
 function scrollToDiv(element) {
     var offset = element.offset();
     var offsetTop = offset.top;
