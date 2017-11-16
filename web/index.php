@@ -103,25 +103,27 @@
                         <img class="lazyload desktop" src="images/page_template/lazyload.jpg" data-src="images/version2/bg.png" alt="">
                         <img class="lazyload mobile" src="images/page_template/lazyload.jpg" data-src="images/version2/bg1-mobile.png" alt="">
                     </figure>
-                    <figure class="girl">
-                        <img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/girl.svg" alt="">
+                    <div class="container">
+                        <figure class="girl">
+                            <img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/girl.svg" alt="">
 
-                        <div class="heart-bulk">
-                            <figure class="b-heart1 heart-anim1"><img src="images/home/heart.svg" alt=""></figure>
-                            <figure class="b-heart1 heart-anim2"><img src="images/home/heart.svg" alt=""></figure>
-                            <figure class="b-heart1 heart-anim3"><img src="images/home/heart.svg" alt=""></figure>
-                        </div>
-                    </figure>       
-                    <figure class="phone-app">
-                        <div class="video-app-holder" id="video-app-holder">
-                            <video id="video-app" width="100%" height="100%" autoplay loop muted playsinline>
-                                <source src="video/app-demo.mp4" type="video/mp4">
-                                <!-- <source src="videos/app-demo.webm" type="video/ogg"> -->
-                           </video>
-                           <img id="video-img-bk" src="images/version2/phone-frame-mobile.jpg">
-                        </div>
-                        <img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/version2/phone_frame.png" alt="">
-                    </figure>
+                            <div class="heart-bulk">
+                                <figure class="b-heart1 heart-anim1"><img src="images/home/heart.svg" alt=""></figure>
+                                <figure class="b-heart1 heart-anim2"><img src="images/home/heart.svg" alt=""></figure>
+                                <figure class="b-heart1 heart-anim3"><img src="images/home/heart.svg" alt=""></figure>
+                            </div>
+                        </figure>       
+                        <figure class="phone-app">
+                            <div class="video-app-holder" id="video-app-holder">
+                                <video id="video-app" width="100%" height="100%" autoplay loop muted playsinline>
+                                    <source src="video/app-demo.mp4" type="video/mp4">
+                                    <!-- <source src="videos/app-demo.webm" type="video/ogg"> -->
+                               </video>
+                               <img id="video-img-bk" src="images/version2/phone-frame-mobile.jpg">
+                            </div>
+                            <img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/version2/phone_frame.png" alt="">
+                        </figure>
+                    </div>
                 </div>
             </div>
         </section>
@@ -427,7 +429,7 @@
                                 <!-- <small>FEATURE</small> -->
                                 <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/feature-simple.svg" alt=""></figure>
                                 <h3>Simple</h3>
-                                <p>Investing made easy &amp; <br>mobile. No appointments. <br>No pen &amp; paper. No hassle.</p>
+                                <p>Invest at your convenience. No appointments. <br>No pen &amp; paper. No hassle.</p>
                             </div>
                             <div class="cf-num">
                                 <span>01</span>
@@ -556,6 +558,7 @@
                                         <div class="cg-top">
                                             <div class="cg-top-content">
                                                 <figure><img src="images/home/logo-cap-orig.png" alt=""></figure>
+                                                <p class="up-to"><sup>up to</sup></p>
                                                 <p><sup>*</sup>8<span>%</span></p>
                                             </div>
                                         </div>

@@ -239,7 +239,6 @@ $(window).scroll(function (event) {
         
     //     // Do something
         
-        
     // }
 });
 
@@ -247,21 +246,11 @@ $(window).on('scroll load', function(){
     var swH = $(window).height() - 74;
     var _cur_top = $(window).scrollTop();
 
-    console.log(swH);
+    if(  _cur_top >=  swH) {
+        $('header').addClass('is-fixed');
 
-    if($('header').hasClass('adjusted')) {
-        if(  _cur_top >=  swH) {
-            $('header').addClass('is-fixed');
-        } else {
-            $('header').removeClass('is-fixed');
-        }
     } else {
-        if(  _cur_top >=  swH) {
-            $('header').addClass('is-fixed');
-
-        } else {
-            $('header').removeClass('is-fixed');
-        }
+        $('header').removeClass('is-fixed');
     }
     
 
