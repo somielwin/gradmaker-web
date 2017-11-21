@@ -1083,7 +1083,10 @@
             var start_tuition = Math.round(annual_tuition*Math.pow(1+inflate_rate,(18-childs_age)));
             
             total_tuition_in_n_years = start_tuition;
-            total_tuition_in_n_years = Math.round(total_tuition_in_n_years*4);
+            for(var i=1;i < n_years_in_college; i++){
+                total_tuition_in_n_years += Math.round(annual_tuition*Math.pow(1+inflate_rate,(18+i)-childs_age));
+            }
+            console.log('Start tuition '+start_y+' Php'+start_tuition)
             $('#pj-year').html(start_y+'-'+(start_y+3))
             $('#result').html('Php '+Math.round(total_tuition_in_n_years).toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         }
