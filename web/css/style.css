@@ -3985,15 +3985,15 @@ br.mobile-br {
   clear: both;
   overflow: hidden;
   margin: 0 auto;
-  max-width: 1200px; }
+  max-width: 1206px; }
 
 #dream-carousel > div {
   visibility: hidden;
   cursor: pointer;
-  width: 542px; }
+  width: 543px; }
   @media (max-width: 1024px) {
     #dream-carousel > div {
-      width: 442px; } }
+      width: 443px; } }
 
 .dc-item .dc-link {
   display: block;

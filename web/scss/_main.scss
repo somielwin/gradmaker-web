@@ -2912,17 +2912,17 @@ br.mobile-br {
 	clear:both;
 	overflow:hidden;
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 1206px;
 
 	@include breakpoint(tablet)
 }
 #dream-carousel > div {
 	visibility:hidden; 
 	cursor:pointer;
-	width: 542px;
+	width: 543px;
 
 	@include breakpoint(desktop) {
-		width: 442px;
+		width: 443px;
 	}
 }
 
