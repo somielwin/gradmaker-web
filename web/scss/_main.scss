@@ -4682,6 +4682,10 @@ br.mobile-br {
 			right: -40px;
 			top: 50%;
 			margin-top: -3px;
+
+			@include breakpoint(tablet2) {
+				margin-top: -7px;
+			}
 		}
 
 		i {
