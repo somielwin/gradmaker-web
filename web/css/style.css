@@ -2445,10 +2445,10 @@ br.mobile-br {
   .cg-bank .cg-top {
     text-align: center;
     height: 150px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ffc139), to(#ffac5c));
-    background: -webkit-linear-gradient(#ffc139, #ffac5c);
-    background: -o-linear-gradient(#ffc139, #ffac5c);
-    background: linear-gradient(#ffc139, #ffac5c);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffc139), to(#ffa73e));
+    background: -webkit-linear-gradient(#ffc139, #ffa73e);
+    background: -o-linear-gradient(#ffc139, #ffa73e);
+    background: linear-gradient(#ffc139, #ffa73e);
     border-radius: 20px;
     position: relative;
     z-index: 3; }
@@ -2464,7 +2464,8 @@ br.mobile-br {
     .cg-bank .cg-top .cg-top-content figure {
       margin-bottom: 8px; }
       .cg-bank .cg-top .cg-top-content figure img {
-        max-width: 45px; }
+        max-width: 45px;
+        opacity: 0.70; }
       @media (max-width: 640px) {
         .cg-bank .cg-top .cg-top-content figure {
           width: 28px; } }

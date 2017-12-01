@@ -999,7 +999,7 @@ br.mobile-br {
 	.cg-top {
 		text-align: center;
 		height: 150px;
-		background: linear-gradient(#ffc139, #ffac5c);
+		background: linear-gradient(#ffc139, #ffa73e);
 		border-radius: 20px;
 		position: relative;
 		z-index: 3;
@@ -1024,6 +1024,7 @@ br.mobile-br {
 
 				img {
 					max-width: 45px;
+					opacity: 0.70;
 
 				}
 
