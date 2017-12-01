@@ -1,7 +1,7 @@
 .faq-list {
 	
 	max-width: 900px;
-	margin: 30px auto 0;
+	margin: 70px auto 0;
 
 	> ul {
 
@@ -21,7 +21,7 @@
 	background: #FFFFFF;
 	border: 1px solid #D5D5D5;
 	border-radius: 10px;
-	padding: 20px 40px 20px;
+	padding: 22px 40px 22px;
 
 	@include breakpoint(tablet2) {
 		padding: 15px 20px;
