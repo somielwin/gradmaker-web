@@ -3990,7 +3990,12 @@ br.mobile-br {
 #dream-carousel > div {
   visibility: hidden;
   cursor: pointer;
-  width: 543px; }
+  width: 543px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
   @media (max-width: 1024px) {
     #dream-carousel > div {
       width: 443px; } }
@@ -4006,6 +4011,7 @@ br.mobile-br {
   transition: all 0.4s ease;
   position: relative;
   border-radius: 20px;
+  outline: none;
   overflow: hidden; }
 
 .dc-wrap {

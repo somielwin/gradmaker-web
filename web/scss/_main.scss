@@ -2920,6 +2920,10 @@ br.mobile-br {
 	visibility:hidden; 
 	cursor:pointer;
 	width: 543px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	backface-visibility: hidden;
 
 	@include breakpoint(desktop) {
 		width: 443px;
@@ -2935,6 +2939,7 @@ br.mobile-br {
     	@include transition(all 0.4s ease);
     	position: relative;
     	border-radius: 20px;
+    	outline: none;
     	overflow: hidden;
 	}
 }
