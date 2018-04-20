@@ -3328,9 +3328,10 @@ br.mobile-br {
 
 .section4 {
   padding-bottom: 90px;
-  padding-top: 90px; }
-  .section4.bg-grey {
-    border-top: none; }
+  padding-top: 90px;
+  /*&.bg-grey {
+		
+	}*/ }
   .section4 .col-wrap {
     max-width: 500px; }
     @media (max-width: 991px) {

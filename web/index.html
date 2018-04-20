@@ -253,8 +253,7 @@
                 <div class="comparison-wrap">
                     <div class="compa-content col-wrap fr animated hiding" data-animation="fadeInUp">
                         <h2>How <span>it works</span></h2>
-                        <p>You can watch the video demo here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <p>You can watch the video demo here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
                         <a href="#" class="btn btn-primary play-video" data-videoid="RBEzCv3Df6U"> <span class="i-icon icon-watch-video"></span>Watch How</a>
                     </div>
                     <div class="compa-graph col-wrap fl">
@@ -649,37 +648,37 @@
 		// Calculator
 
 		var inflate_val = '0.10';
-		var inflate_rate = parseFloat(inflate_val);
+        var inflate_rate = parseFloat(inflate_val);
 
-		$.getJSON("universities.json",function(data){
-			var options = '';
-			$.each(data,function(i,e){
-				//options += '<option value="'+e+'">'+i+'</option>';
-				options += '<li><a href="#" data-value="'+e+'">'+i+'</a></li>';
+        $.getJSON("universities.json",function(data){
+            var options = '';
+            $.each(data,function(i,e){
+                //options += '<option value="'+e+'">'+i+'</option>';
+                options += '<li><a href="#" data-value="'+e+'">'+i+'</a></li>';
 
-			});
-			$('#university').html(options);
-			$('#university li:first-child a').click();
+            });
+            $('#university').html(options);
+            $('#university li:first-child a').click();
 
-			
-		});
+            
+        });
 
-		function computeTuition(){
-			var childs_age = $('#selected-age').attr('data-value');
-			var annual_tuition = $('#selected-university').attr('data-value');
-			var d = new Date();
-			var y = d.getFullYear();
-			var start_y = (y-childs_age)+18;
-			var total_tuition_in_n_years = 0;
-			var n_years_in_college = 4;
+        function computeTuition(){
+            var childs_age = $('#selected-age').attr('data-value');
+            var annual_tuition = $('#selected-university').attr('data-value');
+            var d = new Date();
+            var y = d.getFullYear();
+            var start_y = (y-childs_age)+18;
+            var total_tuition_in_n_years = 0;
+            var n_years_in_college = 4;
 
-			var start_tuition = Math.round(annual_tuition*Math.pow(1+inflate_rate,(18-childs_age)));
-			
-			total_tuition_in_n_years = start_tuition;
-			total_tuition_in_n_years = Math.round(total_tuition_in_n_years*4);
-			$('#pj-year').html(start_y+'-'+(start_y+3))
-			$('#result').html('Php '+Math.round(total_tuition_in_n_years).toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-		}
+            var start_tuition = Math.round(annual_tuition*Math.pow(1+inflate_rate,(18-childs_age)));
+            
+            total_tuition_in_n_years = start_tuition;
+            total_tuition_in_n_years = Math.round(total_tuition_in_n_years*4);
+            $('#pj-year').html(start_y+'-'+(start_y+3))
+            $('#result').html('Php '+Math.round(total_tuition_in_n_years).toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        }
 
 	    $(document).on('click', '.js-mobile-custom-dropdown li a', function(e){
 	        e.preventDefault();
