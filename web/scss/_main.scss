@@ -4229,6 +4229,11 @@ br.mobile-br {
 			-moz-appearance: none;
 			appearance: none;
 
+			@include breakpoint(tablet2) {
+				line-height: 30px;
+			}
+
+
 			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 			  color: #9495A0;
 			  opacity: 0.60;
@@ -4265,6 +4270,7 @@ br.mobile-br {
 
 			  @include breakpoint(phablet) {
 			  	font-size: 18px;
+
 			  }
 
 			  @include breakpoint(mobile) {

@@ -5091,6 +5091,9 @@ br.mobile-br {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none; }
+      @media (max-width: 767px) {
+        .faq-search-wrap .input-wrap input[type="text"] {
+          line-height: 30px; } }
       .faq-search-wrap .input-wrap input[type="text"]::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: #9495A0;
