@@ -279,9 +279,7 @@ function updateNav() {
             currentHash = liItems.find('a[href="#' + $(this).attr('id') + '"]');
             liItems.children('a').parent('li').removeClass('active');
             currentHash.parent('li').addClass('active');
-
-           
-
+            
             // if(currentHash.parent('li:nth-child(4)').hasClass('active')) {
             //     $('.sn-menu').addClass('sn-green');
 

@@ -45,8 +45,8 @@ footer { z-index: 2; position: relative; background: #424559; padding: 50px 0 50
 		}
 
 		li {
-			float: left;
-			width: 25%;
+			display: inline-block;
+			width: 24%;
 
 			text-align: center;
 			padding: 0px 15px;
@@ -64,6 +64,15 @@ footer { z-index: 2; position: relative; background: #424559; padding: 50px 0 50
 				span {
 					display: block;
 					opacity: 0.8;
+
+					&.fa {
+						position: relative;
+						top: -2px;
+
+						@include breakpoint(tablet2) {
+							top: -3px;
+						}
+					}
 				}
 
 				&:hover {

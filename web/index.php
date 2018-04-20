@@ -94,7 +94,7 @@
                         <div class="banner-text animated hiding" data-animation="fadeInUp">
                             <h1><span>Investing in your </span>Child’s Future</h1>
                             <p>Now made easy for you with the GradMaker mobile app.</p>
-                            <a href="#" class="btn btn-primary play-video" data-videoid="BZP1rYjoBgI"> <span class="i-icon icon-watch-video"></span>Watch How</a>
+                            <a href="#" class="btn btn-primary">Become a Gradmaker</a>
                         </div>
                     </div>
                 </div>
@@ -130,300 +130,11 @@
             </div>
         </section>
 
-        <section id="section2" class="sec-wrap section2 sec-full bg-green jq-section">
-            <div class="container">
-                <div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
-                    <h2><span>Make your </span>child's dream <span>come true</span></h2>
-                </div>
-            </div>
-            <!-- Mobile Carousel Desktop -->
-            <div id="dream-carousel" class="dream-carousel animated hiding" data-animation="fadeInUp">
-                <div class="dc-item" data-num="1">
-                    <div class="dc-link" id="item-1">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>His dream is <br>to become a</p>
-                                    <h3>Doctor</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/doctor.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="2">
-                    <div class="dc-link" id="item-2">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>Her dream is <br>to become a</p>
-                                    <h3>Teacher</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/teacher.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="3">
-                    <div class="dc-link" id="item-3">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>His dream is <br>to become an</p>
-                                    <h3>Astronaut</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/astronaut.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="4">
-                    <div class="dc-link" id="item-4">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>His dream is <br>to become a</p>
-                                    <h3>Lawyer</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/lawyer.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="5">
-                    <div class="dc-link" id="item-5">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>Her dream is <br>to become a</p>
-                                    <h3>Ballerina</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/ballerina.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="6">
-                    <div class="dc-link" id="item-6">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>Her dream is <br>to become a</p>
-                                    <h3>Flight <br>attendant</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/flight-attendant.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="7">
-                    <div class="dc-link" id="item-7">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>His dream is <br>to become a</p>
-                                    <h3>Fireman</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/fireman.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="8">
-                    <div class="dc-link" id="item-8">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>Her dream is <br>to become a</p>
-                                    <h3>Nurse</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/nurse.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="9">
-                    <div class="dc-link" id="item-9">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>His dream is <br>to become a</p>
-                                    <h3>Police</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/police.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="10">
-                    <div class="dc-link" id="item-10">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>Her dream is <br>to become a</p>
-                                    <h3>Designer</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/designer.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mobile Carouse Mobile -->
-            <div class="container">
-                <div id="dream-carousel-mobile" class="dream-carousel">
-                    <div class="dc-item" data-num="1">
-                        <div class="dc-link" id="item-1">
-                            <div class="dc-wrap">
-                                <div class="dc-box">
-                                    <div class="dc-content">
-                                        <p>His dream is <br>to become a</p>
-                                        <h3>Doctor</h3>
-                                    </div>
-                                </div>
-                                <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/doctor.svg" alt=""></figure>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="dc-item" data-num="2">
-                        <div class="dc-link" id="item-2">
-                            <div class="dc-wrap">
-                                <div class="dc-box">
-                                    <div class="dc-content">
-                                        <p>Her dream is <br>to become a</p>
-                                        <h3>Teacher</h3>
-                                    </div>
-                                </div>
-                                <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/teacher.svg" alt=""></figure>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="dc-item" data-num="3">
-                        <div class="dc-link" id="item-3">
-                            <div class="dc-wrap">
-                                <div class="dc-box">
-                                    <div class="dc-content">
-                                        <p>His dream is <br>to become an</p>
-                                        <h3>Astronaut</h3>
-                                    </div>
-                                </div>
-                                <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/astronaut.svg" alt=""></figure>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dc-item" data-num="4">
-                        <div class="dc-link" id="item-4">
-                            <div class="dc-wrap">
-                                <div class="dc-box">
-                                    <div class="dc-content">
-                                        <p>His dream is <br>to become a</p>
-                                        <h3>Lawyer</h3>
-                                    </div>
-                                </div>
-                                <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/lawyer.svg" alt=""></figure>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dc-item" data-num="5">
-                        <div class="dc-link" id="item-5">
-                            <div class="dc-wrap">
-                                <div class="dc-box">
-                                    <div class="dc-content">
-                                        <p>Her dream is <br>to become a</p>
-                                        <h3>Ballerina</h3>
-                                    </div>
-                                </div>
-                                <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/ballerina.svg" alt=""></figure>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="dc-item" data-num="6">
-                    <div class="dc-link" id="item-6">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>Her dream is <br>to become a</p>
-                                    <h3>Flight <br>attendant</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/flight-attendant.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="7">
-                    <div class="dc-link" id="item-7">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>His dream is <br>to become a</p>
-                                    <h3>Fireman</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/fireman.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="8">
-                    <div class="dc-link" id="item-8">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>Her dream is <br>to become a</p>
-                                    <h3>Nurse</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/nurse.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="9">
-                    <div class="dc-link" id="item-9">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>His dream is <br>to become a</p>
-                                    <h3>Police</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/police.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                <div class="dc-item" data-num="10">
-                    <div class="dc-link" id="item-10">
-                        <div class="dc-wrap">
-                            <div class="dc-box">
-                                <div class="dc-content">
-                                    <p>Her dream is <br>to become a</p>
-                                    <h3>Designer</h3>
-                                </div>
-                            </div>
-                            <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/designer.svg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="dream-dots" id="dream-dots-mobile">
-                    <a href="#" class="dream-dot active" data-num="1"><span>1</span></a>
-                    <a href="#" class="dream-dot" data-num="2"><span>2</span></a>
-                    <a href="#" class="dream-dot" data-num="3"><span>3</span></a>
-                    <a href="#" class="dream-dot" data-num="4"><span>4</span></a>
-                    <a href="#" class="dream-dot" data-num="5"><span>5</span></a>
-                    <a href="#" class="dream-dot" data-num="6"><span>2</span></a>
-                    <a href="#" class="dream-dot" data-num="7"><span>3</span></a>
-                    <a href="#" class="dream-dot" data-num="8"><span>4</span></a>
-                    <a href="#" class="dream-dot" data-num="9"><span>5</span></a>
-                    <a href="#" class="dream-dot" data-num="10"><span>5</span></a>
-                    
-                </div>
-            </div>
-        </section>
-
         <section id="section3" class="sec-wrap section3 bg-grey jq-section">
             <div class="container">
                 <div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
                     <h2>Why <span>GradMaker?</span></h2>
+                    <p><a href="#">Watch the concept video</a></p>
                 </div>
                 <div class="carousel-feature animated hiding" data-animation="fadeInUp">
                     <div class="item active">
@@ -541,6 +252,43 @@
             </div>
         </section>
 
+        <section id="sectionX" class="sec-wrap section4 bg-grey jq-section">
+            <div class="container">
+                <div class="comparison-wrap">
+                    <div class="compa-content col-wrap fr animated hiding" data-animation="fadeInUp">
+                        <h2>Video Title</span></h2>
+                        <p>You can watch the video demo here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <a href="#" class="btn btn-primary play-video" data-videoid="RBEzCv3Df6U"> <span class="i-icon icon-watch-video"></span>Watch How</a>
+                    </div>
+                    <div class="compa-graph col-wrap fl">
+                        <div class="flex">
+                            <figure>
+                                <img src="images/gradmaker-placeholder.jpg" alt="">
+                            </figure>                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section5" class="sec-wrap section5 sec-full bg-grey jq-section">
+            <div class="container">
+                <div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
+                    <div class="col-wrap">
+                        <h2>The Future <span>is Now</span></h2>
+                        <p>The longer you stay invested, the closer you get to securing your child's college fund. Invest early and give your investment more time to grow.</p>
+                        <a href="#" class="btn btn-start">Start now for as low as <br> <i>PHP 10,000</i> <span class="i-icon icon-small-arrow"></span></a>
+                    </div>
+                </div>
+
+                <figure class="graph-whole animated hiding" data-animation="fadeInUp" data-delay="700"><img src="images/home/graph.svg" alt=""></figure>
+                <figure class="graph-mobile"><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/graph-mobile1.svg" alt=""></figure>
+            </div>
+            
+        </section>
+
         <section id="section4" class="sec-wrap section4 bg-grey jq-section">
             <div class="container">
                 <div class="comparison-wrap">
@@ -605,22 +353,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="section5" class="sec-wrap section5 sec-full bg-grey jq-section">
-            <div class="container">
-                <div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
-                    <div class="col-wrap">
-                        <h2>The Future <span>is Now</span></h2>
-                        <p>The longer you stay invested, the closer you get to securing your child's college fund. Invest early and give your investment more time to grow.</p>
-                        <a href="#" class="btn btn-start">Start now for as low as <br> <i>PHP 10,000</i> <span class="i-icon icon-small-arrow"></span></a>
-                    </div>
-                </div>
-
-                <figure class="graph-whole animated hiding" data-animation="fadeInUp" data-delay="700"><img src="images/home/graph.svg" alt=""></figure>
-                <figure class="graph-mobile"><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/graph-mobile1.svg" alt=""></figure>
-            </div>
-            
         </section>
 
         <section id="section6" class="sec-wrap section6 bg-grey jq-section">
