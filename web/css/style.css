@@ -889,6 +889,9 @@ html, body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.hide {
+  display: none; }
+
 header {
   position: fixed;
   z-index: 888;
@@ -2003,7 +2006,15 @@ a {
   .section3 .play-video .icon-watch-video {
     margin-left: 5px;
     top: 2px;
-    position: relative; }
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .section3 .play-video:hover {
+    background: #F5A623;
+    color: #ffffff; }
 
 .table-wrap {
   display: table;
@@ -2097,7 +2108,8 @@ a {
     padding-right: 40px;
     border: none; }
     .banner-text a.btn:hover {
-      background: #F5A623; }
+      background: #F5A623;
+      border: 1px solid #F5A623; }
     @media (max-width: 640px) {
       .banner-text a.btn {
         font-size: 16px; } }

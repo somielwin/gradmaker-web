@@ -128,7 +128,7 @@
             <div class="container">
                 <div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
                     <h2>Why <span>GradMaker?</span></h2>
-                    <a href="#" class="btn btn-primary play-video" data-videoid="BZP1rYjoBgI"> <span class="i-icon icon-watch-video"></span> Watch How</a>
+                    <a href="#" class="btn btn-primary play-video" data-videoid="RBEzCv3Df6U"> <span class="i-icon icon-watch-video"></span> Watch How</a>
                     <!-- <p><a href="#">Watch the concept video</a></p> -->
                 </div>
                 <div class="carousel-feature owl-carousel animated hiding" data-animation="fadeInUp">

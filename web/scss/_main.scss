@@ -48,6 +48,8 @@ a {
 	color: $defaultColor;
 	outline: none;
 
+	
+
 	@include breakpoint(tablet2) {
 		font-size: 18px;
 	}
@@ -420,6 +422,12 @@ a {
 			margin-left: 5px;
 		    top: 2px;
 		    position: relative;
+		    @include transition(all 0.4s ease);
+		}
+
+		&:hover {
+			background: $coOrange;
+			color: $coWhite;
 		}
 	}
 }
@@ -547,7 +555,7 @@ a {
 
 		&:hover {
 			background: #F5A623;
-			
+			border: 1px solid #F5A623;
 		}
 
 		@include breakpoint(phablet) {

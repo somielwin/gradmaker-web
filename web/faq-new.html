@@ -55,7 +55,7 @@
 			<div class="container">
 				<form action="" method="post">
 					<h2>How can we help you?</h2>	
-					<div class="input-wrap">
+					<div class="input-wrap " id="static-search">
 						<input type="text" name="" value="" placeholder="Search Help Articles">
 						<button><i class="fa fa-search"></i></button>
 					</div>
@@ -167,13 +167,12 @@
 		                    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus officia dicta veniam, vel, unde aperiam accusantium. Labore voluptatem.
 		                    			</div>
 									</li>
-									<li>
+									<li class="hide">
 										<h4>I am a housewife. Can I purchase a GradMaker policy if I am not employed or self-employed?</h4>
 										<div class="fl-h">
 		                    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus officia dicta veniam, vel, unde aperiam accusantium. Labore voluptatem.
 		                    			</div>
 									</li>
-
 									<li>
 										<h4>Can I buy a plan on behalf of my spouse?</h4>
 										<div class="fl-h">
@@ -212,7 +211,6 @@
 		                    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus officia dicta veniam, vel, unde aperiam accusantium. Labore voluptatem.
 		                    			</div>
 									</li>
-
 									<li>
 										<h4>Can I add or top up on a policy?</h4>
 										<div class="fl-h">
@@ -245,7 +243,6 @@
 		                    				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus officia dicta veniam, vel, unde aperiam accusantium. Labore voluptatem.
 		                    			</div>
 									</li>
-
 									<li>
 										<h4>How do I cancel my purchase?</h4>
 										<div class="fl-h">
@@ -785,6 +782,7 @@
 <script src="js/jquery.unveil.js"></script>
 <script src="js/jquery.appear.js"></script>
 <script src="js/owl.carousel.js"></script>
+<script src="js/mark.js"></script>
 <script src="js/custom.js"></script>
 <script type="text/javascript">
 	$(document).ready(function () {
@@ -807,7 +805,6 @@
 			e.preventDefault();
 			$(this).hide();
 			$(this).closest('.faq-n-item').find('ul').addClass('show-all');
-
 		});
 
 		$(document).on('click', '.faq-list-home h4', function(e){
@@ -815,7 +812,6 @@
 
 			$('.faq-list-home li').removeClass('active');
 			$('.fl-h').stop(true, false).slideUp(300);
-
 			$(this).parent('li').addClass('active');
 			$(this).siblings('.fl-h').stop(true, false).slideDown(300);
 		});
@@ -903,6 +899,62 @@
 		});
 
 
+		$('#static-search input[type="text"]').on("keyup", mark);
+        $('#static-search input[type="text"]').on("change", mark);
+
+        function mark(e) {
+            // Read the keyword
+            var keyword = $('#static-search input[type="text"]').val();
+
+            console.log('test')
+
+            // Mark the keyword inside the context
+            $(".faq-row").unmark();
+            $(".faq-row").mark(keyword, {
+                "element": "span",
+                "className": "highlight-offset",
+                separateWordSearch : false
+            });
+
+            // var arrS = [];
+
+            // if(e.which === 13){
+            //     return false;
+
+            // } else {
+
+            //     $('.highlight-offset').each(function(){
+            //         _this = $(this).offset();
+            //         arrS.push(_this.top)
+            //     });
+
+            //     if(keyword == '' || arrS.length < 1) {
+            //         $('#static-search label').hide();
+            //         now = 0;
+            //     } else {
+            //         now = 0;
+            //         $('#static-search label').show();
+            //         $('.mf-val').html(now + 1);
+            //         $('.mf-over').html(arrS.length);
+            //         $(window).scrollTop(arrS[0] - ($('.navWrap').outerHeight(false) + 50));
+            //     }
+            // }
+        };
+
+        $(document).on('input','#static-search',function() {
+			var keyword = $(this).val().toLowerCase();
+			if(keyword != "")
+			{
+			var itemArray = $('.faq-col');
+			for (var i = 0; itemArray.length > i; i++) {
+			var item = itemArray[i];
+			var innerText = item.innerText.toLowerCase();
+			item.setAttribute('class',innerText.includes(keyword.toLowerCase())? 'faq-col':'faq-col hide');
+			}
+			// console.log($('.hide'));
+			}
+
+			})
 	});
 
 </script>

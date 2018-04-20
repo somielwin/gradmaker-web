@@ -15,6 +15,11 @@ html, body { height:100%; min-height:100%; }
 	box-sizing: border-box;
 }
 
+.hide {
+
+	display: none;
+}
+
 header {
 	position: fixed;
 	z-index: 888;
