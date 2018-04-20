@@ -4187,11 +4187,12 @@ br.mobile-br {
 		max-width: 865px;
 		margin-left: auto;
 		margin-right: auto;
+		position: relative;
 
 		input[type="text"] {
 			background: $coWhite;
 			border-radius: 6px;
-			padding-left: 30px;
+			padding-left: 50px;
 			padding-right: 30px;
 			color: $defaultColor;
 
@@ -4251,6 +4252,20 @@ br.mobile-br {
 			  	font-size: 16px;
 			  }
 			}
+		}
+
+		button {
+			background: none;
+			border: none;
+			font-size: 24px;
+			color: $defaultColor;
+			position: absolute;
+			top: 3px;
+			left: 0px;
+			z-index: 3;
+			opacity: 0.80;
+			width: 50px;
+			height: 44px;
 		}
 	}
 }

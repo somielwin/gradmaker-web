@@ -5058,11 +5058,12 @@ br.mobile-br {
   .faq-search-wrap .input-wrap {
     max-width: 865px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    position: relative; }
     .faq-search-wrap .input-wrap input[type="text"] {
       background: #ffffff;
       border-radius: 6px;
-      padding-left: 30px;
+      padding-left: 50px;
       padding-right: 30px;
       color: #424559; }
       .faq-search-wrap .input-wrap input[type="text"]::-webkit-input-placeholder {
@@ -5113,6 +5114,18 @@ br.mobile-br {
         @media (max-width: 480px) {
           .faq-search-wrap .input-wrap input[type="text"]:-moz-placeholder {
             font-size: 16px; } }
+    .faq-search-wrap .input-wrap button {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #424559;
+      position: absolute;
+      top: 3px;
+      left: 0px;
+      z-index: 3;
+      opacity: 0.80;
+      width: 50px;
+      height: 44px; }
 
 /* Base for label styling */
 .custom-checkbox {
