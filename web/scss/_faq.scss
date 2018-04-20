@@ -506,7 +506,7 @@ article {
 			&.show-all {
 
 				> li {
-					
+
 					&:nth-child(n+5) {
 						display: block;
 					}
@@ -562,6 +562,11 @@ article {
 	    @include breakpoint(phablet) {
 			width: calc(100%);
 			margin: 0px 0px 60px;
+	    }
+
+
+	    &.hide {
+	    	display: none;
 	    }
 	}
 }

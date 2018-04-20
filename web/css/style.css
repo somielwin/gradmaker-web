@@ -7778,6 +7778,8 @@ article table {
       .faq-flex .faq-col {
         width: calc(100%);
         margin: 0px 0px 60px; } }
+    .faq-flex .faq-col.hide {
+      display: none; }
 
 .view-all-link {
   display: inline-block;
