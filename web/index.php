@@ -88,7 +88,7 @@
 						<div class="banner-text animated hiding" data-animation="fadeInUp">
 							<h1><span>Investing in your </span>Child’s Future</h1>
 							<p>Now made easy for you with the GradMaker mobile app.</p>
-							<a href="#" class="btn btn-primary">Become a Gradmaker</a>
+							<a href="#" class="btn btn-primary js-btn-get-app">Become a Gradmaker</a>
 						</div>
 					</div>
 				</div>
@@ -910,7 +910,7 @@
 	    });
 
 	    // Scroll To section9
-	    $('.btn-get-app, .btn-start').click(function(e){
+	    $('.btn-get-app, .btn-start, .js-btn-get-app').click(function(e){
 	        e.preventDefault();
 	        var wH = $('header').outerHeight(false);
 	        $("html, body").animate({ scrollTop: $('#section9').offset().top - (wH - 2) }, 700);
