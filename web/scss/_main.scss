@@ -422,12 +422,13 @@ a {
 			margin-left: 5px;
 		    top: 2px;
 		    position: relative;
-		    @include transition(all 0.4s ease);
+		 	@include transition(all 0s linear);  
 		}
 
 		&:hover {
 			background: $coOrange;
 			color: $coWhite;
+			border:1px solid $coOrange;
 		}
 	}
 }
@@ -1253,6 +1254,10 @@ br.mobile-br {
 		}
 	}
 
+	.owl-dots {
+		display: none;
+	}
+
 	@include breakpoint(desktop) {
 		margin: 50px -15px 20px;
 	}
@@ -1583,6 +1588,12 @@ br.mobile-br {
 		padding-left: 40px;
 		padding-right: 40px;
 		border: none;
+
+		&:hover {
+			background: $coOrange;
+			color: $coWhite;
+
+		}
 
 		span {
 			font-size: 16px;
@@ -3985,6 +3996,17 @@ br.mobile-br {
 	display: block;
 	position: relative;
 
+	&:hover {
+
+		&:before, &:after {
+			color: $coOrange;
+		}
+
+		&:after {
+			border:1px solid $coOrange;
+		}
+	}
+
 	&:before {
 		content: "\e900";
 		speak: none;
@@ -4203,6 +4225,9 @@ br.mobile-br {
 			padding-left: 50px;
 			padding-right: 30px;
 			color: $defaultColor;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
 
 			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 			  color: #9495A0;

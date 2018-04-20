@@ -613,9 +613,9 @@
         <div class="social-wrap">
             <ul>
                 <li><a href="https://www.facebook.com/ManulifeGradMaker/" target="_blank"><span class="i-icon icon-icon-fb"></span></a></li>
-                <li><a href="https://twitter.com/ManulifeGradMaker" target="_blank"><span class="i-icon icon-icon-twitter"></span></a></li>
+                <li><a href="https://www.instagram.com/ManulifeGradMaker/" target="_blank"><span class="i-icon icon-instagram"></span></a></li>
                 <li><a href="contact.html"><span class="fa fa-envelope"></span></a></li>
-                <!-- <li><a href="https://www.instagram.com/manulife/" target="_blank"><span class="i-icon icon-instagram"></span></a></li>
+                <!-- <li><a href="https://twitter.com/ManulifeGradMaker" target="_blank"><span class="i-icon icon-icon-twitter"></span></a></li>
                 <li><a href="https://www.youtube.com/user/ManulifeFinancial" target="_blank"><span class="i-icon icon-youtube"></span></a></li> -->
             </ul>
         </div>

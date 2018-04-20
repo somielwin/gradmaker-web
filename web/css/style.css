@@ -2007,14 +2007,15 @@ a {
     margin-left: 5px;
     top: 2px;
     position: relative;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    -webkit-transition: all 0s linear;
+    -moz-transition: all 0s linear;
+    -ms-transition: all 0s linear;
+    -o-transition: all 0s linear;
+    transition: all 0s linear; }
   .section3 .play-video:hover {
     background: #F5A623;
-    color: #ffffff; }
+    color: #ffffff;
+    border: 1px solid #F5A623; }
 
 .table-wrap {
   display: table;
@@ -2680,6 +2681,8 @@ br.mobile-br {
 		}*/ }
     .carousel-feature.owl-carousel .owl-stage-outer {
       overflow: visible; }
+  .carousel-feature .owl-dots {
+    display: none; }
   @media (max-width: 1024px) {
     .carousel-feature {
       margin: 50px -15px 20px; } }
@@ -2942,6 +2945,9 @@ br.mobile-br {
     padding-left: 40px;
     padding-right: 40px;
     border: none; }
+    .comparison-wrap .btn:hover {
+      background: #F5A623;
+      color: #ffffff; }
     .comparison-wrap .btn span {
       font-size: 16px;
       margin-right: 10px; }
@@ -4888,6 +4894,10 @@ br.mobile-br {
 .placeholder-video {
   display: block;
   position: relative; }
+  .placeholder-video:hover:before, .placeholder-video:hover:after {
+    color: #F5A623; }
+  .placeholder-video:hover:after {
+    border: 1px solid #F5A623; }
   .placeholder-video:before {
     content: "\e900";
     speak: none;
@@ -5077,7 +5087,10 @@ br.mobile-br {
       border-radius: 6px;
       padding-left: 50px;
       padding-right: 30px;
-      color: #424559; }
+      color: #424559;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none; }
       .faq-search-wrap .input-wrap input[type="text"]::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: #9495A0;
@@ -7773,11 +7786,11 @@ article table {
     @media (max-width: 991px) {
       .faq-flex .faq-col {
         width: calc(50% - 50px);
-        margin: 0px 25px 40px; } }
+        margin: 0px 25px 60px; } }
     @media (max-width: 640px) {
       .faq-flex .faq-col {
         width: calc(100%);
-        margin: 0px 0px 60px; } }
+        margin: 0px 0px 80px; } }
     .faq-flex .faq-col.hide {
       display: none; }
 

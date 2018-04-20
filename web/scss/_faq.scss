@@ -556,12 +556,12 @@ article {
 
 	    @include breakpoint(tablet) {
 	    	width: calc(50% - 50px);
-	    	margin: 0px 25px 40px;
+	    	margin: 0px 25px 60px;
 	    }
  	
 	    @include breakpoint(phablet) {
 			width: calc(100%);
-			margin: 0px 0px 60px;
+			margin: 0px 0px 80px;
 	    }
 
 
