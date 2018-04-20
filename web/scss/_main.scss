@@ -56,7 +56,7 @@ a {
 }
 
 .container {
-	max-width: 1170px;
+	max-width: 1120px;
 	margin: 0 auto;
 	padding: 0px 25px;
 
@@ -412,12 +412,16 @@ a {
 
 	&.sec-wrap {
 		padding-top: 90px;
-
+		padding-bottom: 110px;
 	}
 
 
 	.play-video {
-
+		padding-top: 17px;
+		padding-bottom: 17px;
+		padding-left: 40px;
+		padding-right: 40px;
+ 
 		.icon-watch-video {
 			margin-left: 5px;
 		    top: 2px;
@@ -431,6 +435,11 @@ a {
 			border:1px solid $coOrange;
 		}
 	}
+}
+
+#section3 {
+	padding-top: 90px;
+	padding-bottom: 110px;
 }
 
 .table-wrap {
@@ -1619,6 +1628,8 @@ br.mobile-br {
 	overflow: visible;
 	min-height: 710px;
 	height: auto;
+	padding-top: 90px;
+	padding-bottom: 110px;
 
 
 	@include breakpoint(desktop) {
@@ -1627,6 +1638,7 @@ br.mobile-br {
 
 	@include breakpoint(tablet) {
 		padding-bottom: 60px;
+		padding-top: 60px;
 	}
 
 	@include breakpoint(tablet2) {
@@ -1692,8 +1704,8 @@ br.mobile-br {
 
 .section6 {
 	min-height: 675px;
-	padding-top: 100px;
-	padding-bottom: 90px;
+	padding-top: 90px;
+	padding-bottom: 110px;
 
 	@include breakpoint(tablet2) {
 		height: auto;
@@ -2088,6 +2100,15 @@ br.mobile-br {
 	}
 }
 
+#section7 {
+	padding-top: 100px;
+	padding-bottom: 70px;
+
+	@include breakpoint(tablet) {
+		padding: 60px 0;
+	}
+}
+
 .section7 {
 	position: relative;
 	overflow: visible;
@@ -2101,8 +2122,8 @@ br.mobile-br {
 }
 
 .section4 {
-	padding-bottom: 90px;
-	padding-top: 90px;
+	padding-bottom: 110px;
+	padding-top: 110px;
 
 	/*&.bg-grey {
 		
@@ -2128,13 +2149,19 @@ br.mobile-br {
 		}
 	}
 
+	.flex.flex-row {
+		flex-direction: column;
+	}
+
 	@include breakpoint(tablet) {
 		padding-bottom: 60px;
+		padding-top: 60px;
 	}
 
 	@include breakpoint(tablet2) {
 		margin-bottom: 0;
 		padding-top: 60px;
+
 	}
 }
 
@@ -3996,6 +4023,11 @@ br.mobile-br {
 	display: block;
 	position: relative;
 
+	img {
+		width: 100%;
+		height: auto;
+	}
+
 	&:hover {
 
 		&:before, &:after {
@@ -4007,7 +4039,7 @@ br.mobile-br {
 		}
 	}
 
-	&:before {
+	/*&:before {
 		content: "\e900";
 		speak: none;
 		font-family: 'icomoon' !important;
@@ -4035,7 +4067,7 @@ br.mobile-br {
 		left: 50%;
 		border: 1px solid $coGreen;
 		@include transform(translate(-50%, -50%));
-	}
+	}*/
 }
 
 #youtube-video {
@@ -5133,6 +5165,7 @@ br.mobile-br {
 
 	.btn-start {
 		margin-top: 8px;
+		color: $coGreen;
 	}
 }
 

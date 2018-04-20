@@ -88,7 +88,7 @@
 						<div class="banner-text animated hiding" data-animation="fadeInUp">
 							<h1><span>Investing in your </span>Child’s Future</h1>
 							<p>Now made easy for you with the GradMaker mobile app.</p>
-							<a href="#" class="btn btn-primary">Become a Gradmaker</a>
+							<a href="#" class="btn btn-primary js-btn-get-app">Become a Gradmaker</a>
 						</div>
 					</div>
 				</div>
@@ -257,7 +257,7 @@
                         <a href="#" class="btn btn-primary play-video" data-videoid="RBEzCv3Df6U"> <span class="i-icon icon-watch-video"></span>Watch How</a>
                     </div>
                     <div class="compa-graph col-wrap fl">
-                        <div class="flex">
+                        <div class="flex flex-row">
                             <figure>
                             	<a href="#" class="placeholder-video play-video" data-videoid="RBEzCv3Df6U">
                                 	<img src="images/gradmaker-placeholder.jpg" alt="">
@@ -358,7 +358,7 @@
                         <h2>Questions? <br><span>We're here to help.</span></h2>
                         <div class="nm-i-desktop">
 	                        <p>Need more information?</p>
-	                        <a href="#" class="btn btn-start">Visit our FAQs page. <span class="i-icon icon-small-arrow"></span></a>
+	                        <a href="#" class="btn btn-start">Visit our FAQs page <span class="i-icon icon-small-arrow"></span></a>
 	                    </div>
                     </div>
                     <div class="col-wrap fl">
@@ -393,19 +393,19 @@
                         		<li>
                         			<h4>Do I need to have a child to purchase a GradMaker policy?</h4>
                         			<div class="fl-h">
-                        				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis earum molestiae dolorem facere exercitationem, illo animi a molestias dicta sit.
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis earum molestiae dolorem facere exercitationem, illo animi a molestias dicta sit.</p>
                         			</div>
                         		</li>
                         		<li>
                         			<h4>Where is my money invested?</h4>
                         			<div class="fl-h">
-                        				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis earum molestiae dolorem facere exercitationem, illo animi a molestias dicta sit.
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis earum molestiae dolorem facere exercitationem, illo animi a molestias dicta sit.</p>
                         			</div>
                         		</li>
                         		<li>
                         			<h4>What is the age limit of the insured?</h4>
                         			<div class="fl-h">
-                        				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis earum molestiae dolorem facere exercitationem, illo animi a molestias dicta sit.
+                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis earum molestiae dolorem facere exercitationem, illo animi a molestias dicta sit.</p>
                         			</div>
                         		</li>
                         	</ul>
@@ -615,7 +615,7 @@
                 <li><a href="https://www.facebook.com/ManulifeGradMaker/" target="_blank"><span class="i-icon icon-icon-fb"></span></a></li>
                 <li><a href="https://www.instagram.com/ManulifeGradMaker/" target="_blank"><span class="i-icon icon-instagram"></span></a></li>
                 <li><a href="contact.html"><span class="fa fa-envelope"></span></a></li>
-                <!-- <li><a href="https://www.instagram.com/manulife/" target="_blank"><span class="i-icon icon-instagram"></span></a></li>
+                <!-- <li><a href="https://twitter.com/ManulifeGradMaker" target="_blank"><span class="i-icon icon-icon-twitter"></span></a></li>
                 <li><a href="https://www.youtube.com/user/ManulifeFinancial" target="_blank"><span class="i-icon icon-youtube"></span></a></li> -->
             </ul>
         </div>
@@ -910,7 +910,7 @@
 	    });
 
 	    // Scroll To section9
-	    $('.btn-get-app, .btn-start').click(function(e){
+	    $('.btn-get-app, .btn-start, .js-btn-get-app').click(function(e){
 	        e.preventDefault();
 	        var wH = $('header').outerHeight(false);
 	        $("html, body").animate({ scrollTop: $('#section9').offset().top - (wH - 2) }, 700);
