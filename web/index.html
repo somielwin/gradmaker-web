@@ -260,7 +260,7 @@
                         <div class="flex flex-row">
                             <figure>
                             	<a href="#" class="placeholder-video play-video" data-videoid="RBEzCv3Df6U">
-                                	<img src="images/gradmaker-placeholder.jpg" alt="">
+                                	<img src="images/video-preview.svg" alt="">
                                 </a>
                             </figure>                            
                         </div>
