@@ -5276,6 +5276,13 @@ br.mobile-br {
 			padding-right: 20px;
 		}
 
+		figure {
+			img {
+				max-width: 100%;
+				display: block;
+			}
+		}
+
 		p {
 			font-size: 15px;
 			line-height: 20px;
@@ -5308,6 +5315,33 @@ br.mobile-br {
 					position: absolute;
 					left: 5px;
 					top: 9px;
+				}
+			}
+		}
+
+		ol {
+			font-size: 15px;
+			line-height: 20px;
+			margin-left: 20px;
+			opacity: 0.80;
+			margin-bottom: 10px;
+			padding-left: 20px;
+
+			li {
+
+				list-style-type: decimal;
+			}
+		}
+
+		table {
+			font-size: 15px;
+			width: 100%;
+			margin-bottom: 15px;
+
+			tr {
+
+				td {
+					padding: 4px 0;
 				}
 			}
 		}

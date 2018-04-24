@@ -1058,11 +1058,21 @@ nav {
     -ms-transform: translate(100%, 0);
     -o-transform: translate(100%, 0);
     transform: translate(100%, 0); }
+    .head-btn .btn-get-app.desktop {
+      display: block; }
+      @media (max-width: 767px) {
+        .head-btn .btn-get-app.desktop {
+          display: none; } }
+    .head-btn .btn-get-app.mobile {
+      display: none; }
+      @media (max-width: 767px) {
+        .head-btn .btn-get-app.mobile {
+          display: block; } }
     .head-btn .btn-get-app:hover {
       border: 1px solid #F5A623;
       background: #F5A623; }
 
-.for-app.is-fixed .head-btn .btn-get-app {
+.for-app.is-fixed .head-btn .btn-get-app, .for-app.is-show .head-btn .btn-get-app {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -5895,6 +5905,9 @@ br.mobile-br {
       .faq-list-home .fl-h {
         padding-top: 5px;
         padding-right: 20px; } }
+    .faq-list-home .fl-h figure img {
+      max-width: 100%;
+      display: block; }
     .faq-list-home .fl-h p {
       font-size: 15px;
       line-height: 20px;
@@ -5921,6 +5934,21 @@ br.mobile-br {
           position: absolute;
           left: 5px;
           top: 9px; }
+    .faq-list-home .fl-h ol {
+      font-size: 15px;
+      line-height: 20px;
+      margin-left: 20px;
+      opacity: 0.80;
+      margin-bottom: 10px;
+      padding-left: 20px; }
+      .faq-list-home .fl-h ol li {
+        list-style-type: decimal; }
+    .faq-list-home .fl-h table {
+      font-size: 15px;
+      width: 100%;
+      margin-bottom: 15px; }
+      .faq-list-home .fl-h table tr td {
+        padding: 4px 0; }
 
 .nm-i-desktop {
   display: block; }
@@ -7757,11 +7785,13 @@ article table {
   max-width: 100%;
   padding-left: 0;
   float: none;
-  clear: both; }
+  clear: both;
+  padding-bottom: 40px; }
   .faq-col .faq-list-home h4 {
     font-size: 15px;
     font-weight: 300;
-    line-height: 28px; }
+    line-height: 28px;
+    display: inline-block; }
     .faq-col .faq-list-home h4:before, .faq-col .faq-list-home h4:after {
       display: none; }
   .faq-col .faq-list-home .fl-h {
@@ -8010,3 +8040,32 @@ article table {
         color: #00673C;
         font-size: 14px;
         margin-left: 10px; }
+
+.dropdown-sub {
+  position: relative;
+  padding: 0 !important; }
+
+.main-copies {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #ffffff;
+  padding: 20px;
+  z-index: 99;
+  width: 460px;
+  margin-top: -30px;
+  -webkit-box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.08); }
+  .main-copies:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 20px solid #ffffff;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    -webkit-box-shadow: inset 1px 3px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: inset 1px 3px 8px rgba(0, 0, 0, 0.08); }

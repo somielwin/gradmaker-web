@@ -367,45 +367,54 @@
                         		<li class="active">
                         			<h4>What is GradMaker?</h4>
                         			<div class="fl-h" style="display: block;">
-                        				<p>GradMaker is a mobile app and a financial solution for parents who want to invest for their children's college fund.</p>
-                        				<p>It is the first digital, end-to-end solution of Manulife that allows you to sign up, invest and purchase policies online, 24/7, without paper forms!</p>
+                        				<p>GradMaker is a <strong>mobile app and a financial solution for parents</strong> who want to <strong>invest for their children's college fund.</strong></p>
+                        				<p>It is the <strong>first digital, end-to-end solution</strong> of Manulife that allows you to sign up, invest and purchase policies online, 24/7, without paper forms!</p>
                         			</div>
                         		</li>
                         		<li>
-                        			<h4>Who can buy a GradMaker policy?</h4>
+                        			<h4>Can I buy a GradMaker Policy?</h4>
                         			<div class="fl-h">
-                        				<p>You must:</p>
+                        				<p>You can buy a policy if you:</p>
                         				<ul>
-											<li>be a Filipino citizen and resident</li>
-											<li>be between 18 to 50 years old</li>
-											<li>nominate a child 0 to 13 years old (i.e. your son, daughter, nephew, niece, etc)</li>
-											<li>have a Philippine business or work address</li>
+											<li>are a <strong>Filipino citizen and resident,</strong></li>
+											<li>are between <strong>18 to 50</strong> years old*,</li>
+											<li>have a <strong>Philippine business or work address</strong></li>
+                                            <br><p><em>*Your age is based on your most recent birthday. If you are 50 years and 60 days old, you are still qualified to purchase a GradMaker policy until before you turn 51.</em></p>
 										</ul>
+                                        
 										<p>If you are:</p>
 										<ul>
-											<li>a dual citizen</li>
-											<li>considered a Politically Exposed Person*, or</li>
-											<li>have a Beneficial Owner*</li>
-											<br><p><i>We are sorry we cannot accept your application at this time, but we will look for ways in the future. However, we have another education related product that you may want to consider. Check it out here <a href="https://www.manulife.com.ph/EducationBuilder">https://www.manulife.com.ph/EducationBuilder</a>.<em></em></i></p>
+											<li>a <strong>dual citizen,</strong></li>
+											<li>considered a <strong>Politically Exposed Person</strong>, or </li>
+											<li>have a <strong>Beneficial Owner</strong></li>
+											<br><p><em>We are sorry we cannot accept your application at this time, but we will look for ways in the future. However, we have another education related product that you may want to consider. You may check it out here <a href="https://www.manulife.com.ph/EducationBuilder">https://www.manulife.com.ph/EducationBuilder</a> </em></p>
 										</ul>
                         			</div>
                         		</li>
                         		<li>
-                        			<h4>Do I need to have a child to purchase a GradMaker policy?</h4>
+                        			<h4>Do I need to have a child to purchase a GradMaker Policy?</h4>
                         			<div class="fl-h">
-                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis earum molestiae dolorem facere exercitationem, illo animi a molestias dicta sit.</p>
+                        				<p>No, you do not need to have a child to purchase a GradMaker policy.</p>
                         			</div>
                         		</li>
                         		<li>
-                        			<h4>Where is my money invested?</h4>
+                        			<h4>I’m pregnant. Can I buy a GradMaker policy now?</h4>
                         			<div class="fl-h">
-                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis earum molestiae dolorem facere exercitationem, illo animi a molestias dicta sit.</p>
+                        				<p>You do not have to wait until your child is born. Just indicate your child is 0 years old. This will allow you to proceed to the tuition fee calculator and begin the process. You may designate your spouse, parents, grandparents or siblings as your beneficiary for the mean time. You have the option to appoint your child as your beneficiary later on.</p>
+                                        <p>Your Beneficiary is the person who will receive the death benefit if you (the insured) die. There are 2 types of beneficiaries:</p>
+                                        <p><strong>Revocable Beneficiary</strong> - a revocable beneficiary means you are free to use the funds and change your chosen beneficiary without the need of your current beneficiary’s consent.</p>
+                                        <p><strong>Irrevocable Beneficiary</strong> - an irrevocable beneficiary means that you will need to seek approval from your beneficiary to change him/her to another beneficiary of your choice. You will also need his/her consent to withdraw the funds or make any changes to the policy.</p>
                         			</div>
                         		</li>
                         		<li>
-                        			<h4>What is the age limit of the insured?</h4>
+                        			<h4>Who is a qualified Beneficiary?</h4>
                         			<div class="fl-h">
-                        				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis earum molestiae dolorem facere exercitationem, illo animi a molestias dicta sit.</p>
+                        				<p>Your Beneficiary must:</p>
+                                        <ul>
+                                            <li>be a <strong>Filipino citizen and resident</strong>, not a dual citizen</li>
+                                            <li>be your husband, wife, son, daughter, brother, sister, father, mother, grandfather, grandmother, granddaughter or grandson</li>
+                                            <br><p><em>If your beneficiary is a minor, less than 18 years old, you will need to appoint a Trustee.</em></p>
+                                        </ul>
                         			</div>
                         		</li>
                         	</ul>
@@ -912,8 +921,20 @@
 	    // Scroll To section9
 	    $('.btn-get-app, .btn-start, .js-btn-get-app').click(function(e){
 	        e.preventDefault();
-	        var wH = $('header').outerHeight(false);
-	        $("html, body").animate({ scrollTop: $('#section9').offset().top - (wH - 2) }, 700);
+
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+	   
+            if($(window).width() < 768) {
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    window.location.href = 'https://itunes.apple.com/ph/app/gradmaker/id1295654096?mt=8';
+                } else {
+                    window.location.href = 'https://play.google.com/store/apps/details?id=com.manulife.ph.gradmaker.prod&hl=en'
+                }
+
+            } else {
+                var wH = $('header').outerHeight(false);
+                $("html, body").animate({ scrollTop: $('#section9').offset().top - (wH - 2) }, 700);
+            }
 	    });
 
 	    // Section 2 Carousel

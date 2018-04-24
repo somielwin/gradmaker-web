@@ -19,7 +19,7 @@
 
 <section id="main-container">
 	<div class="header-hamburger"><span></span></div>
-	<header class="for-app">
+	<header class="for-app is-show">
 		<div class="logo icon-only">
 			<a href="index.html">
 				<img class="desktop-logo" src="images/page_template/logo.png" alt="">
@@ -36,7 +36,8 @@
 		</nav>
 		<div class="head-btn">
 			<!-- <a href="#" class="btn btn-early-access"><figure><img src="images/home/early-access.svg"></figure>Get Early Access</a> -->
-			<a href="index.html#section9" class="btn btn-get-app">Get the app</a>
+			<a href="index.html#section9" class="btn btn-get-app desktop">Get the app</a>
+            <a href="#" class="btn btn-get-app mobile">Get the app</a>
 		</div>
 	</header>
 
@@ -394,6 +395,18 @@
 	            }
 	        });
 		});
+
+		$('.btn-get-app.mobile').click(function(e){
+        	e.preventDefault();
+
+        	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        	if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = 'https://itunes.apple.com/ph/app/gradmaker/id1295654096?mt=8';
+            } else {
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.manulife.ph.gradmaker.prod&hl=en'
+            }
+        });
 	});
 </script>
 

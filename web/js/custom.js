@@ -5,6 +5,15 @@ var isScrollingAllowed = true;
 var win = $(window);
 var doc = $(document);
 
+function get_biggest(elements){
+    var biggest_height = 0;
+    for ( var i = 0; i < elements.length ; i++ ){
+        var element_height = $(elements[i]).height();
+        //compare the height, if bigger, assign to variable
+        if(element_height > biggest_height ) biggest_height = element_height;
+    }
+    return biggest_height;
+}
 
 function resize() {
 	windowWidth = $(window).outerWidth();
@@ -24,16 +33,12 @@ function resize() {
 	});
 
 	// for equalizer
-	// $('.classname').css({minHeight: 0});
-	// var ClassName = get_biggest($('.classname'));
-	// $('.classname').css({minHeight: ClassName});
-
+	
 	if($(window).width() < 768) {
 		$('#dream-carousel').remove();
 	} else {
 		
 		$('#dream-carousel-mobile').remove();
-
 	}
 }
 
@@ -41,7 +46,6 @@ $(window).resize(function() {
 	resize();
 
 });
-
 
 
 $(document).ready(function() {
@@ -187,6 +191,24 @@ $(document).ready(function() {
     
 
 });
+
+$(window).load(function(){
+
+    $('.faq-list-home').css({minHeight: 0});
+    var ClassName = get_biggest($('.faq-list-home'));
+    $('.faq-list-home').css({minHeight: ClassName});
+});
+
+
+function get_biggest(elements){
+    var biggest_height = 0;
+    for ( var i = 0; i < elements.length ; i++ ){
+        var element_height = $(elements[i]).height();
+        //compare the height, if bigger, assign to variable
+        if(element_height > biggest_height ) biggest_height = element_height;
+    }
+    return biggest_height;
+}
 
 function submitForm()
 {

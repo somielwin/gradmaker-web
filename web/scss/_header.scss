@@ -261,6 +261,22 @@ nav {
 		opacity: 0;
 		@include transform(translate(100%, 0));
 
+		&.desktop {
+			display: block;
+
+			@include breakpoint(tablet2) {
+				display: none;
+			}
+		}
+
+		&.mobile {
+			display: none;
+
+			@include breakpoint(tablet2) {
+				display: block;
+			}
+		}
+
 
 		&:hover {
 			border: 1px solid $coOrange;
@@ -271,7 +287,7 @@ nav {
 
 .for-app {
 
-	&.is-fixed {
+	&.is-fixed, &.is-show {
 
 		.head-btn {
 
@@ -281,6 +297,8 @@ nav {
 			}
 		}
 	}
+
+
 }
 
 .section-nav {
