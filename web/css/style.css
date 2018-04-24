@@ -5909,7 +5909,7 @@ br.mobile-br {
       max-width: 100%;
       display: block; }
     .faq-list-home .fl-h p {
-      font-size: 15px;
+      font-size: 13px;
       line-height: 20px;
       margin-bottom: 15px; }
       @media (max-width: 640px) {
@@ -5917,7 +5917,7 @@ br.mobile-br {
           font-size: 12px;
           line-height: 18px; } }
     .faq-list-home .fl-h ul {
-      font-size: 15px;
+      font-size: 13px;
       line-height: 20px;
       margin-left: 20px;
       opacity: 0.80;
@@ -5935,7 +5935,7 @@ br.mobile-br {
           left: 5px;
           top: 9px; }
     .faq-list-home .fl-h ol {
-      font-size: 15px;
+      font-size: 13px;
       line-height: 20px;
       margin-left: 20px;
       opacity: 0.80;
@@ -5944,7 +5944,7 @@ br.mobile-br {
       .faq-list-home .fl-h ol li {
         list-style-type: decimal; }
     .faq-list-home .fl-h table {
-      font-size: 15px;
+      font-size: 13px;
       width: 100%;
       margin-bottom: 15px; }
       .faq-list-home .fl-h table tr td {
@@ -7790,7 +7790,7 @@ article table {
   .faq-col .faq-list-home h4 {
     font-size: 15px;
     font-weight: 300;
-    line-height: 28px;
+    line-height: 24px;
     display: inline-block; }
     .faq-col .faq-list-home h4:before, .faq-col .faq-list-home h4:after {
       display: none; }
