@@ -474,6 +474,7 @@ article {
 		float: none;
 		clear: both;
 		padding-bottom: 40px;
+		width: 100%;
 
 		@include breakpoint(tablet2) {
 			min-height: auto !important;
@@ -585,7 +586,6 @@ article {
 	    	@include breakpoint(tablet2) {
 	    		display: none;	
 	    	}
-	    	
 	    }
 	}
 

@@ -7811,7 +7811,8 @@ article table {
   padding-left: 0;
   float: none;
   clear: both;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  width: 100%; }
   @media (max-width: 767px) {
     .faq-col .faq-list-home {
       min-height: auto !important;
