@@ -589,8 +589,8 @@
 					</div>
 					<div class="act-download animated hiding" data-animation="fadeInUp">
 						<ul>
-							<li><a href="#" class="btn"><span class="i-icon icon-icon-apple"></span>App Store</a></li>
-							<li><a href="#" class="btn"><span class="i-icon icon-icon-google"></span>Google Play</a></li>
+							<li><a href="https://itunes.apple.com/ph/app/gradmaker/id1295654096?mt=8" target="_blank" class="btn"><span class="i-icon icon-icon-apple"></span>App Store</a></li>
+							<li><a href="https://play.google.com/store/apps/details?id=com.manulife.ph.gradmaker.prod&hl=en" target="_blank" class="btn"><span class="i-icon icon-icon-google"></span>Google Play</a></li>
 						</ul>
 					</div>
 				</div>
