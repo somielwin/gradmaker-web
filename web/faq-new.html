@@ -1467,6 +1467,8 @@
             	$('.faq-clone-content').html('');
 	            var _thisContent = $(this).closest('.faq-n-item').find('> ul').clone();
 	            var _thisTitle = $(this).closest('.faq-n-item').find('.faq-categ-title').clone();
+
+	            $('.faq-list-home .fl-h').css({'display' : 'none'});
 	            $('.faq-clone-content').html(_thisContent);
 	            $('.faq-clone-content').prepend(_thisTitle);
 	            $('.faq-clone-content > ul').addClass('flex');
@@ -1700,7 +1702,7 @@
             var itemArray = $('.faq-list-home');
             $('.faq-n-item > ul > li').removeClass('hide');
             $('.view-all-link').addClass('hide');
-
+            $('.faq-list-home .fl-h').css({'display' : 'none'});
             
 
         	//console.log(keyword+' blank');

@@ -8172,7 +8172,7 @@ article table {
     border-radius: 8px;
     padding: 15px; }
     .faq-clone-wrap .faq-clone-content > ul > li .fl-h {
-      display: block;
+      display: block !important;
       padding-right: 0; }
   .faq-clone-wrap h4 {
     font-size: 16px;

@@ -265,7 +265,7 @@
                     <div class="col-wrap">
                         <h2>The Future <span>is Now</span></h2>
                         <p>The longer you stay invested, the closer you get to securing your child's college fund. Invest early and give your investment more time to grow.</p>
-                        <a href="#" class="btn btn-start">Start now for as low as <br> <i>PHP 10,000</i> <span class="i-icon icon-small-arrow"></span></a>
+                        <a href="#" class="btn btn-start js-btn-get-app">Start now for as low as <br> <i>PHP 10,000</i> <span class="i-icon icon-small-arrow"></span></a>
                     </div>
                 </div>
 
@@ -349,7 +349,7 @@
                         <h2>Questions? <br><span>We're here to help.</span></h2>
                         <div class="nm-i-desktop">
 	                        <p>Need more information?</p>
-	                        <a href="#" class="btn btn-start">Visit our FAQs page <span class="i-icon icon-small-arrow"></span></a>
+	                        <a href="faq-new.html" class="btn btn-start">Visit our FAQs page <span class="i-icon icon-small-arrow"></span></a>
 	                    </div>
                     </div>
                     <div class="col-wrap fl">
@@ -413,7 +413,7 @@
 
                         <div class="nm-i-mobile">
 	                        <p>Need more information?</p>
-	                        <a href="#" class="btn btn-start">Visit our FAQs page. <span class="i-icon icon-small-arrow"></span></a>
+	                        <a href="faq-new.html" class="btn btn-start">Visit our FAQs page. <span class="i-icon icon-small-arrow"></span></a>
 	                    </div>
                     </div>
                 </div>
@@ -927,7 +927,7 @@
 	    });
 
 	    // Scroll To section9
-	    $('.btn-get-app, .btn-start, .js-btn-get-app').click(function(e){
+	    $('.btn-get-app, .js-btn-get-app').click(function(e){
 	        e.preventDefault();
 
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
