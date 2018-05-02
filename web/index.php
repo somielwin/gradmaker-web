@@ -945,9 +945,11 @@
                 // $("html, body").animate({ scrollTop: $('#section9').offset().top - (wH - 2) }, 700);
 
                 if(isMacLike) {
-                    console.log('MAC');
+                    window.open('https://itunes.apple.com/ph/app/gradmaker/id1295654096?mt=8', '_blank');
+                    //window.location.href = 'https://itunes.apple.com/ph/app/gradmaker/id1295654096?mt=8';
                 } else {    
-                    console.log('others');
+                    window.open('https://play.google.com/store/apps/details?id=com.manulife.ph.gradmaker.prod&hl=en', '_blank');
+                    //window.location.href = 'https://play.google.com/store/apps/details?id=com.manulife.ph.gradmaker.prod&hl=en'
                 }
             }
 	    });
