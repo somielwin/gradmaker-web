@@ -931,6 +931,7 @@
 	        e.preventDefault();
 
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var isMacLike = navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i)?true:false;
 	   
             if($(window).width() < 768) {
                 if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -940,8 +941,14 @@
                 }
 
             } else {
-                var wH = $('header').outerHeight(false);
-                $("html, body").animate({ scrollTop: $('#section9').offset().top - (wH - 2) }, 700);
+                // var wH = $('header').outerHeight(false);
+                // $("html, body").animate({ scrollTop: $('#section9').offset().top - (wH - 2) }, 700);
+
+                if(isMacLike) {
+                    console.log('MAC');
+                } else {
+                    console.log('others');
+                }
             }
 	    });
 
