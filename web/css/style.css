@@ -2145,7 +2145,7 @@ a {
     padding-bottom: 17px;
     padding-left: 40px;
     padding-right: 40px;
-    border: none; }
+    border: 1px solid transparent; }
     .banner-text a.btn:hover {
       background: #F5A623;
       border: 1px solid #F5A623; }

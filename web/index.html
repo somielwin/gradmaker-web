@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Gradmaker | Home</title>
+<title>GradMaker | Home</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -88,7 +88,7 @@
 						<div class="banner-text animated hiding" data-animation="fadeInUp">
 							<h1><span>Investing in your </span>Child’s Future</h1>
 							<p>Now made easy with the GradMaker mobile app.</p>
-							<a href="#" class="btn btn-primary js-btn-get-app">Become a Gradmaker</a>
+							<a href="#" class="btn btn-primary js-btn-get-app">Become a GradMaker</a>
 						</div>
 					</div>
 				</div>
@@ -129,7 +129,7 @@
                 <div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
                     <h2>Why <span>GradMaker?</span></h2>
 
-                    <a href="#" class="btn btn-primary play-video" data-videoid="n9kVfCspfg0"> Learn More <span class="i-icon icon-small-arrow"></span></a>
+                    <a href="#" class="btn btn-primary play-video" data-videoid="RBEzCv3Df6U"> Learn More <span class="i-icon icon-small-arrow"></span></a>
                     <!-- <p><a href="#">Watch the concept video</a></p> -->
                 </div>
                 <div class="carousel-feature owl-carousel animated hiding" data-animation="fadeInUp">
@@ -243,7 +243,7 @@
                 <div class="comparison-wrap">
                     <div class="compa-content col-wrap fr animated hiding" data-animation="fadeInUp">
                         <h2>How <span>it works</span></h2>
-                        <p>You can watch the video demo here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                        <p>Watch this 1-minute tutorial video to get a quick view of the GradMaker 3 step process <br>(Calculate – Sign up – Purchase).</p>
                         <a href="#" class="btn btn-primary play-video" data-videoid="n9kVfCspfg0"> <span class="i-icon icon-watch-video"></span>Watch How</a>
                     </div>
                     <div class="compa-graph col-wrap fl">
@@ -433,7 +433,7 @@
                                 <li class="active">
                                     <a href="#pay-if-forward">
                                         <span class="itb-num">01</span>
-                                        <span class="itb-text">Pay if Forward</span>
+                                        <span class="itb-text">Pay it Forward</span>
                                     </a>
                                 </li>
                                 <li>
@@ -606,8 +606,8 @@
         <div class="container">
             <ul>
                 <li><a href="https://www.manulife.com.ph/" target="_blank">Manulife Philippines</a></li>
-                <li><a href="https://manulife.secure.force.com/Privacy-Policy?rdr=y" target="_blank">Privacy Policy</a></li>
-                <li><a href="https://www.manulife.com.ph/Terms-of-Use" target="_blank">Terms of Use</a></li>
+                <li><a href="https://manulife.secure.force.com/Privacy-Policy?rdr=y" target="_blank">Manulife’s Privacy Policy</a></li>
+                <li><a href="https://www.manulife.com.ph/Terms-of-Use" target="_blank">Manulife’s Terms of Use</a></li>
             </ul>
         </div>
     </div>
