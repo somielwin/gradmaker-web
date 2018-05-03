@@ -732,7 +732,8 @@
 	        }
 	    }, '.js-custom-dropdown-menu');
 
-	    $('.js-mobile-custom-dropdown').click(function() {
+	    $('.js-mobile-custom-dropdown').click(function(e) {
+            e.preventDefault();
 	        $(this).children('ul').stop(true, false).slideToggle(150);
 	    });
 	});
