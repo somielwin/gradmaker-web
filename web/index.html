@@ -51,7 +51,7 @@
 		<nav>
 			<ul>
 				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="faq-new.html">FAQs</a></li>
+				<li><a href="faq-v2.html">FAQs</a></li>
 				<li><a href="co-creator.html">Co-creators</a></li>
 				<li><a href="contact.html">Contact Us</a></li>
 			</ul>
@@ -66,7 +66,7 @@
 		<nav>
 			<ul>
 				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="faq-new.html">FAQs</a></li>
+				<li><a href="faq-v2.html">FAQs</a></li>
 				<li><a href="co-creator.html">Co-creators</a></li>
 				<li><a href="contact.html">Contact Us</a></li>
 			</ul>
@@ -349,7 +349,7 @@
                         <h2>Questions? <br><span>We're here to help.</span></h2>
                         <div class="nm-i-desktop">
 	                        <p>Need more information?</p>
-	                        <a href="faq-new.html" class="btn btn-start">Visit our FAQs page <span class="i-icon icon-small-arrow"></span></a>
+	                        <a href="faq-v2.html" class="btn btn-start">Visit our FAQs page <span class="i-icon icon-small-arrow"></span></a>
 	                    </div>
                     </div>
                     <div class="col-wrap fl">
@@ -413,7 +413,7 @@
 
                         <div class="nm-i-mobile">
 	                        <p>Need more information?</p>
-	                        <a href="faq-new.html" class="btn btn-start">Visit our FAQs page. <span class="i-icon icon-small-arrow"></span></a>
+	                        <a href="faq-v2.html" class="btn btn-start">Visit our FAQs page. <span class="i-icon icon-small-arrow"></span></a>
 	                    </div>
                     </div>
                 </div>
