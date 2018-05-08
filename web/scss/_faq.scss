@@ -486,6 +486,7 @@ article {
 			font-weight: 400;
 			line-height: 24px;
 			display: inline-block;
+			padding-right: 0;
 
 			&:before, &:after {
 				display: none;
@@ -502,6 +503,7 @@ article {
 
 			> li {
 				position: relative;
+				margin-left: 55px;
 
 				
 				&.hide {
@@ -523,6 +525,10 @@ article {
 					display: none;
 
 					
+				}
+
+				&.remained {
+					display: block;
 				}
 			}
 
@@ -587,8 +593,8 @@ article {
 
 	.faq-col {
 		max-width: 500;
-		width: calc(33.33% - 100px);
-	    margin: 0px 50px 80px;
+		width: calc(33.33% - 50px);
+	    margin: 0px 0px 80px 50px;
 	    /*display: -webkit-flex;
 	    display: -webkit-box;
 	    display: -moz-flex;
@@ -642,6 +648,7 @@ article {
 	font-weight: 400;
 	font-size: 18px;
 	margin-top: 10px;
+	margin-left: 55px;
 
 
 	span {
@@ -1049,4 +1056,17 @@ article {
 		color: #424559;
     }
 }
+
+.faq-col.hide
+	{
+	display:none;
+	}
+	li.hide
+	{
+	display:none;
+	}
+
+	.view-all-link.hide {
+		display: none !important;
+	}
 

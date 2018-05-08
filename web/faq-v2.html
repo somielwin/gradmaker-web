@@ -9,20 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/font-awesome.css" media="all" />
     <link rel="stylesheet" href="css/style.css" media="all" />
-    <style>
-    	.faq-col.hide
-		{
-		display:none;
-		}
-		li.hide
-		{
-		display:none;
-		}
-
-		.view-all-link.hide {
-			display: none !important;
-		}
-    </style>
+    
     <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
     <script src="js/html5.js"></script>
     <script src="js/lib/modernizr-2.8.3.min.js"></script>
@@ -82,6 +69,7 @@
                     </div>
                     <div class="faq-row ">
                     	<h3 class="faq-categ-no-result">No Result</h3>
+                    	<div class="faq-list-parent">
                         <ul class="faq-flex">
                             <li class="faq-col">
                                 <div class="faq-n-item faq-list-home">
@@ -1030,6 +1018,7 @@
                                 
                             </li> -->
                         </ul>
+					    </div>	 	 		   	             
                     </div>
                 </div>
             </section>
@@ -1446,34 +1435,8 @@
     <script src="js/mark.js"></script>
     <script src="js/custom.js"></script>
     <script type="text/javascript">
-
-  //   	var dropdown = {
-		//     init: function() {
-		//         $('.dd').click(function() {
-		//             dropdown.open(this);
-		//         });
-		//     },
-		//     open: function(target) {
-		//     	//$(target).addClass('active');
-		//     	var _this = $(target);
-		//     	var left = _this.width();
-
-		//     	_this.addClass('active');
-		//         _this.closest('li').find('.dropdown-sub').show();
-		//         var ddHeight = _this.closest('li').find('.dropdown-sub .main-copies').outerHeight();
-
-
-		//         TweenMax.set($('.dropdown-sub'), {height: 0});
-		//         TweenMax.set($('.dropdown-sub .main-copies', target), {opacity: 0, scale: 1.2});
-		//         TweenMax.to($('.dropdown-sub', target), 0.5, {height: ddHeight, onComplete: function() {
-		//             //TweenMax.set($('.dropdown-sub', target), {clearProps: 'all'});
-		//             TweenMax.to($('.dropdown-sub .main-copies', target), 0.5, {opacity: 1, scale: 1});
-		//         }});
-		//     }
-		// }
 		
     $(document).ready(function() {
-    	//dropdown.init();
 
         $('.faq-title').click(function(e) {
             e.preventDefault();
@@ -1487,17 +1450,17 @@
                     $('body, html').stop().animate({ scrollTop: _thisOffset.top - ($('header').outerHeight(false) + 25) }, 500, 'swing');
                 }, 400);
             }
-
         });
 
         $('.end-reading').click(function(e){
             e.preventDefault();
-            console.log('test');
             $(this).removeClass('activated');
             //$(this).closest('ul').removeClass('show-all');
             $(this).closest('ul').find('li').removeClass('active').removeAttr('style');
             $(this).closest('ul').find('.fl-h').css({'display' : 'none'});
             $(this).closest('.faq-n-item').find('.view-all-link').css({'display' : 'block'});
+
+            
         });
 
         $(document).on('click', '.faq-list-home .view-all-link', function(e) {
@@ -1660,49 +1623,6 @@
             }
         });
 
-
-        // $('#static-search input[type="text"]').on("keyup", mark);
-        // $('#static-search input[type="text"]').on("change", mark);
-
-        // function mark(e) {
-        //     // Read the keyword
-        //     var keyword = $('#static-search input[type="text"]').val();
-
-        //     console.log('test')
-
-        //     // Mark the keyword inside the context
-        //     $(".faq-row").unmark();
-        //     $(".faq-row").mark(keyword, {
-        //         "element": "span",
-        //         "className": "highlight-offset",
-        //         separateWordSearch: false
-        //     });
-
-        //     // var arrS = [];
-
-        //     // if(e.which === 13){
-        //     //     return false;
-
-        //     // } else {
-
-        //     //     $('.highlight-offset').each(function(){
-        //     //         _this = $(this).offset();
-        //     //         arrS.push(_this.top)
-        //     //     });
-
-        //     //     if(keyword == '' || arrS.length < 1) {
-        //     //         $('#static-search label').hide();
-        //     //         now = 0;
-        //     //     } else {
-        //     //         now = 0;
-        //     //         $('#static-search label').show();
-        //     //         $('.mf-val').html(now + 1);
-        //     //         $('.mf-over').html(arrS.length);
-        //     //         $(window).scrollTop(arrS[0] - ($('.navWrap').outerHeight(false) + 50));
-        //     //     }
-        //     // }
-        // };
-
         var isBusy = false;
 
         $('#static-search-form').submit(function(){
@@ -1715,13 +1635,15 @@
 
         	
         	$(this).removeClass('active');
+        	$('.faq-n-item').removeClass('hide');
         	$('#static-search-form input').val('').change();
+        	$('.faq-n-item > ul > li.remained').removeClass('remained');
 
         	console.log('test');
         });
 
         $(document).on('change', '.input-wrap input', function() {
-            var keyword = $(this).val().toLowerCase();
+            var keyword = $(this).val();
             isBusy = keyword == "";
             var itemArray = $('.faq-list-home');
             $('.faq-n-item > ul > li').removeClass('hide');
@@ -1730,36 +1652,33 @@
             if(isBusy) {
             	$('.view-all-link').removeClass('hide');
             	$('.faq-flex').removeClass('is-on-search');
-            	console.log(isBusy);
             } else {
             	
             	$('.faq-flex').addClass('is-on-search');
             	$('.clear-field').addClass('active');
-            	console.log(isBusy);
-            }
-
-            for (var i = 0; itemArray.length > i; i++) {
-
-                var item = itemArray[i];
-                var innerText = item.innerText.toLowerCase();
-                item.setAttribute('class', innerText.includes(keyword) ? 'faq-n-item faq-list-home' : 'faq-n-item faq-list-home hide');
-                var childH3 = item.children[0].innerText.toLowerCase();
-                var childLi = $(item).find('> ul > li');
-                $(item).find('> ul').addClass('show-all');
-
-                
-                if (!childH3.includes(keyword)) {
-                    for (var i1 = 0; childLi.length > i1; i1++) {
-                        var childInnerText = childLi[i1].children[0].innerText.toLowerCase();
-						childLi[i1].setAttribute('class', childInnerText.includes(keyword) ? "" : "hide")
-                    }
-                }
             }
 
             if (keyword !='' && keyword !=' ') {
-            	$('.faq-categ-no-result').addClass('show-me');
+
+            	var _this = $(".faq-list-parent").find('.faq-list-home > ul > li h4:contains("'+keyword+'")').parent('li');
+            	var _thisParent = _this.closest('.faq-n-item');
+
+            	$('.faq-n-item.faq-list-home').addClass('hide');
+            	_thisParent.removeClass('hide');
+            	_thisParent.find('ul').addClass('show-all').children('li').addClass('hide');
+
+            	_this.removeClass('hide').addClass('remained');
+            	//console.log(_this);
+
+            	if(_this.length > 0 ) {
+            		$('.faq-categ-no-result').removeClass('show-me');
+            	} else {
+            		$('.faq-categ-no-result').addClass('show-me');
+            	}
+
             } else {
             	$('.faq-col').find('ul').removeClass('show-all');
+            	$('.faq-n-item .view-all-link').html('View all <span class="i-icon icon-small-arrow"></span>').removeClass('activated');
             	$('.faq-categ-no-result').removeClass('show-me');
             }
 

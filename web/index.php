@@ -653,7 +653,6 @@
 <script src="js/owl.carousel.js"></script>
 <script src="js/jquery.appear.js"></script>
 <script src="js/TweenMax.js"></script>
-<!-- <script src="js/jquery.waterwheelCarousel.js"></script> -->
 <script src="js/jquery.unveil.js"></script>
 <script src="js/custom.js"></script>
 
@@ -955,57 +954,6 @@
             }
 	    });
 
-	    // Section 2 Carousel
-	   //  if($("#dream-carousel").length > 0) {
-
-		  //   var carousel = $("#dream-carousel").waterwheelCarousel({
-				// flankingItems: 3,
-				// separation: ($(window).width() < 1024) ? 200 : 294,
-				// opacityMultiplier: 1,
-				// animationEasing: 'swing',
-				// activeClassName: 'active',
-				// keyboardNav: true,
-	   //      });
-
-	   //      // $("#dream-carousel").on("swipeleft",function(){
-	   //      //   carousel.next();
-	   //      // });
-	   //      // $("#dream-carousel").on("swiperight",function(){
-	   //      //   carousel.prev();
-	   //      // });
-
-	   //      $(window).resize(function(){
-	   //      	carousel.reload({
-	   //      		lankingItems: 3,
-				// 	separation: ($(window).width() < 1024) ? 200 : 294,
-				// 	opacityMultiplier: 1,
-				// 	animationEasing: 'swing',
-				// 	activeClassName: 'active',
-				// 	keyboardNav: true,
-	   //      	});
-	   //        	return false;
-	   //      });
-
-	   //      $('.dc-item').click(function(){
-
-		  //   	var _thisNum = $(this).data('num');
-
-
-		  //   	$('.dream-dot').removeClass('active');
-		  //   	$('.dream-dots .dream-dot[data-num='+ _thisNum +']').addClass('active');
-		  //   });
-
-		  //   $('.dream-dots .dream-dot').click(function(e){
-		  //   	e.preventDefault();
-
-		  //   	var _thisNum = $(this).data('num');
-		  //   	$('.dream-dots .dream-dot').removeClass('active');
-		  //   	$(this).addClass('active');
-		  //   	$('#item-'+_thisNum+'').closest('.dc-item').click();
-		  //   });
-    //     }
-
-
 	    $('.ii-circle a').click(function(e){
 	    	e.preventDefault();
 	    	var _this = $(this).attr('href');
@@ -1041,107 +989,6 @@
 
 	    });
 
-
-	    // Mobile Section 2 Carousel
-	 //    (function() {
-		//   	var rotate, timeline;
-
-		// 	rotate = function() {
-
-		// 		$('#dream-carousel-mobile .dc-item:first-child').animate({'opacity' : 0, transform : 'scale(0)'}, 'swing', function(){
-		// 			$('#dream-carousel-mobile .dc-item:first-child').appendTo('#dream-carousel-mobile').css({'opacity' : 0, transform : 'scale(0)'});
-		// 		}).animate({'opacity' : 1, transform : 'scale(1)', 'display' : 'block'}, function(){
-		// 			setTimeout(function(){
-		// 				$('#dream-carousel-mobile .dc-item:last-child').removeAttr('style');
-		// 			}, 100);
-		// 		});
-		// 	};
-
-		// 	// Automatic Rotate
-		// 	//timeline = setInterval(rotate, 7000);
-
-		// 	$('#dream-carousel-mobile').hover(function() {
-		// 		return clearInterval(timeline);
-		// 	});
-
-		// 	isBusy = false;
-
-		// 	$('#dream-carousel-mobile .dc-item').click(function(e) {
-		// 		e.preventDefault();
-
-		// 		if( isBusy == false) {
-
-		// 			isBusy = true;
-		// 			setTimeout(function(){
-		// 				isBusy = false;
-		// 			}, 400);
-		// 			return rotate();
-		// 		} 
-
-		// 	});
-
-		// 	$('#dream-dots-mobile a').click(function(e){
-		// 		e.preventDefault();
-
-		// 		$('#dream-dots-mobile .dream-dot').removeClass('active');
-		// 		$(this).closest('.dream-dot').addClass('active');
-		// 		var _this = $(this).data('num');
-		// 		var test = $('#dream-carousel-mobile .dc-item[data-num='+ _this +']').prevAll('.dc-item').css({'opacity' : 0});
-
-		// 		$('#dream-carousel-mobile  .dc-item[data-num='+ _this +']').prevAll('.dc-item').animate({'opacity' : 0,  transform : 'scale(0)'}, 'swing', function(){
-		// 			$('#dream-carousel-mobile').append(test).css({'opacity' : 1,  transform : 'scale(1)'}).removeAttr('style');
-		// 		}).animate({'opacity' : 1,  transform : 'scale(1)', 'display' : 'block'}, function(){
-		// 			setTimeout(function(){
-		// 				$('#dream-carousel-mobile .dc-item').removeAttr('style');
-		// 			}, 100);
-		// 		});
-
-		// 		return clearInterval(timeline);
-		// 	});
-
-		// 	var isBusyFill = false;
-
-		// 	$('#dream-carousel-mobile')[0].addEventListener('touchstart', function(e) {
-		// 		var touch = e.touches[0] || e.changedTouches[0];
-		// 		currentX = touch["clientX"];
-		// 		currentY = touch["clientY"];
-		// 	});
-		// 	$('#dream-carousel-mobile')[0].addEventListener('touchmove', function(e) {
-		// 		var touch = e.touches[0] || e.changedTouches[0];
-		// 		var newX = touch["clientX"];
-		// 		var newY = touch["clientY"];
-		// 		if (Math.abs(newX - currentX) > Math.abs(newY - currentY)) {
-		// 			e.preventDefault();
-		// 			var itScrolledDir = "";
-		// 			if (newX > currentX) {
-
-		// 				if( isBusyFill == false) {
-		// 					isBusyFill = true;
-		// 					$('#dream-carousel-mobile .dc-item').click();
-		// 					setTimeout(function(){
-		// 						isBusyFill = false;
-		// 					},500);
-
-		// 					return clearInterval(timeline);
-		// 				}
-						
-		// 			} else {
-		// 				if( isBusyFill == false) {
-		// 					isBusyFill = true;
-		// 					$('#dream-carousel-mobile .dc-item').click();
-		// 					setTimeout(function(){
-		// 						isBusyFill = false;
-		// 					},500);
-
-		// 					return clearInterval(timeline);
-		// 				}
-		// 			}
-		// 		}
-		// 		currentX = newX;
-		// 		//currentY = newY;
-		// 	});
-
-		// }).call(this);
 	});
 
 	// Youtube Api
@@ -1152,8 +999,6 @@
 	    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 	}
 	        
-	
-
 	function onYouTubeIframeAPIReady() {
 	    playerVideo = "ready";
 	    //$(".home-slide-thumb li").each(function(index) {

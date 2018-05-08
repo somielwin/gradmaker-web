@@ -3056,6 +3056,8 @@ br.mobile-br {
       .section5 .sec-head-title .btn i {
         color: #00673C;
         font-style: normal; }
+  .section5 .btn-start {
+    background: #FAFAFA; }
 
 .section6 {
   min-height: 675px;
@@ -7821,7 +7823,8 @@ article table {
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
-    display: inline-block; }
+    display: inline-block;
+    padding-right: 0; }
     .faq-col .faq-list-home h4:before, .faq-col .faq-list-home h4:after {
       display: none; }
   .faq-col .faq-list-home .fl-h {
@@ -7829,7 +7832,8 @@ article table {
   .faq-col .faq-list-home > ul {
     position: relative; }
     .faq-col .faq-list-home > ul > li {
-      position: relative; }
+      position: relative;
+      margin-left: 55px; }
       .faq-col .faq-list-home > ul > li.hide {
         display: none !important; }
       .faq-col .faq-list-home > ul > li.active:before, .faq-col .faq-list-home > ul > li.active:after {
@@ -7838,6 +7842,8 @@ article table {
         color: #00673C; }
       .faq-col .faq-list-home > ul > li:nth-child(n+5) {
         display: none; }
+      .faq-col .faq-list-home > ul > li.remained {
+        display: block; }
     .faq-col .faq-list-home > ul.show-all > li:nth-child(n+5) {
       display: block; }
   .faq-col .faq-list-home.hide {
@@ -7886,8 +7892,8 @@ article table {
   justify-content: center; }
   .faq-flex .faq-col {
     max-width: 500;
-    width: calc(33.33% - 100px);
-    margin: 0px 50px 80px;
+    width: calc(33.33% - 50px);
+    margin: 0px 0px 80px 50px;
     /*display: -webkit-flex;
 	    display: -webkit-box;
 	    display: -moz-flex;
@@ -7928,7 +7934,8 @@ article table {
   color: #00673C;
   font-weight: 400;
   font-size: 18px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-left: 55px; }
   .view-all-link span {
     margin-left: 8px;
     display: inline-block;
@@ -8267,3 +8274,12 @@ article table {
     font-size: 46px;
     left: 0;
     color: #424559; }
+
+.faq-col.hide {
+  display: none; }
+
+li.hide {
+  display: none; }
+
+.view-all-link.hide {
+  display: none !important; }
