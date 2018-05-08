@@ -7829,6 +7829,8 @@ article table {
       display: none; }
   .faq-col .faq-list-home .fl-h {
     padding-right: 0; }
+    .faq-col .faq-list-home .fl-h a {
+      word-break: break-all; }
   .faq-col .faq-list-home > ul {
     position: relative; }
     .faq-col .faq-list-home > ul > li {

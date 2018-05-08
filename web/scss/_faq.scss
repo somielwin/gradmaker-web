@@ -496,6 +496,10 @@ article {
 
 		.fl-h {
 			padding-right: 0;
+
+			a {
+				word-break: break-all;
+			}
 		}
 
 		> ul {
