@@ -7779,7 +7779,7 @@ article table {
     left: -15px; }
 
 .faq-row {
-  margin: 70px -50px 0;
+  margin: 70px 0px 70px -50px;
   position: relative;
   min-height: 200px; }
   @media (max-width: 991px) {
