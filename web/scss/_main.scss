@@ -3447,15 +3447,25 @@ br.mobile-br {
 	padding-top: 50px;
 
 	p.small {
-		display: none;
+		
+		font-size: 12px;
+		line-height: 18px;
+		display: block;
+		padding: 0px 25px;
 
-		@include breakpoint(tablet) {
-			font-size: 12px;
-			line-height: 18px;
-			display: block;
-			padding: 0px 25px;
+		
+		@include breakpoint(mobilesmall) {
+			font-size: 10px;
 		}
 	}
+
+	.mb {
+		display: none;
+
+		@include breakpoint(tablet2) {
+			display: block;
+		}
+  	}
 }
 
 
@@ -5074,7 +5084,7 @@ br.mobile-br {
 			display: block;
 
 			@include breakpoint(mobilesmall) {
-				font-size: 11px;
+				font-size: 10px;
 			}
 		}
 	}

@@ -4481,13 +4481,18 @@ br.mobile-br {
 .act-now {
   padding-top: 50px; }
   .act-now p.small {
-    display: none; }
-    @media (max-width: 991px) {
+    font-size: 12px;
+    line-height: 18px;
+    display: block;
+    padding: 0px 25px; }
+    @media (max-width: 374px) {
       .act-now p.small {
-        font-size: 12px;
-        line-height: 18px;
-        display: block;
-        padding: 0px 25px; } }
+        font-size: 10px; } }
+  .act-now .mb {
+    display: none; }
+    @media (max-width: 767px) {
+      .act-now .mb {
+        display: block; } }
 
 .act-download ul {
   text-align: center;
@@ -5748,7 +5753,7 @@ br.mobile-br {
       display: block; }
       @media (max-width: 374px) {
         .ii-tab-item p small {
-          font-size: 11px; } }
+          font-size: 10px; } }
   .ii-tab-item a {
     color: #00673C;
     position: relative; }
