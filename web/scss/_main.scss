@@ -3445,6 +3445,17 @@ br.mobile-br {
 
 .act-now {
 	padding-top: 50px;
+
+	p.small {
+		display: none;
+
+		@include breakpoint(tablet) {
+			font-size: 12px;
+			line-height: 18px;
+			display: block;
+			padding: 0px 25px;
+		}
+	}
 }
 
 
@@ -5061,6 +5072,10 @@ br.mobile-br {
 			font-size: 12px;
 			line-height: 18px;
 			display: block;
+
+			@include breakpoint(mobilesmall) {
+				font-size: 11px;
+			}
 		}
 	}
 

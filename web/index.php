@@ -89,7 +89,7 @@
 							<h1><span>Investing in your </span>Child’s Future</h1>
 							<p>Now made easy with the GradMaker mobile app.</p>
                             <div>
-                                <a href="#" class="concept-video play-video" data-videoid="RBEzCv3Df6U">Watch the Gradmaker concept Video</a>
+                                <a href="#" class="concept-video play-video" data-videoid="RBEzCv3Df6U" style="font-weight: 400;">Watch the GradMaker concept Video</a>
                             </div>
 							<a href="#" class="btn btn-primary js-btn-get-app">Become a GradMaker</a>
 						</div>
@@ -585,6 +585,7 @@
 				<div class="act-now">
 					<div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
 						<h2>Download the app now!</h2>
+                        <p class="small">List of supported devices: Samsung Galaxy S6, S6 Edge, S7, S7 Edge, S8, S8+ with Android version 6 and up <br>iPhone 6, 6s, 6 plus, 7, 7 plus with iOS version 10 and up</p>
 						<!-- <p>Be a GradMaker today! Download here</p> -->
 					</div>
 					<div class="act-download animated hiding" data-animation="fadeInUp">

@@ -4480,6 +4480,14 @@ br.mobile-br {
 
 .act-now {
   padding-top: 50px; }
+  .act-now p.small {
+    display: none; }
+    @media (max-width: 991px) {
+      .act-now p.small {
+        font-size: 12px;
+        line-height: 18px;
+        display: block;
+        padding: 0px 25px; } }
 
 .act-download ul {
   text-align: center;
@@ -5738,6 +5746,9 @@ br.mobile-br {
       font-size: 12px;
       line-height: 18px;
       display: block; }
+      @media (max-width: 374px) {
+        .ii-tab-item p small {
+          font-size: 11px; } }
   .ii-tab-item a {
     color: #00673C;
     position: relative; }
