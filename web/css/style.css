@@ -5959,7 +5959,7 @@ br.mobile-br {
     max-width: 100%;
     display: block; }
   .fl-h p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
     margin-bottom: 15px;
     /*@include breakpoint(phablet) {
@@ -5967,7 +5967,7 @@ br.mobile-br {
 			line-height: px;
 		}*/ }
   .fl-h ul {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 20px;
     margin-left: 20px;
     opacity: 0.80;
@@ -5985,7 +5985,7 @@ br.mobile-br {
         left: 5px;
         top: 9px; }
   .fl-h ol {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 20px;
     margin-left: 20px;
     opacity: 0.80;
@@ -5996,7 +5996,7 @@ br.mobile-br {
       .fl-h ol li > ul li {
         list-style-type: none; }
   .fl-h table {
-    font-size: 13px;
+    font-size: 15px;
     width: 100%;
     margin-bottom: 15px; }
     .fl-h table tr td {

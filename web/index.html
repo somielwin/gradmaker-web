@@ -787,14 +787,20 @@
         });
 
 		$(document).on('click', '.faq-list-home h4', function(e){
-			e.preventDefault();
+            e.preventDefault();
 
-			$('.faq-list-home li').removeClass('active');
-			$('.fl-h').stop(true, false).slideUp(300);
+            if($(this).closest('li').hasClass('active')) {
+                $(this).parent('li').removeClass('active');
+                $(this).siblings('.fl-h').stop(true, false).slideUp(300);
+            } else {
+                $('.faq-list-home li').removeClass('active');
+                $('.fl-h').stop(true, false).slideUp(300);
 
-			$(this).parent('li').addClass('active');
-			$(this).siblings('.fl-h').stop(true, false).slideDown(300);
-		});
+                $(this).parent('li').addClass('active');
+                $(this).siblings('.fl-h').stop(true, false).slideDown(300);
+            }
+            
+        });
 
 		$(document).on('click', '#youtube-video .popup-close', function(e){
 	        e.preventDefault();
