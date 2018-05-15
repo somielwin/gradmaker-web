@@ -1,0 +1,129 @@
+.ui-datepicker-calendar, .ui-datepicker-prev, .ui-datepicker-next {
+	display: none;
+}
+
+.ui-datepicker-month, .ui-datepicker-year {
+	padding: 5px 8px;
+	width: auto;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	background-image: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	padding: 0px 8px 8px 8px;
+	display: inline-block;
+	line-height: 35px;
+	color: #00673C;
+	font-weight: 400;
+	border-radius: 0;
+	font-size: 24px;
+	margin-right: 0px;
+	border-bottom: 2px dotted #00673C;
+}
+
+.ui-datepicker-title {
+	position: relative;
+}
+
+.ui-datepicker-title:after {
+	content: "\e906";
+	display: inline-block;
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 10px;
+	position: absolute;
+	top: 50%;
+	left: 190px;
+	color: #00673C;
+	margin-top: -10px;
+	z-index: 101;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.ui-datepicker-title:before {
+	content: "\e906";
+	display: inline-block;
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 10px;
+	position: absolute;
+	top: 50%;
+	left: 70px;
+	color: #00673C;
+	margin-top: -10px;
+	z-index: 101;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.ui-datepicker-title {
+}
+
+.ui-datepicker-month {
+	margin-right: 50px;
+}
+
+@media (max-width: 991px) {
+	.ui-datepicker-title:after {
+		left: 320px;
+	}
+
+	.ui-datepicker-title:before {
+		left: 200px;
+	}
+}
+
+@media (max-width: 767px) {
+	.ui-datepicker-title {
+		max-width: 290px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.ui-datepicker-title:before {
+	    left: 130px;
+	}
+
+	.ui-datepicker-title:after {
+	    left: 230px;
+	}
+}
+
+@media (max-width: 640px) {
+	
+	.ui-datepicker-month {
+		margin-right: 30px;
+	}
+	
+	.ui-datepicker-month, .ui-datepicker-year {
+		font-size: 22px;
+	}
+
+	.ui-datepicker-title {
+		text-align: center;
+	}
+}
+
+
+
+

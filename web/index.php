@@ -10,6 +10,7 @@
 
 <link rel="stylesheet" href="css/font-awesome.css" media="all"/>
 <link rel="stylesheet" href="css/style.css" media="all"/>
+<link rel="stylesheet" href="css/datepicker.css" media="all"/>
 
 <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
 <script src="js/html5.js"></script>
@@ -88,6 +89,9 @@
 						<div class="banner-text animated hiding" data-animation="fadeInUp">
 							<h1><span>Investing in your </span>Child’s Future</h1>
 							<p>Now made easy with the GradMaker mobile app.</p>
+                            <div>
+                                <a href="#" class="concept-video play-video" data-videoid="RBEzCv3Df6U">Watch the Gradmaker concept Video</a>
+                            </div>
 							<a href="#" class="btn btn-primary js-btn-get-app">Become a GradMaker</a>
 						</div>
 					</div>
@@ -111,11 +115,11 @@
 						</figure>	
 						<figure class="phone-app">
 							<div class="video-app-holder" id="video-app-holder">
-								<video id="video-app" width="100%" height="100%" autoplay loop muted playsinline>
+								<!-- <video id="video-app" width="100%" height="100%" autoplay loop muted playsinline>
 									<source src="video/app-demo.mp4" type="video/mp4">
-											<!-- <source src="videos/app-demo.webm" type="video/ogg"> -->
-				               </video>
-				               <img id="video-img-bk" src="images/version2/phone-frame-mobile.jpg">
+									<source src="videos/app-demo.webm" type="video/ogg">
+				               </video> -->
+				               <img id="video-img-bk" class="lazyload" src="images/page_template/lazyload.jpg" data-src="video/first-screen.jpg">
 							</div>
 							<img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/version2/phone_frame.png" alt="">
 						</figure>
@@ -124,19 +128,17 @@
 			</div>
 		</section>
 
-		<section id="section2" class="sec-wrap section3 bg-grey jq-section">
+		<!-- <section id="section2" class="sec-wrap section3 bg-grey jq-section">
             <div class="container">
                 <div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
                     <h2>Why <span>GradMaker?</span></h2>
 
                     <a href="#" class="btn btn-primary play-video" data-videoid="RBEzCv3Df6U"> Learn More <span class="i-icon icon-small-arrow"></span></a>
-                    <!-- <p><a href="#">Watch the concept video</a></p> -->
                 </div>
                 <div class="carousel-feature owl-carousel animated hiding" data-animation="fadeInUp">
                     <div class="item active">
                         <div class="cf-box-flex text-center">
                             <div class="cf-box">
-                                <!-- <small>FEATURE</small> -->
                                 <figure><img class="lazyload" src="images/page_template/lazyload.jpg" data-src="images/home/feature-simple.svg" alt="">
                                 </figure>
                                 <h3>Simple</h3>
@@ -167,7 +169,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="section3" class="sec-wrap bg-grey jq-section">
             <div class="container">
@@ -178,9 +180,13 @@
                     <div class="col-wrap project-detail-wrap fl">
                         <div class="project-detail">
                             <div class="input-wrap pd-old">
-                                <p><strong>How old is your child?</strong> </p>
-                                <div class="mobile-custom-dropdown js-mobile-custom-dropdown" >
-                                    <span id="selected-age" data-value="1" class="selected">1</span>
+                                <p><strong>When is your child’s birth month and year?</strong> </p>
+                                <div id="selected-age" ></div>
+                                <div class="select-style" id="datepicker">
+                                    <!-- <input type="text" id="" val=""> -->
+                                </div>
+                                <!-- <div class="mobile-custom-dropdown js-mobile-custom-dropdown" >
+                                    <span id="selected-month" data-value="1" class="selected">1</span>
                                     <ul class="custom-dropdown-menu js-custom-dropdown-menu" id="childs_age">
                                         <li><a href="#" data-value="1">1</a></li>
                                         <li><a href="#" data-value="2">2</a></li>
@@ -196,7 +202,8 @@
                                         <li><a href="#" data-value="12">12</a></li>
                                         <li><a href="#" data-value="13">13</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
+                                
                             </div>
                             <div class="input-wrap pd-school">
                                 <p><strong>Where do you want your child to study? </strong></p>
@@ -348,20 +355,13 @@
                     <div class="col-wrap fl  animated hiding" data-animation="fadeInUp">
                         <h2>Questions? <br><span>We're here to help.</span></h2>
                         <div class="nm-i-desktop">
-	                        <p>Need more information?</p>
+	                        <!-- <p>Need more information?</p> -->
 	                        <a href="faq-v2.html" class="btn btn-start">Visit our FAQs page <span class="i-icon icon-small-arrow"></span></a>
 	                    </div>
                     </div>
                     <div class="col-wrap fl">
                         <div class="faq-list-home">
                         	<ul>
-                        		<li class="active">
-                        			<h4>What is GradMaker?</h4>
-                        			<div class="fl-h" style="display: block;">
-                        				<p>GradMaker is a <strong>mobile app and a financial solution for parents</strong> who want to <strong>invest for their children's college fund.</strong></p>
-                        				<p>It is the <strong>first digital, end-to-end solution</strong> of Manulife that allows you to sign up, invest and purchase policies online, 24/7, without paper forms!</p>
-                        			</div>
-                        		</li>
                         		<li>
                         			<h4>Can I buy a GradMaker Policy?</h4>
                         			<div class="fl-h">
@@ -398,21 +398,22 @@
                         			</div>
                         		</li>
                         		<li>
-                        			<h4>Who is a qualified Beneficiary?</h4>
-                        			<div class="fl-h">
-                        				<p>Your Beneficiary must:</p>
-                                        <ul>
-                                            <li>be a <strong>Filipino citizen and resident</strong>, not a dual citizen</li>
-                                            <li>be your husband, wife, son, daughter, brother, sister, father, mother, grandfather, grandmother, granddaughter or grandson</li>
-                                            <br><p><em>If your beneficiary is a minor, less than 18 years old, you will need to appoint a Trustee.</em></p>
-                                        </ul>
-                        			</div>
+                        			<h4>How much do I need to pay?</h4>
+                                    <div class="fl-h">
+                                        <p>You can pay as low as Php 10,000 and as high as Php 120,000 per policy.</p>
+                                    </div>
                         		</li>
+                                <li>
+                                    <h4>Do I have to pay regularly for the policy? What is the penalty if I miss a payment?</h4>
+                                    <div class="fl-h">
+                                        <p>No, GradMaker is a single premium product, which means you buy 1 policy each time you make a purchase. There is no monthly, quarterly or annual schedule. You get to decide when to invest again!.</p>
+                                    </div>
+                                </li>
                         	</ul>
                         </div>
 
                         <div class="nm-i-mobile">
-	                        <p>Need more information?</p>
+	                        <!-- <p>Need more information?</p> -->
 	                        <a href="faq-v2.html" class="btn btn-start">Visit our FAQs page. <span class="i-icon icon-small-arrow"></span></a>
 	                    </div>
                     </div>
@@ -424,7 +425,7 @@
             <div class="container">
                 <div class="sec-head-title text-center animated hiding" data-animation="fadeInUp">
                     <h2>More than <span>an investment.</span></h2>
-                    <p>Co-created with parents just like you, this app is packed with awesome features!</p>
+                    <p><a href="co-creator.html">Co-created with parents</a> just like you, this app is packed with awesome features!</p>
                 </div>
                 <div class="investment-wrap">
                     <div class="col-wrap iw-text fl animated hiding" data-animation="fadeInUp">
@@ -606,7 +607,7 @@
         <div class="container">
             <ul>
                 <li><a href="https://www.manulife.com.ph/" target="_blank">Manulife Philippines</a></li>
-                <li><a href="https://manulife.secure.force.com/Privacy-Policy?rdr=y" target="_blank">Manulife’s Privacy Policy</a></li>
+                <li><a href="https://www.manulife.com.ph/customer-privacy-policy" target="_blank">Manulife’s Privacy Policy</a></li>
                 <li><a href="https://www.manulife.com.ph/Terms-of-Use" target="_blank">Manulife’s Terms of Use</a></li>
             </ul>
         </div>
@@ -643,13 +644,14 @@
 </div>
 
 <script src="js/lib/jquery.min.js"></script>
-<script type="text/javascript">
+<script src="js/lib/jquery-ui.min.js"></script>
+<!-- <script type="text/javascript">
 	var ua = navigator.userAgent.toLowerCase();
 	var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 	if(isAndroid) {
 	  $('#video-app-holder').children('video').remove();
 	}
-</script>
+</script> -->
 <script src="js/owl.carousel.js"></script>
 <script src="js/jquery.appear.js"></script>
 <script src="js/TweenMax.js"></script>
@@ -659,13 +661,42 @@
 <script type="text/javascript">
 	var player;
 	var playerVideo = "unloaded";
+    var ageMonth;
+    var ageYear;
+    var ageFinal = 0;
+
+    var TodayDate = new Date();
+    var monthInit = TodayDate.getMonth();
+    var yearInit = TodayDate.getFullYear();
+
+    $(function() {   
+        
+   });
+
+    // $('#datepicker .ui-datepicker-month').on('change', function(){
+    //     var _this = this.value
+
+    //     console.log(_this);
+    // });
+
+    
+
 	
 	$(window).load(function(){
 		
 		// Calculator
 
-		var inflate_val = '0.10';
+		
+	});
+
+	$(document).ready(function () {
+
+		// Youtube Video
+		setupYTAPI();
+
+        var inflate_val = '0.10';
         var inflate_rate = parseFloat(inflate_val);
+        console.log(ageFinal);
 
         $.getJSON("universities.json",function(data){
             var options = '';
@@ -680,8 +711,26 @@
             
         });
 
+        $( "#datepicker" ).datepicker({
+            changeMonth:true,
+            changeYear:true,
+            yearRange:"-13:+1",
+            dateFormat: 'MM yy',
+            minDate : '-13y',
+            maxDate : 0,
+            altField: "#input_date",
+            onChangeMonthYear: function(year, month, inst){
+                ageFinal = 0;
+                ageYear = (yearInit == year) ? 0 : yearInit - year
+                ageFinal = ageYear;
+                console.log(ageYear);
+
+                computeTuition();
+            }
+        });
+
         function computeTuition(){
-            var childs_age = $('#selected-age').attr('data-value');
+            var childs_age = ageFinal;
             var annual_tuition = $('#selected-university').attr('data-value');
             var d = new Date();
             var y = d.getFullYear();
@@ -697,50 +746,45 @@
             $('#result').html('Php '+Math.round(total_tuition_in_n_years).toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         }
 
-	    $(document).on('click', '.js-mobile-custom-dropdown li a', function(e){
-	        e.preventDefault();
-	        var sitem = $(this).text(),
-	            $this = $(this),
-	            $targetDiv = $(this).attr('data-value');
-
-	            console.log($targetDiv)
-
-	        $('.js-mobile-custom-dropdown ul li').removeClass('selected');
-	        $(this).parent().addClass('selected');
-	        $(this).closest('ul').siblings('span.selected').html(sitem);
-	        $(this).closest('ul').siblings('span.selected').attr('data-value', $targetDiv)
-	        $(this).closest('ul').slideUp(150);
-	        $(this).children('ul').stop(true, false).slideToggle(150);
-	        computeTuition();
-	        return true;
-	    });
-
-	    var timer;
-
-	    // MouseLeave Custom Dropdown
-	    $(document).on({
-	        mouseenter: function(){
-	            clearTimeout(timer);
-	            $('.js-custom-dropdown-menu', this).slideDown(150);
-
-	        },
-	        mouseleave: function(){
-	            timer = setTimeout(function(){
-	                $('.js-custom-dropdown-menu').slideUp(150);
-	            }, 1500);
-	        }
-	    }, '.js-custom-dropdown-menu');
-
-	    $('.js-mobile-custom-dropdown').click(function(e) {
+        
+        $(document).on('click', '.js-mobile-custom-dropdown li a', function(e){
             e.preventDefault();
-	        $(this).children('ul').stop(true, false).slideToggle(150);
-	    });
-	});
+            var sitem = $(this).text(),
+                $this = $(this),
+                $targetDiv = $(this).attr('data-value');
 
-	$(document).ready(function () {
+                console.log($targetDiv)
 
-		// Youtube Video
-		setupYTAPI();
+            $('.js-mobile-custom-dropdown ul li').removeClass('selected');
+            $(this).parent().addClass('selected');
+            $(this).closest('ul').siblings('span.selected').html(sitem);
+            $(this).closest('ul').siblings('span.selected').attr('data-value', $targetDiv)
+            $(this).closest('ul').slideUp(150);
+            $(this).children('ul').stop(true, false).slideToggle(150);
+            computeTuition();
+            return true;
+        });
+
+        var timer;
+
+        // MouseLeave Custom Dropdown
+        $(document).on({
+            mouseenter: function(){
+                clearTimeout(timer);
+                $('.js-custom-dropdown-menu', this).slideDown(150);
+
+            },
+            mouseleave: function(){
+                timer = setTimeout(function(){
+                    $('.js-custom-dropdown-menu').slideUp(150);
+                }, 1500);
+            }
+        }, '.js-custom-dropdown-menu');
+
+        $('.js-mobile-custom-dropdown').click(function(e) {
+            e.preventDefault();
+            $(this).children('ul').stop(true, false).slideToggle(150);
+        });
 
 		$(document).on('click', '.faq-list-home h4', function(e){
 			e.preventDefault();
@@ -757,6 +801,14 @@
 	        player.pauseVideo(2);
 	        $('.popup-wrap').removeClass('active');
 	    });
+
+        $(document).keypress(function(e) {
+            e.preventDefault();
+            if (e.which == 13) {
+                player.pauseVideo(2);
+                $('.popup-wrap').removeClass('active');
+            }
+        });
 
 		$(document).on('click', '.popup-menu a', function(e){
 	    	e.preventDefault();
@@ -1023,7 +1075,7 @@
 	            player = new YT.Player('player', {
 	                height: $(".video-holder").height(),
 	                width: $(".video-holder").width(),
-	                playerVars: { 'controls':0, 'showinfo':0, 'cc_load_policy':0, 'rel':0, 'autoplay':1},
+	                playerVars: { 'controls':1, 'showinfo':0, 'cc_load_policy':0, 'rel':0, 'autoplay':1},
 	                videoId: videoId,
 	                events: {
 	                    'onReady': onPlayerReady,

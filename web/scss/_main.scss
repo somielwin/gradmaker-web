@@ -309,7 +309,7 @@ a {
 		}
 
 		@include breakpoint(desktop) {
-			bottom: 100%;
+			bottom: 50px;
 			margin-right: 140px;
 		}
 
@@ -321,7 +321,7 @@ a {
 		}
 
 		@include breakpoint(tablet2) {
-			bottom: 50px;
+			bottom: 20px;
 			@include transform(translate(-50%, 0) scale(0.65));
 		}
 
@@ -459,6 +459,7 @@ a {
 #section3 {
 	padding-top: 90px;
 	padding-bottom: 110px;
+	border-top: none;
 }
 
 .table-wrap {
@@ -521,7 +522,7 @@ a {
 		@include breakpoint(tablet2) {
 			text-align: center;
 			max-width: 360px;
-			margin: 0 auto 30px;
+			margin: 0 auto 20px;
 			font-size: 42px;
 			line-height: 50px;
 
@@ -560,7 +561,7 @@ a {
 		font-size: 18px;
 		color: $defaultColor;
 		line-height: 30px;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 
 		@include breakpoint(tablet2) {
 			font-size: 16px;
@@ -571,6 +572,16 @@ a {
 			max-width: 80%;
 		}
 
+	}
+
+	.concept-video {
+		display: inline-block;
+		margin-bottom: 30px;
+		line-height: 30px;
+
+		@include breakpoint(tablet2) {
+			margin-bottom: 25px;
+		}
 	}
 
 	a.btn {
@@ -1471,7 +1482,7 @@ br.mobile-br {
 	h2 {
 		color: $defaultColor;
 		margin-bottom: 30px;
-		font-size: 64px;
+		font-size: 60px;
 
 		@include breakpoint(tablet) {
 			font-size: 48px;
@@ -4266,6 +4277,11 @@ br.mobile-br {
 		text-align: center;
 		font-weight: 300;
 		margin-bottom: 25px;
+
+		@include breakpoint(tablet2) {
+			font-size: 32px;
+			margin-bottom: 15px;
+		}
 	}
 
 	.input-wrap {
@@ -4446,8 +4462,13 @@ br.mobile-br {
 .project-detail {
 	font-size: 26px;
 
+	@include breakpoint(tablet) {
+		text-align: center;
+	}
+
 	p {
 		font-size: 26px;
+		display: inline-block !important;
 
 		strong {
 
@@ -4460,6 +4481,20 @@ br.mobile-br {
 		@include breakpoint(tablet) {
 			padding-left: 10px;
 			margin-left: 15px;
+		}
+	}
+
+	.input-wrap {
+		display: inline-block;
+
+		input[type="text"] {
+			display: inline-block;
+		    line-height: 25px;
+		    color: #00673C;
+		    font-weight: 400;
+		    font-size: 30px;
+		    margin-right: 15px;
+		    border-bottom: 2px dotted #00673C;
 		}
 	}
 }
@@ -5122,7 +5157,7 @@ br.mobile-br {
 	}
 
 	img {
-		display: none !important;
+		xdisplay: none !important;
 		
 
 		@include breakpoint(tablet) {
@@ -5134,7 +5169,7 @@ br.mobile-br {
 		height: 100%; 
 		width: 100%; 
 		position: absolute; 
-		top: 0;
+		top: 4px;
 		left: 0;
 	}
 }
@@ -5208,6 +5243,7 @@ br.mobile-br {
 		margin-left: auto;
 		margin-right: auto;
 		text-align: left;
+		min-height: auto !important;
 	}
 
 	h4 {
@@ -5315,14 +5351,14 @@ br.mobile-br {
 	}
 
 	p {
-		font-size: 13px;
+		font-size: 14px;
 		line-height: 20px;
 		margin-bottom: 15px;
 
-		@include breakpoint(phablet) {
-			font-size: 12px;
-			line-height: 18px;
-		}
+		/*@include breakpoint(phablet) {
+			font-size: 14px;
+			line-height: px;
+		}*/
 	}
 
 

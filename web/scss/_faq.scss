@@ -482,7 +482,7 @@ article {
 		}
 
 		h4 {
-			font-size: 15px;
+			font-size: 16px;
 			font-weight: 400;
 			line-height: 24px;
 			display: inline-block;
@@ -811,6 +811,12 @@ article {
 			margin: 0px 6px;
 			border: none;
 			xbox-shadow: inset 0px 1px 8px rgba($coBlack, 0.1);
+
+			@include breakpoint(tablet2) {
+				width: 9px;
+				height: 9px;
+				margin: 0px 5px;
+			}
 
 			&:hover, &.active {
 				background: $coGreen;

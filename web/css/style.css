@@ -1930,7 +1930,7 @@ a {
       margin-right: 156px; } }
   @media (max-width: 1024px) {
     .home-section-banner .phone-app {
-      bottom: 100%;
+      bottom: 50px;
       margin-right: 140px; } }
   @media (max-width: 991px) {
     .home-section-banner .phone-app {
@@ -1946,7 +1946,7 @@ a {
       transform-origin: center bottom; } }
   @media (max-width: 767px) {
     .home-section-banner .phone-app {
-      bottom: 50px;
+      bottom: 20px;
       -webkit-transform: translate(-50%, 0) scale(0.65);
       -moz-transform: translate(-50%, 0) scale(0.65);
       -ms-transform: translate(-50%, 0) scale(0.65);
@@ -2053,7 +2053,8 @@ a {
 
 #section3 {
   padding-top: 90px;
-  padding-bottom: 110px; }
+  padding-bottom: 110px;
+  border-top: none; }
 
 .table-wrap {
   display: table;
@@ -2103,7 +2104,7 @@ a {
       .banner-text h1 {
         text-align: center;
         max-width: 360px;
-        margin: 0 auto 30px;
+        margin: 0 auto 20px;
         font-size: 42px;
         line-height: 50px; }
         .banner-text h1 br {
@@ -2129,7 +2130,7 @@ a {
     font-size: 18px;
     color: #424559;
     line-height: 30px;
-    margin-bottom: 40px; }
+    margin-bottom: 20px; }
     @media (max-width: 767px) {
       .banner-text p {
         font-size: 16px;
@@ -2138,6 +2139,13 @@ a {
         margin-left: auto;
         margin-right: auto;
         max-width: 80%; } }
+  .banner-text .concept-video {
+    display: inline-block;
+    margin-bottom: 30px;
+    line-height: 30px; }
+    @media (max-width: 767px) {
+      .banner-text .concept-video {
+        margin-bottom: 25px; } }
   .banner-text a.btn {
     background: #008C50;
     color: #FFFFFF;
@@ -2877,7 +2885,7 @@ br.mobile-br {
   .compa-content h2 {
     color: #424559;
     margin-bottom: 30px;
-    font-size: 64px; }
+    font-size: 60px; }
     @media (max-width: 991px) {
       .compa-content h2 {
         font-size: 48px; } }
@@ -5131,6 +5139,10 @@ br.mobile-br {
     text-align: center;
     font-weight: 300;
     margin-bottom: 25px; }
+    @media (max-width: 767px) {
+      .faq-search-wrap h2 {
+        font-size: 32px;
+        margin-bottom: 15px; } }
   .faq-search-wrap .input-wrap {
     max-width: 865px;
     margin-left: auto;
@@ -5257,14 +5269,28 @@ br.mobile-br {
 
 .project-detail {
   font-size: 26px; }
+  @media (max-width: 991px) {
+    .project-detail {
+      text-align: center; } }
   .project-detail p {
-    font-size: 26px; }
+    font-size: 26px;
+    display: inline-block !important; }
     .project-detail p strong {
       font-weight: 400; }
   @media (max-width: 991px) {
     .project-detail .mobile-custom-dropdown {
       padding-left: 10px;
       margin-left: 15px; } }
+  .project-detail .input-wrap {
+    display: inline-block; }
+    .project-detail .input-wrap input[type="text"] {
+      display: inline-block;
+      line-height: 25px;
+      color: #00673C;
+      font-weight: 400;
+      font-size: 30px;
+      margin-right: 15px;
+      border-bottom: 2px dotted #00673C; }
 
 #childs_age {
   min-width: 50px;
@@ -5778,7 +5804,7 @@ br.mobile-br {
     left: 0;
     z-index: 10; }
   .video-app-holder img {
-    display: none !important; }
+    xdisplay: none !important; }
     @media (max-width: 991px) {
       .video-app-holder img {
         display: block !important; } }
@@ -5786,7 +5812,7 @@ br.mobile-br {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 4px;
     left: 0; }
 
 .faq-home-wrap:after {
@@ -5840,7 +5866,8 @@ br.mobile-br {
       clear: both;
       margin-left: auto;
       margin-right: auto;
-      text-align: left; } }
+      text-align: left;
+      min-height: auto !important; } }
   .faq-list-home h4 {
     opacity: 0.8;
     font-size: 22px;
@@ -5932,13 +5959,13 @@ br.mobile-br {
     max-width: 100%;
     display: block; }
   .fl-h p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 20px;
-    margin-bottom: 15px; }
-    @media (max-width: 640px) {
-      .fl-h p {
-        font-size: 12px;
-        line-height: 18px; } }
+    margin-bottom: 15px;
+    /*@include breakpoint(phablet) {
+			font-size: 14px;
+			line-height: px;
+		}*/ }
   .fl-h ul {
     font-size: 13px;
     line-height: 20px;
@@ -7820,7 +7847,7 @@ article table {
       min-height: auto !important;
       padding-bottom: 60px; } }
   .faq-col .faq-list-home h4 {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     display: inline-block;
@@ -8068,6 +8095,11 @@ article table {
     margin: 0px 6px;
     border: none;
     xbox-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.1); }
+    @media (max-width: 767px) {
+      .term-carousel .owl-dots .owl-dot {
+        width: 9px;
+        height: 9px;
+        margin: 0px 5px; } }
     .term-carousel .owl-dots .owl-dot:hover, .term-carousel .owl-dots .owl-dot.active {
       background: #00673C; }
 
