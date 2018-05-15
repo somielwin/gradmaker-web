@@ -30,14 +30,13 @@
 		<div class="sn-menu animated hiding" data-animation="fadeIn" data-delay="500">
 			<ul>
 				<li class="active"><a href="#section1">01</a></li>
-				<li><a href="#section2">02</a></li>
-				<li><a href="#section3">03</a></li>
-				<li><a href="#section4">04</a></li>
-				<li><a href="#section5">05</a></li>
-				<li><a href="#section6">06</a></li>
-				<li><a href="#section7">07</a></li>
-				<li><a href="#section8">08</a></li>
-				<li><a href="#section9">09</a></li>
+				<li><a href="#section3">02</a></li>
+				<li><a href="#section4">03</a></li>
+				<li><a href="#section5">04</a></li>
+				<li><a href="#section6">05</a></li>
+				<li><a href="#section7">06</a></li>
+				<li><a href="#section8">07</a></li>
+				<li><a href="#section9">08</a></li>
 			</ul>
 		</div>
 	</div>
