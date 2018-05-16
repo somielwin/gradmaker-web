@@ -249,7 +249,7 @@
                 <div class="comparison-wrap">
                     <div class="compa-content col-wrap fr animated hiding" data-animation="fadeInUp">
                         <h2>How <span>it works</span></h2>
-                        <p>Watch this 1-minute tutorial video to get a quick view of the GradMaker 3 step process <br>(Calculate – Sign up – Purchase).</p>
+                        <p>Watch this 1-minute tutorial video to get a quick view of the GradMaker 3 step process.</p>
                         <a href="#" class="btn btn-primary play-video" data-videoid="n9kVfCspfg0"> <span class="i-icon icon-watch-video"></span>Watch How</a>
                     </div>
                     <div class="compa-graph col-wrap fl">
@@ -490,7 +490,7 @@
                             </div>
                             <div class="ii-tab-item" id="product" >
                                 <figure><img class="lazyload-trigger" src="images/version2/tab-product.svg" data-src="images/version2/tab-product.svg" alt=""></figure>
-                                <h4><a href="https://www.google.com" target="_blank"><i>Product</i> <span><img src="images/version2/new_browser.svg" alt=""></span></a></h4>
+                                <h4>Product</h4>
                                 <p>You are not only invested but you are also <br>insured, in case anything happens.</p>
  
 
@@ -507,7 +507,7 @@
                             </div>
                             <div class="ii-tab-item" id="company" >
                                 <figure><img class="lazyload-trigger" src="images/version2/tab-company.svg" data-src="images/version2/tab-company.svg" alt=""></figure>
-                                <h4><a href="https://www.google.com" target="_blank"><i>Company</i> <span><img src="images/version2/new_browser.svg" alt=""></span></a></h4>
+                                <h4><a href="http://www.manulife.com/servlet/servlet.FileDownload?file=00P5000000kpw8hEAA" target="_blank"><i>Company</i> <span><img src="images/version2/new_browser.svg" alt=""></span></a></h4>
                                 <p>Manulife is a leading global financial services company with over C$47 Billion Market Capitalization.</p>
                                 <br>
                                 <p><small><a href="https://www.manulife.com.ph/About-Us">Learn about Manulife Philippines</a></small></p>
@@ -524,7 +524,7 @@
                             </div>
                             <div class="ii-tab-item" id="security" >
                                 <figure><img class="lazyload-trigger" src="images/version2/tab-security.svg" data-src="images/version2/tab-security.svg" alt=""></figure>
-                                <h4><a href="https://www.google.com" target="_blank"><i>Security</i> <span><img src="images/version2/new_browser.svg" alt=""></span></a></h4>
+                                <h4><a href="https://manulife.secure.force.com/Privacy-Policy?rdr=y" target="_blank"><i>Security</i> <span><img src="images/version2/new_browser.svg" alt=""></span></a></h4>
                                 <p>Safeguards are in place to protect your <br> data and transactions.</p>
 
                                 <div class="popup-menu">
