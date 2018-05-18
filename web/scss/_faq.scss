@@ -790,6 +790,87 @@ article {
 	}
 }
 
+.terms-alphabet-list {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+
+	@include breakpoint(tablet2) {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	ul {
+
+		&.term-letter {
+			padding-bottom: 5px;
+			border-bottom: 2px solid #ccc;	
+			text-align: center;
+			display: inline-block;
+
+			@include breakpoint(tablet2) {
+				border-bottom: none;
+
+			}
+		}
+
+		li {
+			display: inline-block;
+			padding: 0px 12px;
+			position: relative;
+
+			@include breakpoint(tablet2) {
+				margin-bottom: 10px;
+				padding: 6px;
+			}
+
+			&:before {
+				content:'';
+				width: 100%;
+				position: absolute;
+				height: 2px;
+				bottom: -7px;
+				left: 0;
+				background: $coGreen;
+				transform-origin: left center;
+				@include transform(scale(0))
+				@include transition(all 0.4s ease);
+				opacity: 0;
+
+				@include breakpoint(tablet2) {
+					width: 100%;
+				}
+			}
+
+			&.active {
+				
+				&:before {
+					@include transform(scale(1))
+					opacity: 1;
+				}
+
+				a {
+					@include transform(scale3d(1.4, 1.4, 1.4));
+					font-weight: 700;
+					color: $coGreen;
+				}
+
+			}
+
+			a {
+				display: block;
+				text-transform: uppercase;
+				color: $defaultColor;
+				transform-origin: center center;
+				@include transform(scale(1));
+
+				@include breakpoint(tablet2) {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
 .term-carousel {
 
 	.owl-stage-outer {
@@ -836,18 +917,9 @@ article {
 .term-carousel-desktop {
 	display: block !important;
 
-	@include breakpoint(tablet) {
-		display: none !important;	
-	}
+	
 }
 
-.term-carousel-mobile {
-	display: none !important;
-
-	@include breakpoint(tablet) {
-		display: block !important;	
-	}
-}
 
 .submit-your-question {
 	max-width: 670px;
