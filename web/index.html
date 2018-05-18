@@ -89,7 +89,7 @@
 							<h1><span>Investing in your </span>Child’s Future</h1>
 							<p>Now made easy with the GradMaker mobile app.</p>
                             <div>
-                                <a href="#" class="concept-video play-video" data-videoid="RBEzCv3Df6U" style="font-weight: 400;">Watch the GradMaker concept Video</a>
+                                <a href="#" class="concept-video play-video" data-videoid="RBEzCv3Df6U" style="font-weight: 400;">Why GradMaker?</a>
                             </div>
 							<a href="#" class="btn btn-primary js-btn-get-app">Become a GradMaker</a>
 						</div>
@@ -249,7 +249,7 @@
                 <div class="comparison-wrap">
                     <div class="compa-content col-wrap fr animated hiding" data-animation="fadeInUp">
                         <h2>How <span>it works</span></h2>
-                        <p>Watch this 1-minute tutorial video to get a quick view of the GradMaker 3 step process.</p>
+                        <p>Watch this 1-minute tutorial video to get a quick view of the GradMaker 3-step process.</p>
                         <a href="#" class="btn btn-primary play-video" data-videoid="n9kVfCspfg0"> <span class="i-icon icon-watch-video"></span>Watch How</a>
                     </div>
                     <div class="compa-graph col-wrap fl">
