@@ -1464,7 +1464,7 @@
     <script src="js/jquery.unveil.js"></script>
     <script src="js/jquery.appear.js"></script>
     <script src="js/owl.carousel.js"></script>
-    <script src="js/mark.js"></script>
+    <script src="js/jquery.mark.js"></script>
     <script src="js/custom.js"></script>
     <script type="text/javascript">
 		
@@ -1694,6 +1694,8 @@
 
         $(document).on('change', '.input-wrap input', function() {
             var keyword = $(this).val();
+
+            mark();
             isBusy = keyword == "";
             var itemArray = $('.faq-list-home');
             $('.faq-n-item > ul > li').removeClass('hide');
@@ -1713,6 +1715,8 @@
             	var _this = $(".faq-list-parent").find('.faq-list-home > ul > li:contains("'+keyword+'")');
             	// var _this = $(".faq-list-parent").find('.faq-list-home > ul > li h4:contains("'+keyword+'")').parent('li');
             	var _thisParent = _this.closest('.faq-n-item');
+
+
 
             	$('.faq-n-item.faq-list-home').addClass('hide');
             	_thisParent.removeClass('hide');
@@ -1734,6 +1738,22 @@
             }
 
         })
+
+        function mark(e) {
+            // Read the keyword
+            var keyword = $('#static-search-form input[type="text"]').val();
+
+            console.log('mark as')
+            // Mark the keyword inside the context
+            $(".faq-list-parent").unmark();
+	        $(".faq-list-parent").mark(keyword, {
+	            "element": "span",
+	            "className": "highlight-offset",
+	            separateWordSearch : false
+	        });
+        };
+
+        
 
         function scrollToDiv(element){
 		    var offset = element.offset();

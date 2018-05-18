@@ -6,10 +6,12 @@
 *****************************************************/
 
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global.Mark = factory());
-}(this, (function () { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('jquery')) :
+  typeof define === 'function' && define.amd ? define(['jquery'], factory) :
+  (global.Mark = factory(global.jQuery));
+}(this, (function ($) { 'use strict';
+
+  $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
 
   var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
     return typeof obj;
@@ -1057,29 +1059,23 @@
     return Mark;
   }();
 
-  function Mark$1(ctx) {
-    var _this = this;
-
-    var instance = new Mark(ctx);
-    this.mark = function (sv, opt) {
-      instance.mark(sv, opt);
-      return _this;
-    };
-    this.markRegExp = function (sv, opt) {
-      instance.markRegExp(sv, opt);
-      return _this;
-    };
-    this.markRanges = function (sv, opt) {
-      instance.markRanges(sv, opt);
-      return _this;
-    };
-    this.unmark = function (opt) {
-      instance.unmark(opt);
-      return _this;
-    };
+  $.fn.mark = function (sv, opt) {
+    new Mark(this.get()).mark(sv, opt);
     return this;
-  }
+  };
+  $.fn.markRegExp = function (regexp, opt) {
+    new Mark(this.get()).markRegExp(regexp, opt);
+    return this;
+  };
+  $.fn.markRanges = function (ranges, opt) {
+    new Mark(this.get()).markRanges(ranges, opt);
+    return this;
+  };
+  $.fn.unmark = function (opt) {
+    new Mark(this.get()).unmark(opt);
+    return this;
+  };
 
-  return Mark$1;
+  return $;
 
 })));
