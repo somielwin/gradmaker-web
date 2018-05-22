@@ -1470,6 +1470,11 @@
 		
     $(document).ready(function() {
 
+        jQuery.expr[':'].icontains = function(a, i, m) {
+          return jQuery(a).text().toUpperCase()
+              .indexOf(m[3].toUpperCase()) >= 0;
+        };
+
         $('.faq-title').click(function(e) {
             e.preventDefault();
             var _thisOffset = $(this).closest('.faq-item').offset();
@@ -1689,14 +1694,15 @@
         	$('#static-search-form input').val('').change();
         	$('.faq-n-item > ul > li.remained').removeClass('remained');
 
-        	console.log('test');
         });
 
         $(document).on('change', '.input-wrap input', function() {
-            var keyword = $(this).val();
+            var keyword = $(this).val().toLowerCase();
+
+            console.log(keyword);
 
             mark();
-            isBusy = keyword == "";
+
             var itemArray = $('.faq-list-home');
             $('.faq-n-item > ul > li').removeClass('hide');
             $('.view-all-link').addClass('hide');
@@ -1712,7 +1718,8 @@
 
             if (keyword !='' && keyword !=' ') {
 
-            	var _this = $(".faq-list-parent").find('.faq-list-home > ul > li:contains("'+keyword+'")');
+                console.log 
+            	var _this = $(".faq-list-parent").find('.faq-list-home > ul > li:icontains("'+keyword+'")');
             	// var _this = $(".faq-list-parent").find('.faq-list-home > ul > li h4:contains("'+keyword+'")').parent('li');
             	var _thisParent = _this.closest('.faq-n-item');
 

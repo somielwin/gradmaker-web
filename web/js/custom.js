@@ -54,11 +54,11 @@ $(document).ready(function() {
 
     $(document).keydown(function(e){
        
-        if(e.keyCode == 27) {
-            player.pauseVideo(2);
-            $('.popup-wrap').removeClass('active');
+        // if(e.keyCode == 27) {
+        //     player.pauseVideo(2);
+        //     $('.popup-wrap').removeClass('active');
 
-        }
+        // }
     });
 
     if($(window).width() >  768) {
