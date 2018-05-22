@@ -1681,6 +1681,10 @@
         var isBusy = false;
 
         $('#static-search-form').submit(function(){
+
+            $('#static-search-form input[type="text"]').focusout(function(){
+                console.log('test');
+            });
             return false;
 
         });
