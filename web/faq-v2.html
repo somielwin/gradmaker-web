@@ -1682,9 +1682,7 @@
 
         $('#static-search-form').submit(function(){
 
-            $('#static-search-form input[type="text"]').focusout(function(){
-                console.log('test');
-            });
+            $('#static-search-form input[type="text"]').blur();
             return false;
 
         });
